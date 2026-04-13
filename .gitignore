@@ -1,0 +1,137 @@
+# =============================================================================
+# PokeBuilder — .gitignore
+# Engine: Godot 4.6 (GDScript)
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Godot engine — generated cache and intermediate files
+# -----------------------------------------------------------------------------
+
+# Main engine cache folder (shaders, imported assets, editor state).
+# This is ALWAYS machine-specific and MUST NOT be committed.
+.godot/
+
+# Godot 4.6 generates a .uid file alongside every resource.
+# These SHOULD be committed so resource references survive renames.
+# *.uid  ← do NOT uncomment; keep .uid files tracked.
+
+# Compiled translation binaries (auto-generated from .po / .csv source files).
+# Commit the source .po files instead.
+*.translation
+
+# -----------------------------------------------------------------------------
+# Export
+# -----------------------------------------------------------------------------
+
+# Export presets can contain signing keys and keystore passwords.
+# Commit export_presets.cfg only if it contains no sensitive data.
+export_presets.cfg
+
+# Export output folders (created by Godot's export pipeline).
+build/
+dist/
+export/
+
+# Android export artifacts
+/android/
+
+# iOS export artifacts
+/ios/
+
+# macOS app bundle
+*.app/
+
+# Windows installer
+*.exe
+*.msi
+
+# Web export
+/web/
+
+# -----------------------------------------------------------------------------
+# Database — SQLite
+# -----------------------------------------------------------------------------
+
+# The main game database is SOURCE DATA and must be committed.
+# data/db/pokebuilder.sqlite  ← tracked intentionally
+
+# Temporary SQLite files created during writes (auto-deleted on clean shutdown).
+*.sqlite-shm
+*.sqlite-wal
+*.sqlite-journal
+
+# -----------------------------------------------------------------------------
+# Save files (runtime user data — never belongs in the repo)
+# -----------------------------------------------------------------------------
+user://
+*.sav
+
+# -----------------------------------------------------------------------------
+# Large binary assets — consider Git LFS
+# -----------------------------------------------------------------------------
+# If audio / image files become large, enable Git LFS and track them with:
+#   git lfs track "*.ogg" "*.mp3" "*.wav" "*.png" "*.jpg" "*.webp"
+# Then commit the .gitattributes file.
+# Do NOT add blanket ignores for assets here; they are part of the project.
+
+# -----------------------------------------------------------------------------
+# macOS
+# -----------------------------------------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# -----------------------------------------------------------------------------
+# Windows
+# -----------------------------------------------------------------------------
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# -----------------------------------------------------------------------------
+# Linux
+# -----------------------------------------------------------------------------
+*~
+.directory
+
+# -----------------------------------------------------------------------------
+# Editors and IDEs
+# -----------------------------------------------------------------------------
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains (Rider, IntelliJ)
+.idea/
+*.iml
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docview
+
+# Vim / Neovim
+*.swp
+*.swo
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# -----------------------------------------------------------------------------
+# Miscellaneous
+# -----------------------------------------------------------------------------
+*.tmp
+*.bak
+*.orig
+*.log
+Logs/
