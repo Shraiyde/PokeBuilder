@@ -23,6 +23,110 @@ const PBS_REGISTRY: Dictionary = {
 }
 
 
+## Returns a ready-to-fill PBS template string for the given type.
+static func get_template(pbs_type: String) -> String:
+	match pbs_type:
+		"pokemon":
+			return (
+				"# Pokemon PBS template\n"
+				+ "# Each section starts with [INTERNAL_ID] (numeric like [001] or text like [BULBASAUR]).\n"
+				+ "# Lines starting with # are comments and are ignored.\n\n"
+				+ "[001]\n"
+				+ "Name=\n"
+				+ "Types=NORMAL\n"
+				+ "BaseStats=45,49,49,45,65,65\n"
+				+ "GrowthRate=Medium\n"
+				+ "GenderRatio=FemaleOneEighth\n"
+				+ "CatchRate=45\n"
+				+ "Happiness=70\n"
+				+ "Abilities=OVERGROW\n"
+				+ "HiddenAbilities=\n"
+				+ "EggGroups=Monster\n"
+				+ "HatchSteps=5120\n"
+				+ "Height=0.7\n"
+				+ "Weight=6.9\n"
+				+ "Color=Green\n"
+				+ "Shape=Quadruped\n"
+				+ "Habitat=Grassland\n"
+				+ "Category=Seed\n"
+				+ "Pokedex=\n"
+				+ "Generation=1\n"
+				+ "BaseExp=64\n"
+				+ "EVs=HP,1\n"
+				+ "WildItemCommon=\n"
+				+ "WildItemUncommon=\n"
+				+ "WildItemRare=\n"
+				+ "Flags=\n"
+			)
+		"moves":
+			return (
+				"# Moves PBS template\n"
+				+ "# Category: Physical / Special / Status\n"
+				+ "# Target: NearOther, NearAlly, NearFoe, AllNearFoes, AllFoes,\n"
+				+ "#         UserOrNearAlly, RandomNearFoe, All, User, None\n\n"
+				+ "[TACKLE]\n"
+				+ "Name=Tackle\n"
+				+ "Type=NORMAL\n"
+				+ "Category=Physical\n"
+				+ "Power=40\n"
+				+ "Accuracy=100\n"
+				+ "TotalPP=35\n"
+				+ "Target=NearOther\n"
+				+ "Priority=0\n"
+				+ "FunctionCode=None\n"
+				+ "Flags=Contact,CanProtect,CanMirrorMove\n"
+				+ "EffectChance=0\n"
+				+ "Description=\n"
+			)
+		"items":
+			return (
+				"# Items PBS template\n"
+				+ "# Pocket: 1=Items, 2=Medicine, 3=Pokeballs, 4=TMs, 5=Berries, 6=Mail, 7=Battle, 8=Key\n\n"
+				+ "[POTION]\n"
+				+ "Name=Potion\n"
+				+ "NamePlural=Potions\n"
+				+ "Pocket=1\n"
+				+ "Price=300\n"
+				+ "SellPrice=150\n"
+				+ "FieldUse=OnPokemon\n"
+				+ "BattleUse=OnBattlePokemon\n"
+				+ "FunctionCode=HealHP20\n"
+				+ "Description=\n"
+				+ "Flags=\n"
+			)
+		"abilities":
+			return (
+				"# Abilities PBS template\n\n"
+				+ "[OVERGROW]\n"
+				+ "Name=Overgrow\n"
+				+ "Description=Powers up Grass-type moves in a pinch.\n"
+				+ "Flags=\n"
+			)
+		"natures":
+			return (
+				"# Natures PBS template\n"
+				+ "# StatUp / StatDown: ATTACK, DEFENSE, SPEED, SPECIAL_ATTACK, SPECIAL_DEFENSE\n"
+				+ "# Leave StatUp/StatDown empty for neutral natures.\n\n"
+				+ "[HARDY]\n"
+				+ "Name=Hardy\n"
+				+ "StatUp=\n"
+				+ "StatDown=\n"
+				+ "LikedFlavor=\n"
+				+ "DislikedFlavor=\n"
+			)
+		"types":
+			return (
+				"# Types PBS template\n"
+				+ "# ColorHex: 6-digit hex colour (e.g. A8A878)\n\n"
+				+ "[NORMAL]\n"
+				+ "Name=Normal\n"
+				+ "ColorHex=A8A878\n"
+				+ "IconPosition=0\n"
+				+ "IsPseudoType=false\n"
+			)
+	return "# Unknown PBS type: %s\n" % pbs_type
+
+
 static func get_supported_types() -> Array[String]:
 	var out: Array[String] = []
 	for k: String in PBS_REGISTRY:

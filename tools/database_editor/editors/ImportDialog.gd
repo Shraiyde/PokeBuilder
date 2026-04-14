@@ -128,9 +128,17 @@ func _build_csv_tab(tabs: TabContainer) -> void:
 	vbox.add_child(opts_grid)
 
 	opts_grid.add_child(_label("Target table:"))
+	var table_row := HBoxContainer.new()
+	table_row.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	opts_grid.add_child(table_row)
 	_csv_table_opt = OptionButton.new()
 	_csv_table_opt.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	opts_grid.add_child(_csv_table_opt)
+	table_row.add_child(_csv_table_opt)
+	var btn_csv_tpl := Button.new()
+	btn_csv_tpl.text         = "↓ Template"
+	btn_csv_tpl.tooltip_text = "Download an empty CSV with the column headers of the selected table"
+	btn_csv_tpl.pressed.connect(_on_csv_download_template)
+	table_row.add_child(btn_csv_tpl)
 
 	opts_grid.add_child(_label("On conflict:"))
 	_csv_mode_opt = OptionButton.new()
@@ -196,13 +204,21 @@ func _build_pbs_tab(tabs: TabContainer) -> void:
 	vbox.add_child(single_grid)
 
 	single_grid.add_child(_label("PBS type:"))
+	var type_row := HBoxContainer.new()
+	type_row.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	single_grid.add_child(type_row)
 	_pbs_single_type_opt = OptionButton.new()
 	_pbs_single_type_opt.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	for pbs_type: String in PbsImporter.get_supported_types():
 		var table: String = PbsImporter.get_target_table(pbs_type)
 		_pbs_single_type_opt.add_item("%s  →  %s" % [pbs_type, table])
 		_pbs_single_type_opt.set_item_metadata(_pbs_single_type_opt.item_count - 1, pbs_type)
-	single_grid.add_child(_pbs_single_type_opt)
+	type_row.add_child(_pbs_single_type_opt)
+	var btn_pbs_tpl := Button.new()
+	btn_pbs_tpl.text         = "↓ Template"
+	btn_pbs_tpl.tooltip_text = "Download an empty PBS template for the selected type"
+	btn_pbs_tpl.pressed.connect(_on_pbs_download_template)
+	type_row.add_child(btn_pbs_tpl)
 
 	single_grid.add_child(_label("PBS file (.txt):"))
 	var single_file_row := HBoxContainer.new()
@@ -561,6 +577,49 @@ func _find_python() -> String:
 
 
 # ── Widget helpers ────────────────────────────────────────────────────────────
+
+func _on_csv_download_template() -> void:
+	var table: String = _csv_table_opt.get_item_text(_csv_table_opt.selected)
+	if table.is_empty():
+		_set_status(_csv_status, "Select a target table first.", false)
+		return
+	var cols := _DB.get_columns(table)
+	if cols.is_empty():
+		_set_status(_csv_status, "Table has no columns.", false)
+		return
+	var names: PackedStringArray = []
+	for col: Dictionary in cols:
+		names.append(col["name"])
+	var content: String = ",".join(names) + "\n"
+	_open_save_dialog("%s_template.csv" % table, "*.csv", content)
+
+
+func _on_pbs_download_template() -> void:
+	var idx: int        = _pbs_single_type_opt.selected
+	var pbs_type: String = _pbs_single_type_opt.get_item_metadata(idx)
+	var content: String  = PbsImporter.get_template(pbs_type)
+	_open_save_dialog("%s_template.txt" % pbs_type, "*.txt", content)
+
+
+## Opens a native save-file dialog. Writes content to the chosen path on confirm.
+func _open_save_dialog(suggested_name: String, filter: String, content: String) -> void:
+	var dlg := FileDialog.new()
+	dlg.access            = FileDialog.ACCESS_FILESYSTEM
+	dlg.file_mode         = FileDialog.FILE_MODE_SAVE_FILE
+	dlg.use_native_dialog = true
+	dlg.add_filter(filter)
+	dlg.current_file = suggested_name
+	add_child(dlg)
+	dlg.file_selected.connect(func(path: String) -> void:
+		var fa := FileAccess.open(path, FileAccess.WRITE)
+		if fa != null:
+			fa.store_string(content)
+			fa.close()
+		dlg.queue_free()
+	)
+	dlg.close_requested.connect(dlg.queue_free)
+	dlg.popup_centered(Vector2i(700, 500))
+
 
 func _make_file_dialog(mode: FileDialog.FileMode, filters: Array, callback: Callable) -> FileDialog:
 	var dlg := FileDialog.new()
