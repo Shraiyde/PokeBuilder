@@ -134,6 +134,9 @@ func _build_csv_tab(tabs: TabContainer) -> void:
 	opts_grid.add_child(table_row)
 	_csv_table_opt = OptionButton.new()
 	_csv_table_opt.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	# Populate built-in tables at build time so items are always present.
+	for t: String in _C.BUILTIN_TABLES:
+		_csv_table_opt.add_item(t)
 	table_row.add_child(_csv_table_opt)
 	var btn_csv_tpl := Button.new()
 	btn_csv_tpl.text         = "↓ Template"
@@ -553,19 +556,13 @@ func _on_pbs_run() -> void:
 
 ## Opens the dialog on the given tab (0 = CSV, 1 = PBS).
 func open_on_tab(tab_idx: int) -> void:
-	# Populate table list the same way the sidebar does:
-	# built-in tables from constants + any user-created custom tables.
-	# This works even if the SQLite schema hasn't been migrated yet, unlike
-	# querying sqlite_master which would return nothing on a fresh database.
-	_csv_table_opt.clear()
-	var seen: Dictionary = {}
-	for t: String in _C.BUILTIN_TABLES:
-		if not seen.has(t):
-			seen[t] = true
-			_csv_table_opt.add_item(t)
+	# Built-in tables are already in the dropdown from _build_csv_tab.
+	# Sync any custom tables that may have been created since the dialog was built.
+	var existing: Dictionary = {}
+	for i: int in _csv_table_opt.item_count:
+		existing[_csv_table_opt.get_item_text(i)] = true
 	for t: String in _DB.get_custom_tables():
-		if not seen.has(t):
-			seen[t] = true
+		if not existing.has(t):
 			_csv_table_opt.add_item(t)
 
 	# Detect Python lazily on first open (avoids subprocess at ready time).
