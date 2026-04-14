@@ -5,6 +5,7 @@ extends Window
 
 signal import_completed(table_name: String)
 
+const _C          = preload("res://tools/database_editor/DatabaseEditorConstants.gd")
 const _DB         = preload("res://tools/database_editor/DatabaseEditorDB.gd")
 const CsvImporter = preload("res://tools/database_editor/importers/CsvImporter.gd")
 const PbsImporter = preload("res://tools/database_editor/importers/PbsImporter.gd")
@@ -552,9 +553,20 @@ func _on_pbs_run() -> void:
 
 ## Opens the dialog on the given tab (0 = CSV, 1 = PBS).
 func open_on_tab(tab_idx: int) -> void:
+	# Populate table list the same way the sidebar does:
+	# built-in tables from constants + any user-created custom tables.
+	# This works even if the SQLite schema hasn't been migrated yet, unlike
+	# querying sqlite_master which would return nothing on a fresh database.
 	_csv_table_opt.clear()
-	for t: String in _DB.get_all_tables():
-		_csv_table_opt.add_item(t)
+	var seen: Dictionary = {}
+	for t: String in _C.BUILTIN_TABLES:
+		if not seen.has(t):
+			seen[t] = true
+			_csv_table_opt.add_item(t)
+	for t: String in _DB.get_custom_tables():
+		if not seen.has(t):
+			seen[t] = true
+			_csv_table_opt.add_item(t)
 
 	# Detect Python lazily on first open (avoids subprocess at ready time).
 	if _pbs_py_edit.text.is_empty():
