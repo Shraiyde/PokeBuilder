@@ -228,9 +228,9 @@ func current_ability_id() -> String:
 	match ability_index:
 		0: return sp.get("ability1_id",      "") if sp.get("ability1_id")     != null else ""
 		1: return sp.get("ability2_id",      "") if sp.get("ability2_id")     != null else \
-			      sp.get("ability1_id",      "")
+				  sp.get("ability1_id",      "")
 		2: return sp.get("hidden_ability_id","") if sp.get("hidden_ability_id") != null else \
-			      sp.get("ability1_id",      "")
+				  sp.get("ability1_id",      "")
 		_: return ""
 
 

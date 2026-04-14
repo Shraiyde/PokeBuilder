@@ -104,11 +104,11 @@ func _build_context(extra: Dictionary) -> Dictionary:
 
 	# ── Player's lead Pokémon ──
 	if not PlayerData.party.is_empty():
-		var lead: Dictionary = PlayerData.party[0]
-		ctx["lead_pokemon"]       = lead.get("nickname", lead.get("species_id", ""))
-		ctx["lead_pokemon_level"] = str(lead.get("level", 1))
-		ctx["lead_pokemon_hp"]    = str(lead.get("current_hp", 0))
-		ctx["lead_pokemon_maxhp"] = str(lead.get("max_hp", 1))
+		var lead: Pokemon          = PlayerData.party[0]
+		ctx["lead_pokemon"]        = lead.full_name()
+		ctx["lead_pokemon_level"]  = str(lead.level)
+		ctx["lead_pokemon_hp"]     = str(lead.current_hp)
+		ctx["lead_pokemon_maxhp"]  = str(lead.max_hp())
 	else:
 		ctx["lead_pokemon"]       = ""
 		ctx["lead_pokemon_level"] = "1"
@@ -222,5 +222,8 @@ func truncate(s: String, max_len: int) -> String:
 
 
 ## Strips BBCode markup from a string to produce plain text.
+## e.g. "[color=red]Hello[/color]" → "Hello"
 func strip_bbcode(s: String) -> String:
-	return s.strip_bbcode() if s.has_method("strip_bbcode") else s
+	var regex := RegEx.new()
+	regex.compile("\\[.*?\\]")
+	return regex.sub(s, "", true)
