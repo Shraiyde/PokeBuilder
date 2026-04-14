@@ -7,6 +7,7 @@ signal import_completed(table_name: String)
 
 const _DB         = preload("res://tools/database_editor/DatabaseEditorDB.gd")
 const CsvImporter = preload("res://tools/database_editor/importers/CsvImporter.gd")
+const PbsImporter = preload("res://tools/database_editor/importers/PbsImporter.gd")
 
 const _DEFAULT_DB_PATH  := "res://data/db/pokebuilder.sqlite"
 const _PBS_SCRIPT_PATH  := "res://tools/pbs_to_sqlite.py"
@@ -26,7 +27,13 @@ var _csv_map_grid: GridContainer
 var _csv_status: Label
 var _csv_file_dlg: FileDialog
 
-# ── UI — PBS ──────────────────────────────────────────────────────────────────
+# ── UI — PBS single-file (GDScript importer) ──────────────────────────────────
+var _pbs_single_type_opt: OptionButton
+var _pbs_single_path_edit: LineEdit
+var _pbs_single_status: Label
+var _pbs_single_file_dlg: FileDialog
+
+# ── UI — PBS bulk migration (Python script) ────────────────────────────────────
 var _pbs_dir_edit: LineEdit
 var _pbs_db_edit: LineEdit
 var _pbs_py_edit: LineEdit
@@ -83,6 +90,9 @@ func _build_ui() -> void:
 	# File dialogs
 	_csv_file_dlg = _make_file_dialog(FileDialog.FILE_MODE_OPEN_FILE, ["*.csv"], _on_csv_file_selected)
 	add_child(_csv_file_dlg)
+
+	_pbs_single_file_dlg = _make_file_dialog(FileDialog.FILE_MODE_OPEN_FILE, ["*.txt"], _on_pbs_single_file_selected)
+	add_child(_pbs_single_file_dlg)
 
 	_pbs_dir_dlg = _make_file_dialog(FileDialog.FILE_MODE_OPEN_DIR, [], _on_pbs_dir_selected)
 	add_child(_pbs_dir_dlg)
@@ -177,7 +187,47 @@ func _build_pbs_tab(tabs: TabContainer) -> void:
 	vbox.add_theme_constant_override("separation", 10)
 	scroll.add_child(vbox)
 
-	# ── How it works ──────────────────────────────────────────────────────────
+	# ── Single file import (GDScript — no Python needed) ──────────────────────
+	vbox.add_child(_section_label("Import single PBS file  (no Python needed)"))
+
+	var single_grid := GridContainer.new()
+	single_grid.columns = 2
+	single_grid.add_theme_constant_override("h_separation", 8)
+	vbox.add_child(single_grid)
+
+	single_grid.add_child(_label("PBS type:"))
+	_pbs_single_type_opt = OptionButton.new()
+	_pbs_single_type_opt.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	for pbs_type: String in PbsImporter.get_supported_types():
+		var table: String = PbsImporter.get_target_table(pbs_type)
+		_pbs_single_type_opt.add_item("%s  →  %s" % [pbs_type, table])
+		_pbs_single_type_opt.set_item_metadata(_pbs_single_type_opt.item_count - 1, pbs_type)
+	single_grid.add_child(_pbs_single_type_opt)
+
+	single_grid.add_child(_label("PBS file (.txt):"))
+	var single_file_row := HBoxContainer.new()
+	single_file_row.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	single_grid.add_child(single_file_row)
+	_pbs_single_path_edit = _path_edit("Select a PBS .txt file…")
+	single_file_row.add_child(_pbs_single_path_edit)
+	var btn_single_browse := Button.new()
+	btn_single_browse.text = "Browse…"
+	btn_single_browse.pressed.connect(func(): _pbs_single_file_dlg.popup_centered(Vector2i(700, 500)))
+	single_file_row.add_child(btn_single_browse)
+
+	var single_import_row := HBoxContainer.new()
+	vbox.add_child(single_import_row)
+	var btn_single_import := Button.new()
+	btn_single_import.text = "  Import PBS File  "
+	btn_single_import.pressed.connect(_on_pbs_single_import)
+	single_import_row.add_child(btn_single_import)
+	_pbs_single_status = _status_label()
+	single_import_row.add_child(_pbs_single_status)
+
+	vbox.add_child(HSeparator.new())
+
+	# ── Bulk migration via Python script ─────────────────────────────────────
+	vbox.add_child(_section_label("Bulk migration  (Python — all tables at once)"))
 	var info := Label.new()
 	info.text = (
 		"Runs the project's pbs_to_sqlite.py script via Python.\n"
@@ -405,6 +455,32 @@ func _get_selected_csv_table_cols() -> Array[String]:
 
 
 # ── PBS handlers ──────────────────────────────────────────────────────────────
+
+func _on_pbs_single_file_selected(path: String) -> void:
+	_pbs_single_path_edit.text = path
+	_pbs_single_status.text    = ""
+
+
+func _on_pbs_single_import() -> void:
+	var path: String = _pbs_single_path_edit.text.strip_edges()
+	if path.is_empty():
+		_set_status(_pbs_single_status, "Select a PBS file first.", false)
+		return
+
+	var idx: int    = _pbs_single_type_opt.selected
+	var pbs_type: String = _pbs_single_type_opt.get_item_metadata(idx)
+
+	_set_status(_pbs_single_status, "Importing…", true)
+	var result: Dictionary = PbsImporter.import_file(path, pbs_type)
+
+	if result["ok"]:
+		_set_status(_pbs_single_status,
+			"Done. %d imported, %d skipped." % [result["imported"], result["skipped"]], true)
+		import_completed.emit(PbsImporter.get_target_table(pbs_type))
+	else:
+		_set_status(_pbs_single_status,
+			"%d imported, %d failed: %s" % [result["imported"], result["skipped"], result["error"]], false)
+
 
 func _on_pbs_dir_selected(dir: String) -> void:
 	_pbs_dir_edit.text = dir
