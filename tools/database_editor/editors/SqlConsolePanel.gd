@@ -13,9 +13,15 @@ var _sql_input: TextEdit
 var _btn_run: Button
 var _status_label: Label
 var _results_tree: Tree
+var _resize_overlay: Control
+var _resize_handles: Array[Control] = []
 
 # ── State ─────────────────────────────────────────────────────────────────────
 var _history: Array[String] = []
+var _resize_col: int       = -1
+var _resize_start_x: float = 0.0
+var _resize_start_w: int   = 0
+var _resize_col_count: int = -1
 
 
 func _ready() -> void:
@@ -98,12 +104,25 @@ func _build_ui() -> void:
 	results_lbl.text = "Results:"
 	bottom.add_child(results_lbl)
 
+	# Wrapper so the transparent resize overlay can sit on top of the Tree.
+	var tree_wrapper := Control.new()
+	tree_wrapper.size_flags_vertical   = SIZE_EXPAND_FILL
+	tree_wrapper.size_flags_horizontal = SIZE_EXPAND_FILL
+	bottom.add_child(tree_wrapper)
+
 	_results_tree = Tree.new()
+	_results_tree.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	_results_tree.hide_root             = true
 	_results_tree.select_mode           = Tree.SELECT_ROW
 	_results_tree.column_titles_visible = true
-	_results_tree.size_flags_vertical   = SIZE_EXPAND_FILL
-	bottom.add_child(_results_tree)
+	tree_wrapper.add_child(_results_tree)
+
+	_resize_overlay = Control.new()
+	_resize_overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_resize_overlay.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	tree_wrapper.add_child(_resize_overlay)
+
+	_results_tree.resized.connect(_update_resize_handle_positions)
 
 
 # ── Input ─────────────────────────────────────────────────────────────────────
@@ -159,11 +178,13 @@ func _display_results(rows: Array) -> void:
 
 	if rows.is_empty():
 		_results_tree.columns = 1
+		_rebuild_resize_handles(0)
 		return
 
 	# Build column list from first row
 	var col_names: Array = rows[0].keys()
-	_results_tree.columns = max(1, col_names.size())
+	var col_count: int   = max(1, col_names.size())
+	_results_tree.columns = col_count
 	for i: int in col_names.size():
 		_results_tree.set_column_title(i, str(col_names[i]))
 		_results_tree.set_column_title_alignment(i, HORIZONTAL_ALIGNMENT_LEFT)
@@ -176,6 +197,67 @@ func _display_results(rows: Array) -> void:
 		for i: int in col_names.size():
 			var val: Variant = row.get(col_names[i], null)
 			item.set_text(i, "" if val == null else str(val))
+
+	_rebuild_resize_handles(col_count)
+
+
+# ── Column resizing ───────────────────────────────────────────────────────────
+
+const _HEADER_H := 26
+
+func _rebuild_resize_handles(col_count: int) -> void:
+	for h: Control in _resize_handles:
+		h.queue_free()
+	_resize_handles.clear()
+	_resize_col_count = col_count
+	for i: int in col_count - 1:
+		var handle := Control.new()
+		handle.size = Vector2(8, _HEADER_H)
+		handle.mouse_filter = Control.MOUSE_FILTER_STOP
+		handle.mouse_default_cursor_shape = Control.CURSOR_HSIZE
+		var captured_idx := i
+		handle.gui_input.connect(func(ev): _on_handle_input(ev, captured_idx))
+		_resize_overlay.add_child(handle)
+		_resize_handles.append(handle)
+	_update_resize_handle_positions()
+
+
+func _update_resize_handle_positions() -> void:
+	if _resize_handles.is_empty() or _results_tree.columns == 0:
+		return
+	var x: float = 0.0
+	for i: int in _resize_handles.size():
+		x += _results_tree.get_column_width(i)
+		_resize_handles[i].position = Vector2(x - 4.0, 0.0)
+
+
+func _on_handle_input(event: InputEvent, col_idx: int) -> void:
+	if event is InputEventMouseButton:
+		var mb := event as InputEventMouseButton
+		if mb.button_index == MOUSE_BUTTON_LEFT:
+			if mb.pressed:
+				_resize_col     = col_idx
+				_resize_start_x = mb.global_position.x
+				_resize_start_w = _results_tree.get_column_width(col_idx)
+			else:
+				_resize_col = -1
+				_update_resize_handle_positions()
+
+
+func _input(event: InputEvent) -> void:
+	if _resize_col < 0:
+		return
+	if event is InputEventMouseButton:
+		var mb := event as InputEventMouseButton
+		if mb.button_index == MOUSE_BUTTON_LEFT and not mb.pressed:
+			_resize_col = -1
+			_update_resize_handle_positions()
+	elif event is InputEventMouseMotion:
+		var dx: int = int((event as InputEventMouseMotion).global_position.x - _resize_start_x)
+		var new_w: int = maxi(40, _resize_start_w + dx)
+		_results_tree.set_column_expand(_resize_col, false)
+		_results_tree.set_column_custom_minimum_width(_resize_col, new_w)
+		_update_resize_handle_positions()
 
 
 # ── History ───────────────────────────────────────────────────────────────────
