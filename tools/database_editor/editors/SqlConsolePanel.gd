@@ -54,16 +54,25 @@ func _build_ui() -> void:
 	btn_clear.pressed.connect(func(): _sql_input.text = "")
 	toolbar.add_child(btn_clear)
 
-	# SQL input area
+	# VSplitContainer separates the input area from the results area,
+	# guaranteeing both sections have visible space.
+	var vsplit := VSplitContainer.new()
+	vsplit.size_flags_vertical = SIZE_EXPAND_FILL
+	vsplit.split_offset = -280
+	add_child(vsplit)
+
+	# ── Top: SQL input ────────────────────────────────────────────────────────
+	var top := VBoxContainer.new()
+	top.size_flags_vertical = SIZE_EXPAND_FILL
+	vsplit.add_child(top)
+
 	_sql_input = TextEdit.new()
 	_sql_input.placeholder_text = "-- Enter SQL here, e.g.:\n-- SELECT * FROM pokemon_species LIMIT 10;\n-- UPDATE game_settings SET value='MyGame' WHERE key='game_title';"
-	_sql_input.custom_minimum_size.y = 120
 	_sql_input.size_flags_vertical = SIZE_EXPAND_FILL
-	add_child(_sql_input)
+	top.add_child(_sql_input)
 
-	# Run button + status
 	var run_row := HBoxContainer.new()
-	add_child(run_row)
+	top.add_child(run_row)
 
 	_btn_run = Button.new()
 	_btn_run.text = "Run Query  (Ctrl+Enter)"
@@ -80,17 +89,21 @@ func _build_ui() -> void:
 	btn_export.pressed.connect(_export_results)
 	run_row.add_child(btn_export)
 
-	# Results tree
+	# ── Bottom: Results ───────────────────────────────────────────────────────
+	var bottom := VBoxContainer.new()
+	bottom.size_flags_vertical = SIZE_EXPAND_FILL
+	vsplit.add_child(bottom)
+
 	var results_lbl := Label.new()
 	results_lbl.text = "Results:"
-	add_child(results_lbl)
+	bottom.add_child(results_lbl)
 
 	_results_tree = Tree.new()
-	_results_tree.hide_root = true
-	_results_tree.select_mode = Tree.SELECT_ROW
+	_results_tree.hide_root             = true
+	_results_tree.select_mode           = Tree.SELECT_ROW
 	_results_tree.column_titles_visible = true
-	_results_tree.size_flags_vertical = SIZE_EXPAND_FILL
-	add_child(_results_tree)
+	_results_tree.size_flags_vertical   = SIZE_EXPAND_FILL
+	bottom.add_child(_results_tree)
 
 
 # ── Input ─────────────────────────────────────────────────────────────────────
@@ -116,7 +129,12 @@ func _run_query() -> void:
 	_status_label.add_theme_color_override("font_color", Color(0.8, 0.8, 0.8))
 	_status_label.text = "Running..."
 
-	var first_word: String = sql.split(" ")[0].to_upper()
+	# Strip comments and find the first SQL keyword.
+	var sql_stripped: String = sql
+	while sql_stripped.begins_with("--"):
+		var nl: int = sql_stripped.find("\n")
+		sql_stripped = sql_stripped.substr(nl + 1 if nl >= 0 else sql_stripped.length()).strip_edges()
+	var first_word: String = sql_stripped.split(" ", true, 1)[0].to_upper()
 	var is_select: bool = first_word in ["SELECT", "PRAGMA", "EXPLAIN", "WITH"]
 
 	if is_select:

@@ -70,6 +70,17 @@ static func import_rows(
 			skipped += 1
 			continue
 
+		# pokemon_metrics: species_id values containing "," encode
+		# "species_id,form_index" and must go into pokemon_form_metrics.
+		var target := table_name
+		if table_name == "pokemon_metrics" and data.has("species_id"):
+			var sid: String = str(data["species_id"])
+			if "," in sid:
+				var parts := sid.split(",", true, 1)
+				data["species_id"] = parts[0].strip_edges()
+				data["form_index"] = int(parts[1].strip_edges())
+				target = "pokemon_form_metrics"
+
 		var cols := PackedStringArray()
 		var ph   := PackedStringArray()
 		var vals: Array = []
@@ -79,7 +90,7 @@ static func import_rows(
 			vals.append(data[col])
 
 		var sql := '%s INTO "%s" (%s) VALUES (%s)' % [
-			mode, table_name, ", ".join(cols), ", ".join(ph)
+			mode, target, ", ".join(cols), ", ".join(ph)
 		]
 		if RPGDatabase.execute(sql, vals):
 			imported += 1

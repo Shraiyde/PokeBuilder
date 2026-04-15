@@ -14,12 +14,13 @@
 # ── PBS type registry ─────────────────────────────────────────────────────────
 
 const PBS_REGISTRY: Dictionary = {
-	"pokemon":   {"hints": ["pokemon.txt", "pokemon"],   "table": "pokemon_species"},
-	"moves":     {"hints": ["moves.txt", "moves"],       "table": "moves"},
-	"items":     {"hints": ["items.txt", "items"],       "table": "items"},
-	"abilities": {"hints": ["abilities.txt","abilities"],"table": "abilities"},
-	"natures":   {"hints": ["natures.txt", "natures"],   "table": "natures"},
-	"types":     {"hints": ["types.txt", "types"],       "table": "types"},
+	"pokemon":         {"hints": ["pokemon.txt", "pokemon"],                 "table": "pokemon_species"},
+	"moves":           {"hints": ["moves.txt", "moves"],                     "table": "moves"},
+	"items":           {"hints": ["items.txt", "items"],                     "table": "items"},
+	"abilities":       {"hints": ["abilities.txt","abilities"],               "table": "abilities"},
+	"natures":         {"hints": ["natures.txt", "natures"],                 "table": "natures"},
+	"types":           {"hints": ["types.txt", "types"],                     "table": "types"},
+	"pokemon_metrics": {"hints": ["pokemon_metrics.txt", "pokemon_metrics"], "table": "pokemon_metrics"},
 }
 
 
@@ -200,6 +201,8 @@ static func parse_string(content: String) -> Dictionary:
 
 ## Full pipeline: parse → convert → INSERT OR REPLACE into target table.
 ## Returns {ok, imported, skipped, error}.
+## For pokemon_metrics, section IDs containing "," are routed to
+## pokemon_form_metrics (species_id,form_index) instead.
 static func import_file(path: String, pbs_type: String) -> Dictionary:
 	var parsed: Dictionary = parse_file(path)
 	if not parsed["ok"]:
@@ -209,16 +212,33 @@ static func import_file(path: String, pbs_type: String) -> Dictionary:
 	if table.is_empty():
 		return {"ok": false, "imported": 0, "skipped": 0, "error": "Unknown PBS type: %s" % pbs_type}
 
-	var imported   := 0
-	var skipped    := 0
-	var first_err  := ""
+	var imported  := 0
+	var skipped   := 0
+	var first_err := ""
 
 	RPGDatabase.execute("BEGIN")
 	for section: Dictionary in parsed["sections"]:
-		var row: Dictionary = _convert_section(section["id"], section["fields"], pbs_type)
+		var sid: String = section["id"]
+
+		# pokemon_metrics: IDs with a comma encode "species_id,form_index"
+		# and must go into pokemon_form_metrics instead.
+		var target_table := table
+		var actual_id    := sid
+		if pbs_type == "pokemon_metrics" and "," in sid:
+			target_table = "pokemon_form_metrics"
+			var parts := sid.split(",", true, 1)
+			actual_id = parts[0].strip_edges()  # will be overwritten in _conv_metrics
+
+		var row: Dictionary = _convert_section(actual_id, section["fields"], pbs_type)
 		if row.is_empty():
 			skipped += 1
 			continue
+
+		# For form entries, replace the plain species_id with the split values.
+		if pbs_type == "pokemon_metrics" and "," in sid:
+			var parts := sid.split(",", true, 1)
+			row["species_id"] = parts[0].strip_edges()
+			row["form_index"] = int(parts[1].strip_edges())
 
 		var cols := PackedStringArray()
 		var ph   := PackedStringArray()
@@ -229,7 +249,7 @@ static func import_file(path: String, pbs_type: String) -> Dictionary:
 			vals.append(row[col])
 
 		var sql := 'INSERT OR REPLACE INTO "%s" (%s) VALUES (%s)' % [
-			table, ", ".join(cols), ", ".join(ph)
+			target_table, ", ".join(cols), ", ".join(ph)
 		]
 		if RPGDatabase.execute(sql, vals):
 			imported += 1
@@ -250,12 +270,13 @@ static func import_file(path: String, pbs_type: String) -> Dictionary:
 
 static func _convert_section(id: String, f: Dictionary, pbs_type: String) -> Dictionary:
 	match pbs_type:
-		"pokemon":   return _conv_pokemon(id, f)
-		"moves":     return _conv_move(id, f)
-		"items":     return _conv_item(id, f)
-		"abilities": return _conv_ability(id, f)
-		"natures":   return _conv_nature(id, f)
-		"types":     return _conv_type(id, f)
+		"pokemon":         return _conv_pokemon(id, f)
+		"moves":           return _conv_move(id, f)
+		"items":           return _conv_item(id, f)
+		"abilities":       return _conv_ability(id, f)
+		"natures":         return _conv_nature(id, f)
+		"types":           return _conv_type(id, f)
+		"pokemon_metrics": return _conv_metrics(id, f)
 	return {}
 
 
@@ -419,6 +440,20 @@ static func _conv_type(id: String, f: Dictionary) -> Dictionary:
 		r["is_pseudo_type"] = 1 if f["IsPseudoType"].to_lower() in ["true", "1", "yes"] else 0
 	# Note: Weaknesses/Resistances/Immunities write to type_effectiveness,
 	# which requires a two-pass import — not handled here.
+	return r
+
+
+static func _conv_metrics(id: String, f: Dictionary) -> Dictionary:
+	var r: Dictionary = {"species_id": id}
+	var back_raw  := _csv(f.get("BackSprite",  "0,0"))
+	var front_raw := _csv(f.get("FrontSprite", "0,0"))
+	r["back_sprite_x"]        = int(back_raw[0])  if back_raw.size()  > 0 else 0
+	r["back_sprite_y"]        = int(back_raw[1])  if back_raw.size()  > 1 else 0
+	r["front_sprite_x"]       = int(front_raw[0]) if front_raw.size() > 0 else 0
+	r["front_sprite_y"]       = int(front_raw[1]) if front_raw.size() > 1 else 0
+	r["front_sprite_altitude"] = 0
+	_copy_int(r, f, "ShadowX",   "shadow_x")
+	_copy_int(r, f, "ShadowSize", "shadow_size")
 	return r
 
 
