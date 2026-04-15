@@ -48,8 +48,6 @@ var _btn_drop: Button
 var _btn_export: Button
 var _search_input: LineEdit
 var _lbl_row_count: Label
-var _header_bar: HBoxContainer       # Custom resizable column header
-var _header_buttons: Array[Button]   # One button per visible column (for sort indicator)
 var _data_tree: Tree
 var _btn_prev: Button
 var _btn_next: Button
@@ -62,13 +60,6 @@ var _btn_cancel: Button
 var _lbl_placeholder: Label
 var _editor_scroll: ScrollContainer
 var _field_grid: GridContainer
-
-# ── Column resize state ────────────────────────────────────────────────────────
-var _col_widths: Array[int]    = []  # Pixel width for each visible column
-var _resize_col: int           = -1  # Column being dragged (-1 = none)
-var _resize_start_x: float     = 0.0
-var _resize_start_w: int       = 0
-var _header_built_cols: int    = -1  # Column count the header was last built for
 
 
 func _ready() -> void:
@@ -137,18 +128,31 @@ func _build_toolbar() -> void:
 
 
 func _build_data_tree(parent: Container) -> void:
-	# Custom header row — buttons sort, drag handles resize columns.
-	_header_bar = HBoxContainer.new()
-	_header_bar.custom_minimum_size.y = 24
-	parent.add_child(_header_bar)
-
 	_data_tree = Tree.new()
 	_data_tree.size_flags_vertical   = SIZE_EXPAND_FILL
 	_data_tree.select_mode           = Tree.SELECT_ROW
-	_data_tree.column_titles_visible = false   # We draw our own header
+	_data_tree.column_titles_visible = true
 	_data_tree.hide_root             = true
 	_data_tree.item_selected.connect(_on_item_selected)
+	_data_tree.column_title_clicked.connect(_on_column_title_clicked)
+	_style_tree_headers()
 	parent.add_child(_data_tree)
+
+
+const _HEADER_BG       := Color(0.15, 0.15, 0.17)
+const _HEADER_BG_HOVER := Color(0.22, 0.22, 0.25)
+
+func _style_tree_headers() -> void:
+	var normal := StyleBoxFlat.new()
+	normal.bg_color = _HEADER_BG
+	normal.set_content_margin_all(4.0)
+	var hover := StyleBoxFlat.new()
+	hover.bg_color = _HEADER_BG_HOVER
+	hover.set_content_margin_all(4.0)
+	_data_tree.add_theme_stylebox_override("title_button_normal",  normal)
+	_data_tree.add_theme_stylebox_override("title_button_hover",   hover)
+	_data_tree.add_theme_stylebox_override("title_button_pressed", hover)
+	_data_tree.add_theme_color_override("title_button_color", Color(0.85, 0.85, 0.85))
 
 
 func _build_pagination(parent: Container) -> void:
@@ -254,7 +258,6 @@ func refresh() -> void:
 ## Resets to the empty state.
 func clear() -> void:
 	_current_table     = ""
-	_header_built_cols = -1
 	_data_tree.columns = 1
 	_data_tree.clear()
 	_lbl_table_name.text = "No table selected"
@@ -330,17 +333,11 @@ func _build_tree(rows: Array[Dictionary]) -> void:
 	if preview_count == 0:
 		_data_tree.columns = 1
 		_data_tree.clear()
-		_rebuild_header(0)
 		return
-
-	# Grow the widths array when we see more columns than before.
-	while _col_widths.size() < preview_count:
-		_col_widths.append(120)
 
 	_data_tree.columns = preview_count
 	for i: int in preview_count:
-		_data_tree.set_column_expand(i, i == preview_count - 1)
-		_data_tree.set_column_custom_minimum_width(i, _col_widths[i])
+		_data_tree.set_column_expand(i, true)
 
 	_rebuild_header(preview_count)
 
@@ -712,111 +709,21 @@ func _on_next_page() -> void:
 
 # ── Column header ─────────────────────────────────────────────────────────────
 
-## Rebuilds the custom header bar with sort buttons and drag handles.
-## Only does a full DOM rebuild when the column count has changed;
-## otherwise just updates sort-indicator text in place.
+## Updates the Tree's built-in column titles with the current sort indicator.
+## Native titles are guaranteed to be pixel-aligned with their columns.
 func _rebuild_header(col_count: int) -> void:
-	if col_count == _header_built_cols and _header_buttons.size() == col_count:
-		# Fast path: update sort indicators without touching the DOM.
-		for i: int in col_count:
-			var col_name: String = _columns[i]["name"]
-			var title: String = col_name
-			if col_name == _sort_col:
-				title += "  " + ("▲" if _sort_asc else "▼")
-			_header_buttons[i].text = title
-		return
-
-	_header_built_cols = col_count
-	for child in _header_bar.get_children():
-		child.queue_free()
-	_header_buttons.clear()
-
 	for i: int in col_count:
 		var col_name: String = _columns[i]["name"]
 		var title: String = col_name
 		if col_name == _sort_col:
 			title += "  " + ("▲" if _sort_asc else "▼")
-
-		var btn := Button.new()
-		btn.text = title
-		btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
-		btn.clip_text = true
-		btn.focus_mode = Control.FOCUS_NONE
-		_style_header_button(btn)
-		if i < col_count - 1:
-			btn.custom_minimum_size.x = _col_widths[i]
-			btn.size_flags_horizontal  = SIZE_SHRINK_BEGIN
-		else:
-			btn.size_flags_horizontal = SIZE_EXPAND_FILL
-		var captured_name := col_name
-		btn.pressed.connect(func(): _sort_by_column(captured_name))
-		_header_bar.add_child(btn)
-		_header_buttons.append(btn)
-
-		# Drag handle between columns (not after the last one).
-		if i < col_count - 1:
-			var handle := ColorRect.new()
-			handle.color                      = _HEADER_BG
-			handle.custom_minimum_size        = Vector2(6, 0)
-			handle.size_flags_vertical        = SIZE_EXPAND_FILL
-			handle.mouse_default_cursor_shape = Control.CURSOR_HSIZE
-			var captured_idx := i
-			handle.gui_input.connect(func(ev: InputEvent): _on_handle_input(ev, captured_idx))
-			_header_bar.add_child(handle)
+		_data_tree.set_column_title(i, title)
+		_data_tree.set_column_title_alignment(i, HORIZONTAL_ALIGNMENT_LEFT)
 
 
-const _HEADER_BG       := Color(0.15, 0.15, 0.17)
-const _HEADER_BG_HOVER := Color(0.22, 0.22, 0.25)
-
-func _style_header_button(btn: Button) -> void:
-	var normal := StyleBoxFlat.new()
-	normal.bg_color = _HEADER_BG
-	normal.set_content_margin_all(4.0)
-
-	var hover := StyleBoxFlat.new()
-	hover.bg_color = _HEADER_BG_HOVER
-	hover.set_content_margin_all(4.0)
-
-	btn.add_theme_stylebox_override("normal",   normal)
-	btn.add_theme_stylebox_override("hover",    hover)
-	btn.add_theme_stylebox_override("pressed",  hover)
-	btn.add_theme_stylebox_override("focus",    normal)
-	btn.add_theme_color_override("font_color",  Color(0.85, 0.85, 0.85))
-
-
-## Called when a drag handle receives input.
-func _on_handle_input(event: InputEvent, col_idx: int) -> void:
-	if event is InputEventMouseButton:
-		var mb := event as InputEventMouseButton
-		if mb.button_index == MOUSE_BUTTON_LEFT and mb.pressed:
-			_resize_col     = col_idx
-			_resize_start_x = mb.global_position.x
-			_resize_start_w = _col_widths[col_idx]
-
-
-## Tracks mouse drag for column resizing at the scene level.
-func _input(event: InputEvent) -> void:
-	if _resize_col < 0:
-		return
-	if event is InputEventMouseButton:
-		var mb := event as InputEventMouseButton
-		if mb.button_index == MOUSE_BUTTON_LEFT and not mb.pressed:
-			_resize_col = -1
-	elif event is InputEventMouseMotion:
-		var dx: float = (event as InputEventMouseMotion).global_position.x - _resize_start_x
-		_col_widths[_resize_col] = maxi(50, _resize_start_w + int(dx))
-		_apply_col_widths()
-
-
-## Applies the current _col_widths to both the Tree and the header buttons.
-func _apply_col_widths() -> void:
-	for i: int in _data_tree.columns:
-		if i < _col_widths.size():
-			_data_tree.set_column_custom_minimum_width(i, _col_widths[i])
-	# Update button minimum widths (all except the last, which auto-expands).
-	for i: int in _header_buttons.size() - 1:
-		if i < _col_widths.size():
-			_header_buttons[i].custom_minimum_size.x = _col_widths[i]
+func _on_column_title_clicked(column: int, _mouse_button: int) -> void:
+	if column < _columns.size():
+		_sort_by_column(_columns[column]["name"])
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
