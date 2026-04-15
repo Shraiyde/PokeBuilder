@@ -49,6 +49,12 @@ var _btn_export: Button
 var _search_input: LineEdit
 var _lbl_row_count: Label
 var _data_tree: Tree
+var _resize_overlay: Control        # Transparent overlay for drag handles
+var _resize_handles: Array[Control] # One per column gap, positioned via get_column_width()
+var _resize_col: int       = -1     # Column being dragged (-1 = none)
+var _resize_start_x: float = 0.0
+var _resize_start_w: int   = 0
+var _resize_col_count: int = -1     # Column count handles were last built for
 var _btn_prev: Button
 var _btn_next: Button
 var _lbl_page: Label
@@ -128,15 +134,30 @@ func _build_toolbar() -> void:
 
 
 func _build_data_tree(parent: Container) -> void:
+	# Wrapper Control so the transparent resize overlay can sit on top of the Tree.
+	var wrapper := Control.new()
+	wrapper.size_flags_vertical   = SIZE_EXPAND_FILL
+	wrapper.size_flags_horizontal = SIZE_EXPAND_FILL
+	parent.add_child(wrapper)
+
 	_data_tree = Tree.new()
-	_data_tree.size_flags_vertical   = SIZE_EXPAND_FILL
+	_data_tree.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	_data_tree.select_mode           = Tree.SELECT_ROW
 	_data_tree.column_titles_visible = true
 	_data_tree.hide_root             = true
 	_data_tree.item_selected.connect(_on_item_selected)
 	_data_tree.column_title_clicked.connect(_on_column_title_clicked)
 	_style_tree_headers()
-	parent.add_child(_data_tree)
+	wrapper.add_child(_data_tree)
+
+	# Overlay: covers the header area only. mouse_filter=IGNORE passes all events
+	# through to the Tree below, except on the drag handles themselves.
+	_resize_overlay = Control.new()
+	_resize_overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_resize_overlay.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	wrapper.add_child(_resize_overlay)
+
+	_data_tree.resized.connect(_update_resize_handle_positions)
 
 
 const _HEADER_BG       := Color(0.15, 0.15, 0.17)
@@ -257,7 +278,12 @@ func refresh() -> void:
 
 ## Resets to the empty state.
 func clear() -> void:
-	_current_table     = ""
+	_current_table    = ""
+	_resize_col       = -1
+	_resize_col_count = -1
+	for h: Control in _resize_handles:
+		h.queue_free()
+	_resize_handles.clear()
 	_data_tree.columns = 1
 	_data_tree.clear()
 	_lbl_table_name.text = "No table selected"
@@ -709,21 +735,86 @@ func _on_next_page() -> void:
 
 # ── Column header ─────────────────────────────────────────────────────────────
 
-## Updates the Tree's built-in column titles with the current sort indicator.
-## Native titles are guaranteed to be pixel-aligned with their columns.
+## Updates the Tree's built-in column titles with the current sort indicator,
+## and (re)builds the transparent resize handles if the column count changed.
 func _rebuild_header(col_count: int) -> void:
 	for i: int in col_count:
 		var col_name: String = _columns[i]["name"]
-		var title: String = col_name
+		var title: String    = col_name
 		if col_name == _sort_col:
 			title += "  " + ("▲" if _sort_asc else "▼")
 		_data_tree.set_column_title(i, title)
 		_data_tree.set_column_title_alignment(i, HORIZONTAL_ALIGNMENT_LEFT)
 
+	if col_count != _resize_col_count:
+		_resize_col_count = col_count
+		_rebuild_resize_handles(col_count)
+	else:
+		_update_resize_handle_positions()
+
 
 func _on_column_title_clicked(column: int, _mouse_button: int) -> void:
 	if column < _columns.size():
 		_sort_by_column(_columns[column]["name"])
+
+
+# ── Column resize ─────────────────────────────────────────────────────────────
+
+const _HEADER_H := 26  # Approximate Tree header row height in pixels.
+
+## Creates one drag handle per column gap, positioned over the header area.
+func _rebuild_resize_handles(col_count: int) -> void:
+	for h: Control in _resize_handles:
+		h.queue_free()
+	_resize_handles.clear()
+
+	for i: int in col_count - 1:
+		var handle := Control.new()
+		handle.size                       = Vector2(8, _HEADER_H)
+		handle.mouse_filter               = Control.MOUSE_FILTER_STOP
+		handle.mouse_default_cursor_shape = Control.CURSOR_HSIZE
+		var captured_idx := i
+		handle.gui_input.connect(func(ev: InputEvent) -> void:
+			_on_handle_input(ev, captured_idx))
+		_resize_overlay.add_child(handle)
+		_resize_handles.append(handle)
+
+	_update_resize_handle_positions()
+
+
+## Repositions handles to sit on each column boundary using the Tree's own widths.
+func _update_resize_handle_positions() -> void:
+	if _resize_handles.is_empty() or _data_tree.columns == 0:
+		return
+	var x: float = 0.0
+	for i: int in _resize_handles.size():
+		x += _data_tree.get_column_width(i)
+		_resize_handles[i].position = Vector2(x - 4.0, 0.0)
+
+
+func _on_handle_input(event: InputEvent, col_idx: int) -> void:
+	if event is InputEventMouseButton:
+		var mb := event as InputEventMouseButton
+		if mb.button_index == MOUSE_BUTTON_LEFT and mb.pressed:
+			_resize_col     = col_idx
+			_resize_start_x = mb.global_position.x
+			_resize_start_w = _data_tree.get_column_width(col_idx)
+
+
+func _input(event: InputEvent) -> void:
+	if _resize_col < 0:
+		return
+	if event is InputEventMouseButton:
+		var mb := event as InputEventMouseButton
+		if mb.button_index == MOUSE_BUTTON_LEFT and not mb.pressed:
+			_resize_col = -1
+			_update_resize_handle_positions()
+	elif event is InputEventMouseMotion:
+		var dx: int = int((event as InputEventMouseMotion).global_position.x - _resize_start_x)
+		var new_w: int = maxi(40, _resize_start_w + dx)
+		_data_tree.set_column_expand(_resize_col, false)
+		_data_tree.set_column_custom_minimum_width(_resize_col, new_w)
+		_update_resize_handle_positions()
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
