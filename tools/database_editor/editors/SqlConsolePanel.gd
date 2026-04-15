@@ -127,14 +127,30 @@ func _build_ui() -> void:
 
 # ── Input ─────────────────────────────────────────────────────────────────────
 
-func _unhandled_input(event: InputEvent) -> void:
-	if not visible:
-		return
+# _input fires before any child widget's gui_input, so Ctrl+Enter is caught
+# even when the TextEdit has focus (which would swallow _unhandled_input).
+# Also handles mouse drag for column resizing.
+func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
-		var key_event := event as InputEventKey
-		if key_event.pressed and key_event.keycode == KEY_ENTER and key_event.ctrl_pressed:
+		var ke := event as InputEventKey
+		if ke.pressed and ke.keycode == KEY_ENTER and ke.ctrl_pressed and visible:
 			_run_query()
 			get_viewport().set_input_as_handled()
+			return
+
+	if _resize_col < 0:
+		return
+	if event is InputEventMouseButton:
+		var mb := event as InputEventMouseButton
+		if mb.button_index == MOUSE_BUTTON_LEFT and not mb.pressed:
+			_resize_col = -1
+			_update_resize_handle_positions()
+	elif event is InputEventMouseMotion:
+		var dx: int = int((event as InputEventMouseMotion).global_position.x - _resize_start_x)
+		var new_w: int = maxi(40, _resize_start_w + dx)
+		_results_tree.set_column_expand(_resize_col, false)
+		_results_tree.set_column_custom_minimum_width(_resize_col, new_w)
+		_update_resize_handle_positions()
 
 
 # ── Query execution ───────────────────────────────────────────────────────────
@@ -242,22 +258,6 @@ func _on_handle_input(event: InputEvent, col_idx: int) -> void:
 			else:
 				_resize_col = -1
 				_update_resize_handle_positions()
-
-
-func _input(event: InputEvent) -> void:
-	if _resize_col < 0:
-		return
-	if event is InputEventMouseButton:
-		var mb := event as InputEventMouseButton
-		if mb.button_index == MOUSE_BUTTON_LEFT and not mb.pressed:
-			_resize_col = -1
-			_update_resize_handle_positions()
-	elif event is InputEventMouseMotion:
-		var dx: int = int((event as InputEventMouseMotion).global_position.x - _resize_start_x)
-		var new_w: int = maxi(40, _resize_start_w + dx)
-		_results_tree.set_column_expand(_resize_col, false)
-		_results_tree.set_column_custom_minimum_width(_resize_col, new_w)
-		_update_resize_handle_positions()
 
 
 # ── History ───────────────────────────────────────────────────────────────────

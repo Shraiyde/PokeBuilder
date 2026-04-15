@@ -484,7 +484,7 @@ func _build_form(row_data: Dictionary) -> void:
 			te.text = val_str
 			te.custom_minimum_size = Vector2(0, 55)
 			te.size_flags_horizontal = SIZE_EXPAND_FILL
-			te.text_changed.connect(func(): _mark_dirty(col_name))
+			te.text_changed.connect(func(): _clear_field_highlight(col_name); _mark_dirty(col_name))
 			input = te
 		else:
 			var le := LineEdit.new()
@@ -494,7 +494,7 @@ func _build_form(row_data: Dictionary) -> void:
 			if not _is_insert_mode and is_pk:
 				le.editable = false
 				le.modulate = Color(1, 1, 1, 0.55)
-			le.text_changed.connect(func(_v: String): _mark_dirty(col_name))
+			le.text_changed.connect(func(_v: String): _clear_field_highlight(col_name); _mark_dirty(col_name))
 			input = le
 
 		_field_inputs[col_name] = input
@@ -673,6 +673,7 @@ func _sort_by_column(col_name: String) -> void:
 
 func _on_save_record() -> void:
 	_editor_error.hide()
+	_clear_all_field_highlights()
 	var data := _collect_form_data()
 	var result: Dictionary
 
@@ -690,8 +691,10 @@ func _on_save_record() -> void:
 		result = _DB.update_row(_current_table, _pk_col, _editing_pk, changes)
 
 	if not result["ok"]:
-		_editor_error.text = "Error: %s" % result.get("error", "Unknown error.")
+		var err: String = result.get("error", "Unknown error.")
+		_editor_error.text = "Error: %s" % err
 		_editor_error.show()
+		_highlight_error_fields(data, err)
 		return
 
 	_is_dirty = false
@@ -815,6 +818,65 @@ func _input(event: InputEvent) -> void:
 		_data_tree.set_column_expand(_resize_col, false)
 		_data_tree.set_column_custom_minimum_width(_resize_col, new_w)
 		_update_resize_handle_positions()
+
+
+# ── Field error highlighting ──────────────────────────────────────────────────
+
+func _highlight_error_fields(data: Dictionary, err: String) -> void:
+	var bad_cols: Array[String] = []
+
+	# SQLite formats constraint errors as:
+	#   "UNIQUE constraint failed: table.column"
+	#   "NOT NULL constraint failed: table.column"
+	if "constraint failed: " in err and "FOREIGN KEY" not in err:
+		var after: String = err.split("constraint failed: ", true, 1)[1]
+		if "." in after:
+			bad_cols.append(after.split(".", true, 1)[1].strip_edges())
+
+	# For FK violations SQLite gives no column name, so check each FK column.
+	if "FOREIGN KEY" in err:
+		var fk_list: Array = RPGDatabase.query(
+			"PRAGMA foreign_key_list('%s')" % _current_table)
+		for fk: Dictionary in fk_list:
+			var from_col: String = str(fk.get("from", ""))
+			if from_col == "" or not data.has(from_col):
+				continue
+			var ref_table: String = str(fk.get("table", ""))
+			var ref_col:   String = str(fk.get("to", ""))
+			var val: Variant = data[from_col]
+			if val == null or str(val) == "":
+				continue
+			var found: Array = RPGDatabase.query(
+				'SELECT 1 FROM "%s" WHERE "%s" = ? LIMIT 1' % [ref_table, ref_col], [val])
+			if found.is_empty():
+				bad_cols.append(from_col)
+
+	for col: String in bad_cols:
+		if _field_inputs.has(col):
+			_apply_error_style(_field_inputs[col])
+
+
+func _apply_error_style(inp: Control) -> void:
+	var sb := StyleBoxFlat.new()
+	sb.bg_color = Color(0.35, 0.05, 0.05)
+	sb.border_color = Color(1.0, 0.3, 0.3)
+	sb.set_border_width_all(1)
+	sb.set_content_margin_all(4.0)
+	if inp is LineEdit:
+		inp.add_theme_stylebox_override("normal", sb)
+	elif inp is TextEdit:
+		inp.add_theme_stylebox_override("normal", sb)
+
+
+func _clear_field_highlight(col_name: String) -> void:
+	if _field_inputs.has(col_name):
+		var inp: Control = _field_inputs[col_name]
+		inp.remove_theme_stylebox_override("normal")
+
+
+func _clear_all_field_highlights() -> void:
+	for col_name: String in _field_inputs:
+		_field_inputs[col_name].remove_theme_stylebox_override("normal")
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
