@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbe4ncxmtypq7"]
+
+[ext_resource type="Script" path="res://tools/database_editor/DatabaseEditor.gd" id="1_main"]
+
+; ── Root ──────────────────────────────────────────────────────────────────────
+; All UI is built programmatically in DatabaseEditor.gd _build_ui().
+; Open this scene and press F6 to run the editor as a standalone tool.
+[node name="DatabaseEditor" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_main")

@@ -1,6 +1,6 @@
 # PokeBuilder — Project Documentation
 
-> Last updated: 2026-04-13 (rev 6 — GameData: badges, town map, Z-moves, contest data + runtime queries)
+> Last updated: 2026-04-14 (rev 7 — Database Editor tool: full implementation in tools/database_editor/)
 > Engine: **Godot 4.6** · Renderer: **Mobile** · Graphics API: **D3D12** (Windows) · Language: **GDScript**
 
 ---
@@ -34,7 +34,7 @@
 10. [Audio System](#10-audio-system)
 11. [Text & Translation System](#11-text--translation-system)
 12. [Coding Conventions](#12-coding-conventions)
-13. [Planned Tools](#13-planned-tools)
+13. [Database Editor](#13-database-editor)
 14. [Reference: Pokémon Essentials Equivalences](#14-reference-pokémon-essentials-equivalences)
 
 ---
@@ -734,13 +734,13 @@ Entry and exit point for all battle types. Uses `await` so the calling code gets
 ```gdscript
 # Wild
 var result: Dictionary = await BattleManager.start_wild_battle({
-    "species_id": "PIDGEY", "level": 12, "shiny": false
+	"species_id": "PIDGEY", "level": 12, "shiny": false
 })
 
 # Wild double
 var result: Dictionary = await BattleManager.start_wild_double_battle(
-    {"species_id": "ODDISH", "level": 8},
-    {"species_id": "BELLSPROUT", "level": 9}
+	{"species_id": "ODDISH", "level": 8},
+	{"species_id": "BELLSPROUT", "level": 9}
 )
 
 # Trainer
@@ -765,9 +765,9 @@ var result: Dictionary = await BattleManager.start_frontier_battle(opponent_conf
 
 ```gdscript
 {
-    "outcome": BattleManager.Outcome.WIN,
-    # For CAUGHT — must be a Pokemon instance, not a raw Dictionary:
-    "caught_pokemon": pokemon_instance,
+	"outcome": BattleManager.Outcome.WIN,
+	# For CAUGHT — must be a Pokemon instance, not a raw Dictionary:
+	"caught_pokemon": pokemon_instance,
 }
 ```
 
@@ -1532,7 +1532,7 @@ Each Pokémon slot in `party` and `pc_boxes` serializes to:
   "ivs": [31, 28, 22, 15, 20, 31],
   "evs": [0, 0, 0, 0, 0, 0],
   "moves": [
-    {"move_id": "THUNDERBOLT", "current_pp": 15, "max_pp": 15, "pp_ups": 0}
+	{"move_id": "THUNDERBOLT", "current_pp": 15, "max_pp": 15, "pp_ups": 0}
   ],
   "status": 0,
   "sleep_turns": 0,
@@ -1618,21 +1618,108 @@ Keys follow the pattern `CATEGORY_DESCRIPTION_VARIANT`, e.g.:
 
 ---
 
-## 13. Planned Tools
+## 13. Database Editor
 
-### Database Editor (`tools/database_editor/`)
+**Scene:** `tools/database_editor/DatabaseEditor.tscn`  
+**How to open:** Select the scene in the Godot editor and press **F6**.
 
-A GUI mini-app (Godot scene) for editing the SQLite database without external tools. Planned editors:
+A built-in GUI tool for browsing and editing the SQLite database without any external software. It connects through the `RPGDatabase` autoload (the same path used at runtime) so all constraints and pragmas are in effect.
 
-- Species editor (stats, types, learnsets, evolutions)
-- Move editor
-- Item editor
-- Trainer editor
-- Map connection editor
+### File structure
+
+```
+tools/database_editor/
+├── DatabaseEditor.tscn          # Entry point scene (run with F6)
+├── DatabaseEditor.gd            # Main controller; builds the UI in code
+├── DatabaseEditorConstants.gd   # Protected table list, category map, display names
+├── DatabaseEditorDB.gd          # Static helpers: schema queries, CRUD, DDL, CSV export
+└── editors/
+    ├── TableListPanel.gd        # Left sidebar: categorised tree with row-count badges
+    ├── TableDataView.gd         # Data grid + embedded record editor
+    ├── CreateTableDialog.gd     # Dialog for defining a new custom table
+    ├── ColumnManagerDialog.gd   # Dialog for adding columns to custom tables
+    └── SqlConsolePanel.gd       # Raw SQL console with history and CSV export
+```
+
+### Layout
+
+```
+┌─ header: title · SQL Console toggle · Reload ──────────────────────────────┐
+│ TableListPanel (230 px) │ TableDataView  ─OR─  SqlConsolePanel              │
+│                         │ ┌─ toolbar ──────────────────────────────────────┐│
+│  Configuration          │ │ Table name  Add  Dup  Del  [Cols]  [Drop]  CSV ││
+│  Types & Battle         │ │                         Search…       N rows   ││
+│  Moves                  │ └────────────────────────────────────────────────┘│
+│  Items                  │ ┌─ data grid (Tree, preview up to 6 columns) ─────┐│
+│  Pokémon Species        │ │ col_a ↑  col_b   col_c   col_d   …              ││
+│  Pokémon Learning       │ │ …                                               ││
+│  Trainers               │ └──────────────── pagination ─────────────────────┘│
+│  World                  │ ┌─ record editor panel (230 px) ─────────────────┐│
+│  Special Features       │ │ Editing: FIRE *        [Save]  [Cancel]        ││
+│  Custom Tables  (3)     │ │ id*       FIRE         name    Fire             ││
+│  Views (read-only)      │ │ color     #FF4500      …                       ││
+└─────────────────────────┘ └────────────────────────────────────────────────┘│
+```
+
+### Features
+
+#### Table browser (left panel)
+- Tables grouped by category with row-count badge `(N)`.
+- Colour coding: custom tables in blue, views in purple, read-only in grey.
+- Filter box to search by table name.
+- **Right-click** on a custom table → Manage Columns / Drop Table.
+- **+ New** button to create a custom table.
+
+#### Data grid
+- Up to **6 columns** shown as a preview; click a column header to sort (ascending/descending, toggled per click).
+- **Pagination** — 100 rows per page with Prev / Next controls.
+- **Search/filter** — filters on the first text column using `LIKE %term%`; page resets automatically.
+- **Export CSV** — copies the entire table (all rows, not just the current page) to the clipboard.
+
+#### Record editor (bottom panel)
+- Appears when a row is selected or **+ Add Row** is clicked.
+- Shows **all** columns (not just the 6-column preview).
+- Long-text columns (`description`, `notes`, `flavor`, etc.) use a `TextEdit`; others use `LineEdit`.
+- **Unsaved-changes tracking**: the panel title shows `*` when inputs differ from the loaded values.
+- Navigating away while dirty triggers a confirmation dialog.
+- **Save** performs an `UPDATE` (edit mode) or `INSERT` (new-row mode). On success the row is re-selected.
+- **Duplicate row** — copies all non-PK columns into a new `INSERT` and jumps to the last page.
+- **Delete row** — shows a confirmation dialog before executing `DELETE`.
+- INTEGER PRIMARY KEY columns are hidden in insert mode (SQLite handles autoincrement).
+- TEXT PRIMARY KEY columns are editable in insert mode; read-only in edit mode.
+
+#### Custom tables
+- Created via **+ New** → `CreateTableDialog`: set table name and define columns (name, type, PK, NOT NULL, default).
+- Registered in an internal `custom_tables` table so they appear in the sidebar after restart.
+- **Add column** via `ColumnManagerDialog` (right-click → Manage Columns). Removing columns is not supported directly by SQLite; use the SQL console to rebuild the table if needed.
+- **Drop table** removes the table and its registry entry after confirmation.
+
+#### SQL console
+- Toggle with the **SQL Console** button in the header.
+- `SELECT` / `PRAGMA` / `EXPLAIN` queries display results in a tree grid.
+- All other statements run via `execute()` and report success or the driver error.
+- **Ctrl + Enter** to run.
+- Query history (last 20) accessible via dropdown.
+- **Export results as CSV** copies the current result set to the clipboard.
+
+### Table classification
+
+| Classification | Behaviour |
+|---|---|
+| **Protected** (`db_metadata`, `custom_tables`) | Never shown in the editable list |
+| **Built-in** (all schema tables) | Rows editable; schema (columns) is fixed |
+| **Views** (`v_species_full`, etc.) | Shown under Views (read-only); no editing |
+| **Custom** (user-created) | Full CRUD on rows; schema management via Manage Columns |
+
+### RPGDatabase change
+
+`last_error() -> String` added to `core/database/RPGDatabase.gd`. Returns `_db.error_message` from the gdsqlite driver so the editor can surface meaningful error messages to the user.
+
+---
 
 ### Animation Creator (`tools/animation_creator/`)
 
-Visual tool for creating move animations frame by frame, with support for Pokémon Essentials' `AnimationEditor`-style keyframe system.
+Visual tool for creating move animations frame by frame. **Not yet implemented.**
 
 ---
 

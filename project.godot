@@ -26,6 +26,15 @@ SceneManager="*res://core/autoloads/SceneManager.gd"
 BattleManager="*res://core/autoloads/BattleManager.gd"
 TextManager="*res://core/autoloads/TextManager.gd"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot-sqlite/plugin.cfg")
