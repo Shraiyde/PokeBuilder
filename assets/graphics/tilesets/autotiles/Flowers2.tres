@@ -1,0 +1,19 @@
+[gd_resource type="TileSet" load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/graphics/tilesets/autotiles/Flowers2.png" id="1_Flowers2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_Flowers2"]
+texture = ExtResource("1_Flowers2")
+margins = Vector2i(0, 0)
+separation = Vector2i(0, 0)
+texture_region_size = Vector2i(32, 32)
+use_texture_padding = false
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+
+[resource]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_Flowers2")
