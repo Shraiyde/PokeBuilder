@@ -815,7 +815,10 @@ def migrate_pokemon_metrics(con: sqlite3.Connection, pbs: Path) -> None:
         return
 
     sections: list[tuple[str, dict[str, str]]] = parse_pbs_sections(read_file(path))
-    rows: list[tuple] = []
+
+    base_rows: list[tuple] = []   # → pokemon_metrics
+    form_rows: list[tuple] = []   # → pokemon_form_metrics
+
     for sid, fields in sections:
         back_raw:  list[str] = csv_split(fields.get("BackSprite",  "0,0"))
         front_raw: list[str] = csv_split(fields.get("FrontSprite", "0,0"))
@@ -825,19 +828,38 @@ def migrate_pokemon_metrics(con: sqlite3.Connection, pbs: Path) -> None:
         front_y:   int = safe_int(front_raw[1]) if len(front_raw) > 1 else 0
         shadow_x:  int = safe_int(fields.get("ShadowX",   "0"))
         shadow_sz: int = clamp(safe_int(fields.get("ShadowSize", "2")), 0, 3)
-        rows.append((sid, back_x, back_y, front_x, front_y, 0, shadow_x, shadow_sz))
+        sprite_data: tuple = (back_x, back_y, front_x, front_y, 0, shadow_x, shadow_sz)
+
+        # Section IDs with a comma encode "species_id,form_index" and belong
+        # in pokemon_form_metrics, not pokemon_metrics.
+        if "," in sid:
+            parts: list[str] = sid.split(",", 1)
+            species_id: str = parts[0].strip()
+            form_index: int = safe_int(parts[1].strip())
+            form_rows.append((species_id, form_index) + sprite_data)
+        else:
+            base_rows.append((sid,) + sprite_data)
 
     cur: sqlite3.Cursor = con.cursor()
     cur.execute("DELETE FROM pokemon_metrics")
     cur.executemany(
-        "INSERT OR IGNORE INTO pokemon_metrics"
+        "INSERT OR IGNORE INTO pokemon_metrics "
         "(species_id, back_sprite_x, back_sprite_y, front_sprite_x, front_sprite_y,"
         " front_sprite_altitude, shadow_x, shadow_size)"
         " VALUES (?,?,?,?,?,?,?,?)",
-        rows,
+        base_rows,
     )
+    if form_rows:
+        cur.execute("DELETE FROM pokemon_form_metrics")
+        cur.executemany(
+            "INSERT OR IGNORE INTO pokemon_form_metrics "
+            "(species_id, form_index, back_sprite_x, back_sprite_y, front_sprite_x, front_sprite_y,"
+            " front_sprite_altitude, shadow_x, shadow_size)"
+            " VALUES (?,?,?,?,?,?,?,?,?)",
+            form_rows,
+        )
     con.commit()
-    print(f"  pokemon_metrics: {len(rows)} filas")
+    print(f"  pokemon_metrics: {len(base_rows)} filas base, {len(form_rows)} filas de forma")
 
 
 def migrate_trainers(con: sqlite3.Connection, pbs: Path) -> None:

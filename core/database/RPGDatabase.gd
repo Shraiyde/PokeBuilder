@@ -138,6 +138,14 @@ func last_insert_id() -> int:
 	return _db.last_insert_rowid
 
 
+## Returns the last error message produced by the database driver.
+## Useful for displaying meaningful errors in the database editor tool.
+func last_error() -> String:
+	if _db == null:
+		return "Database not open."
+	return _db.error_message
+
+
 ## Executes multiple statements inside a single transaction.
 ## Rolls back and returns false if any statement fails.
 ##

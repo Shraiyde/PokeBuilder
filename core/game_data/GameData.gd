@@ -525,7 +525,7 @@ func trainer_team(type_id: String, trainer_name: String, version_index: int = 0)
 	for pk: Dictionary in pokemon:
 		var tp_id:   int   = pk.get("id", -1)
 		var pk_moves: Array = RPGDatabase.query(
-			"SELECT move_id FROM trainer_pokemon_moves"
+			"SELECT move_id FROM trainer_pokemon_moves" +
 			" WHERE trainer_pokemon_id = ? ORDER BY position",
 			[tp_id])
 		pk["moves"] = pk_moves.map(func(r: Dictionary) -> String: return r["move_id"])
@@ -537,8 +537,8 @@ func trainer_team(type_id: String, trainer_name: String, version_index: int = 0)
 ## encounter_type: "Land" | "LandNight" | "Water" | "OldRod" | etc.
 func encounters_for_map(map_id: int, encounter_type: String) -> Array:
 	return RPGDatabase.query(
-		"SELECT * FROM encounter_slots"
-		" WHERE map_id = ? AND encounter_type = ?"
+		"SELECT * FROM encounter_slots" +
+		" WHERE map_id = ? AND encounter_type = ?" +
 		" ORDER BY slot_index",
 		[map_id, encounter_type])
 
