@@ -1,6 +1,6 @@
 # PokeBuilder — Project Documentation
 
-> Last updated: 2026-04-14 (rev 7 — Database Editor tool: full implementation in tools/database_editor/)
+> Last updated: 2026-05-06 (rev 8 — Tilesets imported from Pokémon Essentials v21.1; autotile terrain system)
 > Engine: **Godot 4.6** · Renderer: **Mobile** · Graphics API: **D3D12** (Windows) · Language: **GDScript**
 
 ---
@@ -35,7 +35,8 @@
 11. [Text & Translation System](#11-text--translation-system)
 12. [Coding Conventions](#12-coding-conventions)
 13. [Database Editor](#13-database-editor)
-14. [Reference: Pokémon Essentials Equivalences](#14-reference-pokémon-essentials-equivalences)
+14. [Tilesets & Overworld Map](#14-tilesets--overworld-map)
+15. [Reference: Pokémon Essentials Equivalences](#15-reference-pokémon-essentials-equivalences)
 
 ---
 
@@ -78,8 +79,9 @@
 | Addon | Purpose | Path |
 |-------|---------|------|
 | `godot-sqlite` (2shady4u) | SQLite database access | `res://addons/godot-sqlite/` |
+| `regen_terrain` (built-in) | Regenerates terrain TileSet resources | `res://addons/regen_terrain/` |
 
-Enable in: **Project → Project Settings → Plugins → godot-sqlite → Enable**.
+Enable both in: **Project → Project Settings → Plugins → (addon) → Enable**.
 
 ### Autoload registration order
 
@@ -105,7 +107,8 @@ TextManager = "*res://core/autoloads/TextManager.gd"
 ```
 poke-builder/
 ├── addons/
-│   └── godot-sqlite/
+│   ├── godot-sqlite/
+│   └── regen_terrain/          # EditorPlugin: Project → Tools → Regen Terrain TileSets
 ├── assets/
 │   ├── audio/
 │   │   ├── bgm/            # Background music (.ogg / .mp3)
@@ -125,6 +128,9 @@ poke-builder/
 │       │   ├── icons/  icons_shiny/  eggs/
 │       │   ├── footprints/  shadow/
 │       ├── tilesets/
+│       │   ├── tilesets/           # 22 standard tilesets (256 px wide, 32×32 tiles) + .tres
+│       │   ├── autotiles/          # 40 raw RPGMXP autotiles (96×128 px) + simple .tres
+│       │   └── autotiles_terrain/  # 28 converted terrain atlases (256×192, 47 blob tiles) + .tres
 │       ├── trainers/
 │       ├── transitions/
 │       ├── ui/
@@ -166,8 +172,11 @@ poke-builder/
 │       ├── bag/  party/  pokedex/  storage/  summary/  town_map/
 └── tools/
     ├── animation_creator/       # Move animation editor tool
-    └── database_editor/         # SQLite database mini-app
-        └── editors/
+    ├── database_editor/         # SQLite database mini-app
+    │   └── editors/
+    ├── generate_tilesets.py     # Generates plain .tres for tilesets/ and autotiles/
+    ├── convert_autotiles.py     # Converts RPGMXP 96×128 autotiles → 256×192 terrain atlases
+    └── regen_terrain_tilesets.gd # Legacy EditorScript (superseded by the regen_terrain plugin)
 ```
 
 > Empty directories contain a `.gdkeep` placeholder file so Git tracks them.
@@ -1723,7 +1732,130 @@ Visual tool for creating move animations frame by frame. **Not yet implemented.*
 
 ---
 
-## 14. Reference: Pokémon Essentials Equivalences
+## 14. Tilesets & Overworld Map
+
+All graphical assets are sourced from **Pokémon Essentials v21.1** and live under `assets/graphics/tilesets/`.
+
+### Tileset inventory
+
+| Folder | Contents | Format | Use |
+|--------|----------|--------|-----|
+| `tilesets/` | 22 standard tilesets | PNG 256 px wide, 32×32 tiles | Walls, floors, buildings, interiors |
+| `autotiles/` | 40 raw autotiles | PNG 96×128 (RPGMXP format) | Simple atlas, no auto-connection |
+| `autotiles_terrain/` | 28 terrain atlases | PNG 256×192, 47 blob tiles each | Auto-connecting ground/water/paths |
+
+Each folder contains one `.tres` TileSet resource per PNG, placed alongside it so Godot can load it directly.
+
+---
+
+### Using standard tilesets (`tilesets/`)
+
+These are regular tilemaps — pick tiles manually and paint.
+
+1. Create a **TileMap** node in your scene.
+2. Set its **tile_set** property to any `.tres` from `assets/graphics/tilesets/tilesets/`  
+   (e.g. `Outside.tres`, `Interior general.tres`).
+3. In the bottom panel, open the **TileMap** tab → **Select** mode.
+4. Pick tiles from the atlas and paint them on the canvas.
+
+**Sorted by use-case:**
+
+| TileSet | Typical use |
+|---------|-------------|
+| `Outside.tres` | Overworld: routes, towns, grass, paths |
+| `Caves.tres` / `Dungeon cave.tres` | Cave interiors |
+| `Interior general.tres` | Generic building interiors |
+| `Poke Centre interior.tres` / `Mart interior.tres` | Pokémon Centre, shop |
+| `Gyms interior.tres` | Gym floors |
+| `Underwater.tres` | Diving routes |
+| `Boat.tres` | Ship decks |
+| … | _(see full list in tilesets/)_ |
+
+---
+
+### Using terrain autotiles (`autotiles_terrain/`)
+
+These use Godot's **Terrain** system so tiles auto-connect based on their neighbours — painting a patch of grass automatically selects the correct edge and corner tiles.
+
+#### One-time setup (run once, or after adding new autotile PNGs)
+
+1. **Enable the plugin:** Project → Project Settings → Plugins → **Regen Terrain TileSets** → Enable.
+2. **Run the regeneration:** **Project → Tools → Regen Terrain TileSets**.
+3. Wait for `Done! Regenerated N TileSet resources` in the Output panel.  
+   This rewrites every `.tres` in `autotiles_terrain/` using Godot's API so terrain peering bits are stored in the correct format.
+
+> You only need to do this once. Re-run it if you add new autotile PNGs to `autotiles_terrain/`.
+
+#### Painting terrain tiles
+
+1. Create a **TileMap** node.
+2. Set **tile_set** to a `.tres` from `assets/graphics/tilesets/autotiles_terrain/`  
+   (e.g. `Sea.tres`, `Dirt.tres`, `Light grass.tres`).
+3. In the bottom **TileMap** panel, switch to the **Terrains** tab.
+4. Select the terrain (there is one terrain per TileSet) and paint — tiles auto-connect.
+
+**Available terrain autotiles (28):**
+
+`Blue cave floor` · `Blue cave mud` · `Brick path` · `Brown cave floor` · `Brown cave sand` ·
+`Dirt` · `Dirt cave highlight` · `Fountain1` · `Fountain2` · `Gravel` · `Green cave floor` ·
+`Light grass` · `Red cave floor` · `Red cave highlight` · `Sand` · `Sand shore` · `Sea` ·
+`Sea deep` · `Sea without shore` · `Snow cave floor` · `Snow cave highlight` ·
+`Snow cave ice border` · `Still water` · `Underwater dark` · `Water rock` ·
+`White cave floor` · `White cave highlight` · `White path`
+
+---
+
+### WorldMap scene
+
+**Scene:** `scenes/overworld/WorldMap.tscn`  
+**Script:** `core/overworld/WorldMap.gd`
+
+A ready-made overworld scene with three TileMap layers and a Camera2D.
+
+```
+WorldMap (Node2D)
+├── Layers/
+│   ├── Layer0_Ground   — terrain, ground tiles (grass, water, paths)
+│   ├── Layer1_Objects  — objects on the ground (buildings, trees, ledges)
+│   └── Layer2_Overhead — tiles drawn above the player (overhangs, rooftops)
+├── Entities            — NPCs, items, events (y-sorted with the player)
+└── Camera2D
+```
+
+All three layers share the same TileSet. Assign it once with:
+
+```gdscript
+var ts := preload("res://assets/graphics/tilesets/tilesets/Outside.tres")
+var map := preload("res://scenes/overworld/WorldMap.tscn").instantiate()
+map.set_tileset(ts)
+add_child(map)
+map.load_map("pallet_town")   # TODO: reads tile data from RPGDatabase
+```
+
+#### API
+
+| Method | Description |
+|--------|-------------|
+| `set_tileset(tileset: TileSet)` | Assigns the TileSet to all three layers at once |
+| `load_map(map_id: String)` | Loads tile data from the database *(stub — not yet implemented)* |
+| `follow(target: Node2D)` | Reparents the Camera2D to `target` |
+| `world_to_tile(pos: Vector2) → Vector2i` | World position → tile coordinates |
+| `tile_to_world(tile: Vector2i) → Vector2` | Tile coordinates → world position (tile centre) |
+
+---
+
+### Python conversion tools
+
+| Script | Purpose |
+|--------|---------|
+| `tools/generate_tilesets.py` | Reads PNG dimensions and writes a plain `.tres` alongside each PNG in `tilesets/` and `autotiles/`. Run from the repo root: `python tools/generate_tilesets.py` |
+| `tools/convert_autotiles.py` | Converts RPGMXP 96×128 autotile PNGs into 256×192 terrain atlases (47 blob tiles) and writes `.tres` files to `autotiles_terrain/`. Requires Pillow: `pip install Pillow`. Run: `python tools/convert_autotiles.py` |
+
+After running `convert_autotiles.py`, always follow up with **Project → Tools → Regen Terrain TileSets** inside Godot so the terrain peering bits are written in the format that Godot's terrain system can read.
+
+---
+
+## 15. Reference: Pokémon Essentials Equivalences
 
 | PE concept | PokeBuilder equivalent |
 |---|---|
