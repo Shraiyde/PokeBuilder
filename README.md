@@ -175,8 +175,7 @@ poke-builder/
     ├── database_editor/         # SQLite database mini-app
     │   └── editors/
     ├── generate_tilesets.py     # Generates plain .tres for tilesets/ and autotiles/
-    ├── convert_autotiles.py     # Converts RPGMXP 96×128 autotiles → 256×192 terrain atlases
-    └── regen_terrain_tilesets.gd # Legacy EditorScript (superseded by the regen_terrain plugin)
+    └── convert_autotiles.py     # Converts RPGMXP 96×128 autotiles → 256×192 terrain atlases
 ```
 
 > Empty directories contain a `.gdkeep` placeholder file so Git tracks them.
