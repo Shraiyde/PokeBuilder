@@ -110,13 +110,19 @@ jobs:
         run: |
           curl -sSL -o /tmp/pw.tar.gz "https://api.github.com/repos/Shraiyde/pokewilds-mobile/tarball/${POKEWILDS_REF}"
           mkdir -p /tmp/pw && tar -xzf /tmp/pw.tar.gz -C /tmp/pw --strip-components=1
-          cp -R /tmp/pw/project/assets ./assets
-          cp -R /tmp/pw/project/android ./android
+          mkdir -p assets android
+          cp -R /tmp/pw/project/assets/. ./assets
+          cp -R /tmp/pw/project/android/. ./android
           cp /tmp/pw/tools/release.keystore ./tools/release.keystore
+          
           cp /tmp/pw/project/lobby_server.txt ./lobby_server.txt
           rm -rf /tmp/pw /tmp/pw.tar.gz
           test -d assets/original_pokemon
           echo "::notice::assets $(du -sh assets | cut -f1)"
+      - name: Swap tiles to GBA art
+        run: |
+          pip install pillow
+          python3 tools/tile_swap.py
 
       # libzt's AAR (build_libzt_android.sh), compiled once per patch set.
       - uses: actions/cache@v4
@@ -223,7 +229,7 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: .godot
-          key: godot-import-android-${{ env.GODOT_VERSION }}-${{ hashFiles('assets/**/*.import') }}
+          key: godot-import-android-${{ env.GODOT_VERSION }}-${{ hashFiles('assets/**/*.import', 'tools/tile_swap_map.json') }}
           restore-keys: godot-import-android-${{ env.GODOT_VERSION }}-
 
       - name: Import + export the APK
