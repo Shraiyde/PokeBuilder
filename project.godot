@@ -1,21 +1,33 @@
-; Engine configuration file.
-; It's best edited using the editor UI and not directly,
-; since the parameters that go here are not all obvious.
-;
-; Format:
-;   [section] ; section goes between []
-;   param=value ; assign values to parameters
-
+; PokeWilds on the PokeBuilder fork - Pokewilds game code with PokeBuilder assets
 config_version=5
 
 [application]
-
-config/name="PokeBuilder"
-config/features=PackedStringArray("4.6", "Mobile")
+config/name="Pokewilds"
+run/main_scene="res://scenes/main.tscn"
+run/max_fps=60
+config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+config/quit_on_go_back=false
+; The dedicated server's log reaches its launcher through a pipe (or a file).
+run/flush_stdout_on_print.windows=true
+run/flush_stdout_on_print.linuxbsd=true
+run/flush_stdout_on_print.macos=true
+boot_splash/image="res://assets/title_splash.png"
+boot_splash/show_image=true
+boot_splash/stretch_mode=4
+boot_splash/use_filter=false
+boot_splash/bg_color=Color(0.965, 0.957, 0.906, 1)
+
+[audio]
+
+; iOS: play through the silent switch (Playback) and keep other apps' music going.
+general/ios/session_category=3
+general/ios/mix_with_others=true
 
 [autoload]
-
+OriginalModsSingleton="*res://scripts/original_mods.gd"
+InputRouterSingleton="*res://scripts/input_router.gd"
+DedicatedServerSingleton="*res://scripts/dedicated_server.gd"
 RPGDatabase="*res://core/database/RPGDatabase.gd"
 GameData="*res://core/game_data/GameData.gd"
 GameManager="*res://core/autoloads/GameManager.gd"
@@ -26,24 +38,36 @@ SceneManager="*res://core/autoloads/SceneManager.gd"
 BattleManager="*res://core/autoloads/BattleManager.gd"
 TextManager="*res://core/autoloads/TextManager.gd"
 
-[display]
+[debug]
+file_logging/enable_file_logging=true
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+[display]
+window/size/viewport_width=320
+window/size/viewport_height=180
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/handheld/orientation=4
 
 [editor_plugins]
-
 enabled=PackedStringArray("res://addons/godot-sqlite/plugin.cfg")
 
-[physics]
-
-3d/physics_engine="Jolt Physics"
-
 [rendering]
+textures/vram_compression/import_etc2_astc=true
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+textures/canvas_textures/default_texture_filter=0
+2d/snap/snap_2d_transforms_to_pixel=false
+2d/snap/snap_2d_vertices_to_pixel=true
 
-rendering_device/driver.windows="d3d12"
-renderer/rendering_method="mobile"
+[physics]
+common/physics_interpolation=true
+2d/physics_engine="Dummy"
+
+[android]
+modules/immersive=true
+
+[environment]
+defaults/default_clear_color=Color(0.03, 0.04, 0.05, 1)
