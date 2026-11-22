@@ -1,7 +1,7 @@
 #!/bin/bash
 # Builds libzt (the embeddable ZeroTier node) for Android and puts the AAR
 # where the game's Gradle export picks it up:
-#   project/android/build/libs/zerotier/libzt-release.aar
+#   android/build/libs/zerotier/libzt-release.aar
 #
 # Needs: JDK 17, Android SDK with the NDK and CMake packages below, and the
 # libzt source with its submodules (git clone --recursive
@@ -12,7 +12,7 @@ HERE="$(cd "$(dirname "$0")" && pwd)"
 LIBZT_SRC="${LIBZT_SRC:-$HERE/../third_party/libzt}"
 # Build outside the source drive: exFAT/FAT volumes break Gradle and CMake.
 WORK="${LIBZT_WORK:-$HOME/Library/Caches/pokewilds-libzt}"
-OUT="$HERE/project/android/build/libs/zerotier"
+OUT="$HERE/android/build/libs/zerotier"
 NDK_VERSION="${NDK_VERSION:-29.0.14206865}"   # same NDK the Godot export uses
 CMAKE_VERSION="${CMAKE_VERSION:-3.22.1}"
 
