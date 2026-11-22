@@ -123,9 +123,17 @@ jobs:
           pip install pillow
           python3 tools/tile_swap.py
 
+      - name: Swap sprites to GBA art
+        run: |
+          curl -sSL -o /tmp/sprites.tar.gz "https://github.com/Shraiyde/PokeBuilder/releases/download/gba-sprites-v1/pokewilds-gba-sprites.tar.gz"
+          tar -xzf /tmp/sprites.tar.gz -C assets
+          rm -f /tmp/sprites.tar.gz
+          test -f assets/original_pokemon/bulbasaur/front.png
+
       # libzt's AAR (build_libzt_android.sh), compiled once per patch set.
       - uses: actions/cache@v4
         id: libzt
+        
         with:
           path: android/build/libs/zerotier
           key: libzt-android-${{ hashFiles('build_libzt_android.sh', 'libzt_patches.py', 'tools/build_libzt_ios.sh') }}
@@ -228,7 +236,7 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: .godot
-          key: godot-import-android-${{ env.GODOT_VERSION }}-${{ hashFiles('assets/**/*.import', 'tools/tile_swap_map.json') }}
+                    key: godot-import-android-${{ env.GODOT_VERSION }}-${{ hashFiles('assets/**/*.import', 'tools/tile_swap_map.json', 'tools/species_map.json') }}
           restore-keys: godot-import-android-${{ env.GODOT_VERSION }}-
 
       - name: Import + export the APK
