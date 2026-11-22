@@ -114,7 +114,6 @@ jobs:
           cp -R /tmp/pw/project/assets/. ./assets
           cp -R /tmp/pw/project/android/. ./android
           cp /tmp/pw/tools/release.keystore ./tools/release.keystore
-          
           cp /tmp/pw/project/lobby_server.txt ./lobby_server.txt
           rm -rf /tmp/pw /tmp/pw.tar.gz
           test -d assets/original_pokemon
