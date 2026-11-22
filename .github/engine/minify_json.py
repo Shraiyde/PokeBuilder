@@ -5,7 +5,11 @@ import json, os, sys
 root = sys.argv[1]
 before = after = 0
 for d, dirs, files in os.walk(root):
-    dirs[:] = [x for x in dirs if x != ".godot"]
+    # Skip the editor cache and the checked-out Godot engine source: the
+    # engine tree holds thirdparty data files named .json that are not strict
+    # JSON (thirdparty/icu4c/godot_data.json), and minifying them is not the
+    # job — only the game's own data is minified.
+    dirs[:] = [x for x in dirs if x not in (".godot", "godot-src")]
     for f in files:
         if not f.endswith(".json"):
             continue

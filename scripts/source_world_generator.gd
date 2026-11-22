@@ -136,6 +136,50 @@ func _generate(width: int, height: int, seed_value: int, _size_index: int) -> Di
     _apply_blotch("wooded_lake1", lake_center, maxi(6, surface_radius / 5), "wooded_lake1", 30)
     _apply_blotch("pond1", lake_center, maxi(2, surface_radius / 11), "wooded_lake_water1", 30)
 
+    # Extra lakes: two more wooded lake + pond pairs, spread through the forest.
+    var lake_center2 := _nearest_biome_cell(
+        forest_center + Vector2i(-surface_radius / 2, surface_radius / 3),
+        ["FOREST", "DEEP_FOREST"]
+    )
+    _apply_blotch("wooded_lake1", lake_center2, maxi(5, surface_radius / 6), "wooded_lake1", 30)
+    _apply_blotch("pond1", lake_center2, maxi(2, surface_radius / 13), "wooded_lake_water1", 30)
+    var lake_center3 := _nearest_biome_cell(
+        forest_center + Vector2i(surface_radius / 2, -surface_radius / 4),
+        ["FOREST", "DEEP_FOREST"]
+    )
+    _apply_blotch("wooded_lake1", lake_center3, maxi(5, surface_radius / 6), "wooded_lake1", 30)
+    _apply_blotch("pond1", lake_center3, maxi(2, surface_radius / 13), "wooded_lake_water1", 30)
+
+    # Clearings: open grass patches with no trees, breaking up the forest.
+    var clearing_center := _nearest_biome_cell(
+        forest_center + Vector2i(-surface_radius / 3, surface_radius / 4),
+        ["FOREST", "DEEP_FOREST"]
+    )
+    _apply_blotch("clearing", clearing_center, maxi(4, surface_radius / 6), "forest1", 40)
+    var clearing_center2 := _nearest_biome_cell(
+        forest_center + Vector2i(surface_radius / 4, surface_radius / 3),
+        ["FOREST", "DEEP_FOREST"]
+    )
+    _apply_blotch("clearing", clearing_center2, maxi(4, surface_radius / 6), "forest1", 40)
+    var clearing_center3 := _nearest_biome_cell(
+        forest_center + Vector2i(0, -surface_radius / 3),
+        ["FOREST", "DEEP_FOREST"]
+    )
+    _apply_blotch("clearing", clearing_center3, maxi(3, surface_radius / 7), "forest1", 40)
+
+    # Offshore islets: small separate islands in the ocean, only where there
+    # is room clear of the main island and desert lobes.
+    var isle_radius := maxi(4, surface_radius / 8)
+    var isle1 := Vector2i(_width / 2, maxi(6, _height / 12))
+    if Vector2(isle1 - forest_center).length() > surface_radius + isle_radius + 4 and Vector2(isle1 - desert_center).length() > surface_radius + isle_radius + 4:
+        _apply_blotch("island", isle1, isle_radius, "forest1", 40)
+    var isle2 := Vector2i(_width / 3, _height - 8)
+    if Vector2(isle2 - forest_center).length() > surface_radius + isle_radius + 4 and Vector2(isle2 - desert_center).length() > surface_radius + isle_radius + 4:
+        _apply_blotch("island", isle2, isle_radius, "forest1", 40)
+    var isle3 := Vector2i(_width * 2 / 3, _height - 8)
+    if Vector2(isle3 - forest_center).length() > surface_radius + isle_radius + 4 and Vector2(isle3 - desert_center).length() > surface_radius + isle_radius + 4:
+        _apply_blotch("island", isle3, isle_radius, "forest1", 40)
+
     _apply_source_river_formula()
     _coastify()
     _record_biome_centers()
@@ -409,7 +453,7 @@ func _apply_blotch(
                 var put_tile := _random.next_int(max_distance) + distance_pixels
                 var forced_ratio := 7
                 match blotch_type:
-                    "desert", "sand_pit1", "graveyard1", "volcano1", "volcano1_lava":
+                    "desert", "sand_pit1", "graveyard1", "volcano1", "volcano1_lava", "clearing":
                         forced_ratio = 10
                     "beach1", "wooded_lake1":
                         forced_ratio = 12
@@ -446,21 +490,25 @@ func _write_blotch_tile(
                 base = "grass4" if _random.next_int(7) == 0 else "green1"
                 biome = "DEEP_FOREST"
                 route = "deep_forest"
-                if _random.next_int(5) == 0:
+                if _random.next_int(10) == 0:
                     upper = "tree_large1"
             elif ratio > 0.58:
                 biome = "SAVANNA"
                 route = "savanna1"
                 base = "green_savanna4"
-                if _random.next_int(16) == 0:
+                if _random.next_int(32) == 0:
                     upper = "tree_savanna1"
             else:
                 biome = "FOREST"
                 route = "forest1"
                 if _random.next_int(24) == 0:
                     base = "flower4"
-                elif _random.next_int(10) == 0:
+                elif _random.next_int(20) == 0:
                     upper = "tree2"
+        "clearing":
+            base = "grass4" if _random.next_int(5) == 0 else "green1"
+            biome = "FOREST"
+            route = "forest1"
         "desert":
             base = "desert4"
             biome = "DESERT"
@@ -470,7 +518,7 @@ func _write_blotch_tile(
         "savanna1":
             base = "green_savanna4"
             biome = "SAVANNA"
-            if _random.next_int(14) == 0:
+            if _random.next_int(28) == 0:
                 upper = "tree_savanna1"
             elif _random.next_int(20) == 0:
                 upper = "bush_savanna1"
@@ -484,7 +532,7 @@ func _write_blotch_tile(
         "wooded_lake1":
             base = "green5"
             biome = "WOODED_LAKE"
-            if _random.next_int(11) == 0:
+            if _random.next_int(22) == 0:
                 upper = "tree2"
             elif _random.next_int(13) == 0:
                 base = "grass2"
