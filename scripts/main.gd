@@ -311,6 +311,9 @@ var battle_ui_mode := "INTRO"
 var battle_rng := RandomNumberGenerator.new()
 ## The battle on screen (scripts/battle_session.gd): this file plays its events.
 var battle_session: BattleSession
+## Quetzal battle: the player's trainer id for the wild shiny roll.
+## Lazily rolled once per session (see _qbattle_player_ot_id); 0 = not yet set.
+var _qbattle_ot_id := 0
 var battle_turn_count := 0
 var battle_field: Dictionary = {}
 var battle_submenu_mode := ""
@@ -2171,7 +2174,7 @@ func _start_game() -> void:
     overflow_recovery_notice = ""
 
 func _make_starter_machop() -> Dictionary:
-    return BattleEngine.make_pokemon("machop", 5, battle_rng, {
+    return QBattleParty.make_pokemon("machop", 5, battle_rng, {
         "original_trainer": player_model_name.text.strip_edges(),
         "met_location": "STARTING SHORE"
     })
@@ -2226,16 +2229,16 @@ func _on_battle_requested(context: Dictionary) -> void:
     _start_battle_context(context, source_alert)
 
 func _party_reference_level() -> int:
-    return BattleSession.reference_level(caught_pokemon)
+    return QBattleParty.reference_level(caught_pokemon)
 
 func wild_level_for_player(source_level: int) -> int:
-    return BattleSession.wild_level(caught_pokemon, source_level)
+    return QBattleParty.wild_level(caught_pokemon, source_level)
 
 func _start_battle_context(context: Dictionary, source_alert: bool = false) -> void:
     if battle_active or battle_entry_pending:
         return
 
-    var prepared_context = BattleSession.prepare_context(context, caught_pokemon)
+    var prepared_context = QBattleParty.prepare_context(context, caught_pokemon)
     var raw_party = prepared_context.get("party", [])
     if typeof(raw_party) != TYPE_ARRAY or (raw_party as Array).is_empty():
         return
@@ -2352,6 +2355,14 @@ func _start_battle_context(context: Dictionary, source_alert: bool = false) -> v
     if is_instance_valid(ball_mechanics) and not ball_mechanics.requested_battler.is_empty():
         battle_facts["requested"] = ball_mechanics.requested_battler
         ball_mechanics.requested_battler = ""
+    # Quetzal battle path (single-player): the BattleController owns the whole
+    # battle (its BattleScreen plays the intro, commands, text and sprites).
+    # Co-op battles keep the Pokewilds BattleSession path below — the co-op
+    # system drives the old battle UI, and this file's battle UI functions
+    # stay for that path (see _is_qbattle_coop_battle).
+    if not _is_qbattle_coop_battle(prepared_context):
+        await _run_qbattle(prepared_context, battle_facts)
+        return
     battle_session = BattleSession.new()
     battle_session.stepwise = true
     # The battle draws from main's RNG, as it always has (a transcript seeds it).
@@ -2411,6 +2422,124 @@ func _start_battle_context(context: Dictionary, source_alert: bool = false) -> v
         if String(battle_enemy.get("species", "")) == "mew":
             await _play_mew_battle_intro()
     _show_battle_intro_screen()
+
+## True when this battle belongs to the co-op system (raid / event /
+## population / PvP). Those battles keep the Pokewilds BattleSession path in
+## _start_battle_context — the co-op system drives the old battle UI and its
+## finish hooks (_end_battle's ending_* branches) expect it.
+func _is_qbattle_coop_battle(prepared_context: Dictionary) -> bool:
+	if not coop_game.active:
+		return false
+	if bool(prepared_context.get("pvp", false)):
+		return true
+	if is_instance_valid(coop_game.pvp) and coop_game.pvp.active:
+		return true
+	if coop_game.raids.active:
+		return true
+	if not coop_game.population_battles.claim.is_empty():
+		return true
+	if coop_game.events.active:
+		return true
+	return false
+
+## The player's trainer id for the Quetzal shiny roll. Rolled once per
+## session and reused, so a wild Pokemon's shininess is stable within a
+## session. (Not persisted across sessions yet — see WIRING-REPORT.md.)
+func _qbattle_player_ot_id() -> int:
+	if _qbattle_ot_id == 0:
+		_qbattle_ot_id = Shiny.random_u32()
+	return _qbattle_ot_id
+
+## Runs a single-player battle through the Quetzal BattleController and
+## applies the result, then ends the battle. Called from
+## _start_battle_context (which has already done the setup: battle_context,
+## battle_facts, music, battle_active). The controller's BattleScreen owns
+## the whole battle UI; this function only converts records, maps the
+## outcome to the outcome strings the world expects, and cleans up.
+func _run_qbattle(prepared_context: Dictionary, battle_facts: Dictionary) -> void:
+	var bd := BattleData.load_from()
+	# No Pokemon able to battle: same whiteout as the old path.
+	var can_battle := false
+	for p in caught_pokemon:
+		if typeof(p) == TYPE_DICTIONARY and int((p as Dictionary).get("hp", 0)) > 0:
+			can_battle = true
+			break
+	if not can_battle:
+		dialogs.show_message("You have no Pokemon able to battle.")
+		await get_tree().create_timer(0.4).timeout
+		_end_battle("whiteout")
+		return
+	var party: Array = []
+	for p in caught_pokemon:
+		party.append(QBattleParty.to_qbattle(bd, p))
+	var foe_party_raw: Array = prepared_context.get("party", [])
+	var foe0: Dictionary = (foe_party_raw[0] as Dictionary) if not foe_party_raw.is_empty() else {}
+	var foe_species := str(foe0.get("species", "rattata")).to_lower()
+	var foe_level := maxi(1, int(foe0.get("level", 1)))
+	# battle_enemy is read by _end_battle (roaming ghosts / mine Pokemon).
+	battle_enemy = QBattleParty.make_enemy(foe0, prepared_context, battle_rng)
+	if String(prepared_context.get("kind", "wild")) == "wild":
+		battle_enemy = _apply_pending_wild_record(battle_enemy, foe_level)
+	battle_player = {}
+	if not caught_pokemon.is_empty() and typeof(caught_pokemon[0]) == TYPE_DICTIONARY:
+		battle_player = caught_pokemon[0]
+	var opts := {
+		"seed": battle_rng.randi(),
+		"ot_id": _qbattle_player_ot_id(),
+		"ball_ctx": {
+			"night": String(battle_facts.get("time_of_day", "day")) == "night",
+			"terrain": String(battle_facts.get("terrain", "")),
+			"caught_before": caught_species.has(foe_species),
+			"dex_caught": caught_species.size(),
+		},
+	}
+	var result: Dictionary
+	var kind := String(prepared_context.get("kind", "wild"))
+	if kind == "trainer":
+		opts["foe_party"] = QBattleParty.foe_party(bd, prepared_context)
+		opts["trainer_name"] = String(prepared_context.get("trainer_name", "Trainer"))
+		result = await BattleController.start_trainer(self, party, 0, opts)
+	else:
+		var sp0 := bd.species_id_by_name(foe_species)
+		if foe_party_raw.size() >= 2:
+			var foe1: Dictionary = foe_party_raw[1] as Dictionary
+			opts["foe2"] = [bd.species_id_by_name(str(foe1.get("species", "rattata"))),
+				maxi(1, int(foe1.get("level", 1)))]
+		result = await BattleController.start_wild(self, party, sp0, foe_level, opts)
+	# Write the updated party back (HP, PP, status, level, EXP, moves).
+	var result_party: Array = result.get("party", [])
+	for i in mini(result_party.size(), caught_pokemon.size()):
+		caught_pokemon[i] = QBattleParty.from_qbattle(bd, result_party[i])
+	var outcome := String(result.get("outcome", "lose"))
+	# Map the Quetzal outcome to the outcome strings the world expects
+	# (see BattleSession._end / world.complete_battle_event).
+	var mapped := ""
+	match outcome:
+		"win":
+			mapped = "victory" if kind == "trainer" else "defeated"
+		"caught":
+			mapped = "captured"
+		"run":
+			mapped = "ran"
+		"lose", "forfeit", "no_party", "no_data":
+			mapped = "whiteout"
+		_:
+			mapped = "whiteout"
+	if outcome == "caught" and not (result.get("caught", {}) as Dictionary).is_empty():
+		_qbattle_handle_catch(bd, result.get("caught", {}), foe_species)
+	_end_battle(mapped)
+
+## Handles a caught Pokemon after a Quetzal battle: marks the Pokedex and
+## routes the new party member (party or storage). The BattleScreen already
+## played the catch celebration, so this only does the data side.
+func _qbattle_handle_catch(bd: BattleData, caught_q: Dictionary, foe_species: String) -> void:
+	var captured := QBattleParty.from_qbattle(bd, caught_q)
+	if not caught_species.has(foe_species):
+		caught_species.append(foe_species)
+	if coop_game.active and coop_game.raids.active:
+		coop_game.raids.normalize_capture(captured)
+	pokedex_progress.mark(captured, true)
+	_route_received_pokemon(captured)
 
 func _play_mew_battle_intro() -> void:
     if not GameOptions.enabled("battle_animations"): return
@@ -2558,18 +2687,13 @@ func _play_battle_transition(source_frames: int = 28) -> void:
 ## The Safari encounter's enemy (source_safari_encounter.gd), made and fitted
 ## to the overworld Pokemon as a battle's would be (battle_session.gd).
 func _make_context_enemy(member: Dictionary) -> Dictionary:
-    var maker := BattleSession.new()
-    maker.rng = battle_rng
-    maker.context = battle_context
-    return maker.make_enemy(member)
+    return QBattleParty.make_enemy(member, battle_context, battle_rng)
 
 func _apply_pending_wild_record(enemy: Dictionary, level: int) -> Dictionary:
     if String(battle_context.get("kind", "wild")) != "wild" or not world.has_method("take_pending_encounter_record"):
         return enemy
-    var maker := BattleSession.new()
-    maker.context = battle_context
-    maker.world = {"wild_record":world.call("take_pending_encounter_record")}
-    return maker.apply_wild_record(enemy, level)
+    var record: Dictionary = world.call("take_pending_encounter_record")
+    return QBattleParty.apply_wild_record(enemy, level, battle_context, record)
 
 func _trainer_battle_texture() -> Texture2D:
     player_model_index = clampi(
@@ -4109,7 +4233,7 @@ func _end_battle(outcome: String = "") -> void:
     _clear_battle_capture_ball()
     for index in range(caught_pokemon.size()):
         if typeof(caught_pokemon[index]) == TYPE_DICTIONARY:
-            BattleEngine.reset_battle_state(caught_pokemon[index])
+            QBattleParty.reset_battle_state(caught_pokemon[index])
             caught_pokemon[index].erase("_double_faint_announced")
             caught_pokemon[index].erase("_double_faint_processed")
     # These battle dictionaries are also stored in the party arrays. Replacing

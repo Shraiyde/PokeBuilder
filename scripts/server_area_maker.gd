@@ -21,7 +21,6 @@ const NativeWorldGen=preload("res://scripts/native_world_gen.gd")
 const AreaSim=preload("res://scripts/area_sim.gd")
 const PopulationRules=preload("res://scripts/rules/population_rules.gd")
 const Megas=preload("res://scripts/biome_megas.gd")
-const BattleSession=preload("res://scripts/battle_session.gd")
 ## Under the 10 minutes a player waits for a new area (coop_game.prepare_travel):
 ## at 15 the player had given up before their device was asked to make it.
 const TIMEOUT_MS:=8*60*1000
@@ -117,7 +116,7 @@ static func area_of(seed_value:int,size_index:int)->Dictionary:
 ## select_cell_at, biome_megas.gd choose_at and install_at; `megas`, where
 ## its Megas could stand, is open_cells_at's) with draws from a generator
 ## seeded with the area's seed: the same area gets the same ones.
-## `party_level` (BattleSession.reference_level of the player who arrives
+## `party_level` (QBattleParty.reference_level of the player who arrives
 ## first; 0 for none) adapts their species as a World adapts them to its
 ## party; `clock` is the world's (the Megas' first steps). A shared part for
 ## the area's snapshot: wild_pokemon and event_progress. The Pokemon go in a
@@ -130,7 +129,7 @@ static func first_population(tiles,megas:Dictionary,seed_value:int,party_level:i
     var next:=[1]
     var add:=func(species:String,level:int,cell:Vector2i,home_biome:String,source_record:Dictionary)->int:
         if party_level>0 and not bool(source_record.get("is_trapping",false)):
-            species=PopulationRules.adapted_species(state,species,level,cell,BattleSession.wild_level_at(party_level,level),seed_value)
+            species=PopulationRules.adapted_species(state,species,level,cell,QBattleParty.wild_level_at(party_level,level),seed_value)
         var wild_id:int=next[0]
         if not PopulationRules.add_wild(state,species,level,cell,home_biome,wild_id,source_record):return -1
         next[0]=wild_id+1

@@ -7,7 +7,6 @@ extends RefCounted
 
 const PokemonData = preload("res://scripts/pokemon_data.gd")
 const PokemonState = preload("res://scripts/pokemon_state.gd")
-const BattleEngine = preload("res://scripts/battle_engine.gd")
 const SOURCE_LEVEL_STATS_MIN_FRAMES := 82
 const SOURCE_EXP_UNITS := 68
 const SOURCE_HATCH_BACKGROUND := preload(
@@ -307,7 +306,7 @@ func _learn_level_moves(pokemon: Dictionary, moves_to_learn: Array) -> void:
         if (pokemon.get("moves", []) as Array).has(move_name):
             continue
         if (pokemon.get("moves", []) as Array).size() < 4:
-            if BattleEngine.learn_move(pokemon, move_name):
+            if QBattleParty.learn_move(pokemon, move_name):
                 main._play_source_battle_sound("fanfare1.ogg")
                 await main._type_battle_text("%s learned %s!" % [
                     display_name, move_name.replace("_", " ")])
@@ -325,7 +324,7 @@ func _learn_level_moves(pokemon: Dictionary, moves_to_learn: Array) -> void:
         await main._type_battle_text("And one... two... three... POOF!")
         await main._type_battle_text("%s forgot %s and..." % [
             display_name, old_move.replace("_", " ")])
-        if BattleEngine.learn_move(pokemon, move_name, replace_index):
+        if QBattleParty.learn_move(pokemon, move_name, replace_index):
             main._play_source_battle_sound("fanfare1.ogg")
             await main._type_battle_text("%s learned %s!" % [
                 display_name, move_name.replace("_", " ")])
@@ -334,8 +333,8 @@ func _experience_bar_index(species: String, level: int,
         experience: int) -> int:
     if level >= 100:
         return SOURCE_EXP_UNITS
-    var floor_exp := BattleEngine.exp_for_level(species, level)
-    var ceiling_exp := BattleEngine.exp_for_level(species, level + 1)
+    var floor_exp := QBattleParty.exp_for_level(species, level)
+    var ceiling_exp := QBattleParty.exp_for_level(species, level + 1)
     return clampi(int(floor(float(SOURCE_EXP_UNITS) *
         float(experience - floor_exp) /
         maxf(1.0, float(ceiling_exp - floor_exp)))), 0, SOURCE_EXP_UNITS)
@@ -382,7 +381,7 @@ func run_experience_progression(pokemon: Dictionary, amount: int,
         main.battle_player = pokemon
         main._update_battle_hud()
 
-    var current_exp := int(pokemon.get("exp", BattleEngine.exp_for_level(
+    var current_exp := int(pokemon.get("exp", QBattleParty.exp_for_level(
         String(pokemon.get("species", "machop")), int(pokemon.get("level", 1)))))
     var target_exp := current_exp + maxi(0, amount)
     var gained_level := false
@@ -390,13 +389,13 @@ func run_experience_progression(pokemon: Dictionary, amount: int,
     # No EXP bar animation: jump straight to the level the EXP reaches,
     # collecting every move unlocked along the way.
     while int(pokemon.get("level", 1)) < 100:
-        var next_level_exp := BattleEngine.exp_for_level(
+        var next_level_exp := QBattleParty.exp_for_level(
             String(pokemon.get("species", "machop")),
             int(pokemon.get("level", 1)) + 1)
         if target_exp < next_level_exp:
             break
         pokemon["exp"] = next_level_exp
-        var level_result := BattleEngine.gain_level(pokemon)
+        var level_result := QBattleParty.gain_level(pokemon)
         gained_level = true
         for move in level_result.get("moves", []):
             moves_to_learn.append(move)
@@ -685,7 +684,7 @@ func set_evolution_message(message: String) -> void:
 
 func run_evolution_sequence(pokemon: Dictionary, new_species: String,
         party_index: int) -> bool:
-    new_species = BattleEngine.resolved_evolution_species(pokemon, new_species)
+    new_species = QBattleParty.resolved_evolution_species(pokemon, new_species)
     var old_display_name := PokemonState.display_name(pokemon).to_upper()
     var old_texture := main._battle_sprite_frame(
         _evolution_sprite_texture(String(pokemon.get("species", "")), PokemonData.is_shiny(pokemon)))
@@ -746,7 +745,7 @@ func run_evolution_sequence(pokemon: Dictionary, new_species: String,
         hide_progression_overlay()
         return false
 
-    if not BattleEngine.apply_evolution(pokemon, new_species):
+    if not QBattleParty.apply_evolution(pokemon, new_species):
         hide_progression_overlay()
         return false
     main.pokedex_progress.mark(pokemon, true)
@@ -763,6 +762,6 @@ func run_evolution_sequence(pokemon: Dictionary, new_species: String,
     await main._type_battle_text("Congratulations! Your %s evolved into %s!" % [
         old_display_name, new_species.to_upper().replace("_", " ")])
     hide_progression_overlay()
-    await _learn_level_moves(pokemon, BattleEngine.moves_learned_at_level(
+    await _learn_level_moves(pokemon, QBattleParty.moves_learned_at_level(
         new_species, int(pokemon.get("level", 1))))
     return true

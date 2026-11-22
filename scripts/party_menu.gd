@@ -6,7 +6,6 @@ extends RefCounted
 ## Split out of main.gd; reaches the game through `main`.
 
 const PokemonData = preload("res://scripts/pokemon_data.gd")
-const BattleEngine = preload("res://scripts/battle_engine.gd")
 const PokemonEcology = preload("res://scripts/pokemon_ecology.gd")
 const FieldMoveData = preload("res://scripts/field_move_data.gd")
 const PokemonState = preload("res://scripts/pokemon_state.gd")
@@ -212,7 +211,7 @@ func _set_party_list_row(row_data: Dictionary, pokemon: Dictionary,
         hp_value.text = "--/--"
         hp_fill.size.x = 0.0
         return
-    var record := BattleEngine.ensure_pokemon(pokemon)
+    var record := QBattleParty.ensure_pokemon(pokemon)
     var species := String(record.get("species", "machop")).to_lower()
     row_data["species"] = species
     row_data["shiny"] = PokemonData.is_shiny(record)
@@ -417,7 +416,7 @@ func refresh_pokemon_category_menu() -> void:
     main.pokemon_menu_index = clampi(main.pokemon_menu_index, 0, visible_count - 1)
     for index in range(visible_count):
         if typeof(main.caught_pokemon[index]) == TYPE_DICTIONARY:
-            main.caught_pokemon[index] = BattleEngine.ensure_pokemon(
+            main.caught_pokemon[index] = QBattleParty.ensure_pokemon(
                 main.caught_pokemon[index] as Dictionary)
     refresh_party_list_rows(main.pokemon_party_rows, main.caught_pokemon,
         main.pokemon_menu_index)
@@ -472,7 +471,7 @@ func activate_pokemon_action() -> void:
         close_pokemon_action_menu()
         return
     if action == "STATS":
-        var selected := BattleEngine.ensure_pokemon(main.caught_pokemon[main.pokemon_menu_index])
+        var selected := QBattleParty.ensure_pokemon(main.caught_pokemon[main.pokemon_menu_index])
         main.caught_pokemon[main.pokemon_menu_index] = selected
         close_pokemon_action_menu()
         open_pokemon_stats(selected, "OVERWORLD")
@@ -507,7 +506,7 @@ func finish_pokemon_switch() -> void:
     refresh_pokemon_category_menu()
 
 func open_pokemon_stats(pokemon: Dictionary, return_context: String) -> void:
-    pokemon_stats_pokemon = BattleEngine.ensure_pokemon(pokemon)
+    pokemon_stats_pokemon = QBattleParty.ensure_pokemon(pokemon)
     pokemon_stats_return_context = return_context
     pokemon_stats_page = 0
     main.pokemon_stats_open = true
@@ -543,12 +542,12 @@ func _refresh_pokemon_stats() -> void:
     var status = String(pokemon.get("status", ""))
     (pokemon_stats_fields.Status as Label).text = "OK" if status.is_empty() else status
     (pokemon_stats_fields.Types as Label).text = "\n".join(info.get("types", ["NORMAL"]))
-    var current_exp = int(pokemon.get("exp", BattleEngine.exp_for_level(species, level)))
-    var next_exp = BattleEngine.exp_for_level(species, mini(100, level + 1))
+    var current_exp = int(pokemon.get("exp", QBattleParty.exp_for_level(species, level)))
+    var next_exp = QBattleParty.exp_for_level(species, mini(100, level + 1))
     (pokemon_stats_fields.Exp as Label).text = str(current_exp)
     (pokemon_stats_fields.NextExp as Label).text = str(maxi(0, next_exp - current_exp))
     (pokemon_stats_fields.NextLevel as Label).text = "TO :L%d" % mini(100, level + 1)
-    var exp_floor = BattleEngine.exp_for_level(species, level)
+    var exp_floor = QBattleParty.exp_for_level(species, level)
     var exp_ratio = 1.0 if level >= 100 else clampf(
         float(current_exp - exp_floor) / maxf(1.0, float(next_exp - exp_floor)), 0.0, 1.0)
     if pokemon_stats_exp_fill != null:
@@ -623,7 +622,7 @@ func _activate_selected_field_move() -> void:
     pokemon_move_index = clampi(pokemon_move_index, 0, moves.size() - 1)
     var move := String(moves[pokemon_move_index])
     if move == "STATS":
-        var pokemon := BattleEngine.ensure_pokemon(entry)
+        var pokemon := QBattleParty.ensure_pokemon(entry)
         main.caught_pokemon[main.pokemon_menu_index] = pokemon
         open_pokemon_stats(pokemon, "OVERWORLD")
         return
