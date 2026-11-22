@@ -1,0 +1,3004 @@
+{
+ "comment": "Battle-engine offsets and our own meaning keys for the ROM's numeric move-effect and ability ids, worked out by comparing ROM data with Pokemon Showdown (MIT) behaviour (tools/probe_move_effects.py, tools/gen_battle_profile.py). Numbers and our own keys only: no game content.",
+ "rom_sha1": "c108cec750a35775084c0806cc704d8abd1994e7",
+ "moves": "0x5441D8",
+ "move_stride": 24,
+ "move_count": 937,
+ "move_names": "0x521D06",
+ "move_name_len": 17,
+ "ability_names": "0x53B1B6",
+ "ability_name_len": 17,
+ "ability_count": 319,
+ "type_names": "0x532D40",
+ "type_name_len": 10,
+ "type_count": 20,
+ "type_chart": "0x5415D4",
+ "type_chart_entry": 4,
+ "type_chart_one": 4096,
+ "base_stats": "0x5520A8",
+ "base_stats_stride": 36,
+ "species_count": 1529,
+ "species_names": "0x5181BC",
+ "species_name_len": 13,
+ "learnsets": "0x5BDA28",
+ "exp_tables": "0x551408",
+ "exp_table_rows": 8,
+ "item_names": "0x11EFDC4",
+ "item_name_len": 20,
+ "item_count": 890,
+ "trainer_tables": [
+  "0x5107FC",
+  "0x1991270",
+  "0x199C7C4"
+ ],
+ "trainer_counts": [
+  974,
+  897,
+  745
+ ],
+ "trainer_stride": 32,
+ "effects": {
+  "0": {
+   "k": "hit"
+  },
+  "1": {
+   "k": "status",
+   "s": "slp"
+  },
+  "2": {
+   "k": "status_hit",
+   "s": "psn"
+  },
+  "3": {
+   "k": "drain",
+   "num": 1,
+   "den": 2
+  },
+  "4": {
+   "k": "hit"
+  },
+  "5": {
+   "k": "status_hit",
+   "s": "frz"
+  },
+  "6": {
+   "k": "status_hit",
+   "s": "par"
+  },
+  "7": {
+   "k": "explode"
+  },
+  "8": {
+   "k": "dream_eater"
+  },
+  "10": {
+   "k": "boost_self",
+   "st": {
+    "atk": 1
+   }
+  },
+  "11": {
+   "k": "boost_self",
+   "st": {
+    "def": 1
+   }
+  },
+  "16": {
+   "k": "boost_self",
+   "st": {
+    "eva": 1
+   }
+  },
+  "17": {
+   "k": "boost_self",
+   "st": {
+    "spa": 3
+   }
+  },
+  "18": {
+   "k": "boost_target",
+   "st": {
+    "atk": -1
+   }
+  },
+  "19": {
+   "k": "boost_target",
+   "st": {
+    "def": -1
+   }
+  },
+  "21": {
+   "k": "boost_target",
+   "st": {
+    "spa": -1
+   }
+  },
+  "23": {
+   "k": "boost_target",
+   "st": {
+    "acc": -1
+   }
+  },
+  "25": {
+   "k": "haze"
+  },
+  "27": {
+   "k": "rampage"
+  },
+  "28": {
+   "k": "roar"
+  },
+  "29": {
+   "k": "multi_hit",
+   "lo": 2,
+   "hi": 5
+  },
+  "31": {
+   "k": "flinch_hit"
+  },
+  "32": {
+   "k": "heal",
+   "num": 1,
+   "den": 2
+  },
+  "33": {
+   "k": "status",
+   "s": "tox"
+  },
+  "34": {
+   "k": "hit"
+  },
+  "35": {
+   "k": "screen",
+   "side": "lightscreen"
+  },
+  "36": {
+   "k": "tri_attack"
+  },
+  "37": {
+   "k": "rest"
+  },
+  "38": {
+   "k": "ohko"
+  },
+  "40": {
+   "k": "half_hp"
+  },
+  "41": {
+   "k": "fixed_damage",
+   "d": 40
+  },
+  "42": {
+   "k": "trap_hit"
+  },
+  "43": {
+   "k": "heal_block"
+  },
+  "44": {
+   "k": "crash_on_miss"
+  },
+  "45": {
+   "k": "side_cond",
+   "side": "mist"
+  },
+  "46": {
+   "k": "focus_energy"
+  },
+  "47": {
+   "k": "recoil",
+   "num": 1,
+   "den": 4
+  },
+  "48": {
+   "k": "confuse"
+  },
+  "49": {
+   "k": "boost_self",
+   "st": {
+    "atk": 2
+   }
+  },
+  "50": {
+   "k": "boost_self",
+   "st": {
+    "def": 2
+   }
+  },
+  "51": {
+   "k": "boost_self",
+   "st": {
+    "spe": 2
+   }
+  },
+  "52": {
+   "k": "boost_self",
+   "st": {
+    "spa": 2
+   }
+  },
+  "53": {
+   "k": "boost_self",
+   "st": {
+    "spd": 2
+   }
+  },
+  "57": {
+   "k": "boost_target",
+   "st": {
+    "atk": -2
+   }
+  },
+  "58": {
+   "k": "boost_target",
+   "st": {
+    "def": -2
+   }
+  },
+  "59": {
+   "k": "boost_target",
+   "st": {
+    "spe": -2
+   }
+  },
+  "60": {
+   "k": "boost_target",
+   "st": {
+    "spa": -2
+   }
+  },
+  "61": {
+   "k": "boost_target",
+   "st": {
+    "spd": -2
+   }
+  },
+  "63": {
+   "k": "boost_target",
+   "st": {
+    "eva": -2
+   }
+  },
+  "64": {
+   "k": "screen",
+   "side": "reflect"
+  },
+  "65": {
+   "k": "status",
+   "s": "psn"
+  },
+  "66": {
+   "k": "status",
+   "s": "par"
+  },
+  "67": {
+   "k": "hit_boost_target",
+   "st": {
+    "atk": -1
+   }
+  },
+  "68": {
+   "k": "hit_boost_target",
+   "st": {
+    "def": -1
+   }
+  },
+  "69": {
+   "k": "hit_boost_target",
+   "st": {
+    "spe": -1
+   }
+  },
+  "70": {
+   "k": "hit_boost_target",
+   "st": {
+    "spa": -1
+   }
+  },
+  "71": {
+   "k": "hit_boost_target",
+   "st": {
+    "spd": -1
+   }
+  },
+  "72": {
+   "k": "hit_boost_target",
+   "st": {
+    "acc": -1
+   }
+  },
+  "74": {
+   "k": "two_turn"
+  },
+  "75": {
+   "k": "confuse_hit"
+  },
+  "77": {
+   "k": "substitute"
+  },
+  "78": {
+   "k": "recharge"
+  },
+  "82": {
+   "k": "leech_seed"
+  },
+  "83": {
+   "k": "nothing"
+  },
+  "84": {
+   "k": "disable"
+  },
+  "85": {
+   "k": "level_damage"
+  },
+  "86": {
+   "k": "psywave"
+  },
+  "87": {
+   "k": "counter",
+   "cat": 0
+  },
+  "88": {
+   "k": "encore"
+  },
+  "89": {
+   "k": "pain_split"
+  },
+  "90": {
+   "k": "flinch_hit"
+  },
+  "92": {
+   "k": "lock_on"
+  },
+  "94": {
+   "k": "hit_self_drop",
+   "st": {
+    "spe": -1
+   }
+  },
+  "95": {
+   "k": "sleep_talk"
+  },
+  "96": {
+   "k": "destiny_bond"
+  },
+  "97": {
+   "k": "flail"
+  },
+  "98": {
+   "k": "spite"
+  },
+  "99": {
+   "k": "false_swipe"
+  },
+  "100": {
+   "k": "heal_bell"
+  },
+  "101": {
+   "k": "always_crit"
+  },
+  "102": {
+   "k": "triple_kick"
+  },
+  "103": {
+   "k": "thief"
+  },
+  "104": {
+   "k": "mean_look"
+  },
+  "105": {
+   "k": "nightmare"
+  },
+  "106": {
+   "k": "boost_self",
+   "st": {
+    "eva": 2
+   }
+  },
+  "107": {
+   "k": "curse"
+  },
+  "108": {
+   "k": "healing_wish"
+  },
+  "109": {
+   "k": "protect"
+  },
+  "110": {
+   "k": "hazard",
+   "h": "spikes"
+  },
+  "111": {
+   "k": "foresight"
+  },
+  "112": {
+   "k": "perish_song"
+  },
+  "113": {
+   "k": "weather",
+   "w": "sand"
+  },
+  "114": {
+   "k": "endure"
+  },
+  "115": {
+   "k": "rollout"
+  },
+  "116": {
+   "k": "swagger"
+  },
+  "117": {
+   "k": "fury_cutter"
+  },
+  "118": {
+   "k": "attract"
+  },
+  "119": {
+   "k": "return_power"
+  },
+  "120": {
+   "k": "present"
+  },
+  "121": {
+   "k": "frustration_power"
+  },
+  "122": {
+   "k": "side_cond",
+   "side": "safeguard"
+  },
+  "123": {
+   "k": "magnitude"
+  },
+  "124": {
+   "k": "baton_pass"
+  },
+  "126": {
+   "k": "rapid_spin"
+  },
+  "127": {
+   "k": "fixed_damage",
+   "d": 20
+  },
+  "128": {
+   "k": "boost_target",
+   "st": {
+    "spa": -2
+   },
+   "todo": "opposite-gender check"
+  },
+  "129": {
+   "k": "weather_heal"
+  },
+  "130": {
+   "k": "weather_heal"
+  },
+  "131": {
+   "k": "weather_heal"
+  },
+  "132": {
+   "k": "hidden_power"
+  },
+  "133": {
+   "k": "weather",
+   "w": "rain"
+  },
+  "134": {
+   "k": "weather",
+   "w": "sun"
+  },
+  "135": {
+   "k": "hit_boost_self",
+   "st": {
+    "def": 1
+   }
+  },
+  "136": {
+   "k": "hit_boost_self",
+   "st": {
+    "atk": 1
+   }
+  },
+  "137": {
+   "k": "hit_boost_self",
+   "st": {
+    "atk": 1,
+    "def": 1,
+    "spa": 1,
+    "spd": 1,
+    "spe": 1
+   }
+  },
+  "138": {
+   "k": "fell_stinger"
+  },
+  "139": {
+   "k": "belly_drum"
+  },
+  "140": {
+   "k": "psych_up"
+  },
+  "141": {
+   "k": "counter",
+   "cat": 1
+  },
+  "142": {
+   "k": "skull_bash"
+  },
+  "143": {
+   "k": "hit",
+   "vs_semi": "dig"
+  },
+  "145": {
+   "k": "hit",
+   "vs_semi": "fly"
+  },
+  "146": {
+   "k": "two_turn",
+   "sun_skip": true
+  },
+  "147": {
+   "k": "status_hit",
+   "s": "par",
+   "rain_acc": true
+  },
+  "148": {
+   "k": "teleport"
+  },
+  "150": {
+   "k": "semi_invuln"
+  },
+  "151": {
+   "k": "boost_self",
+   "st": {
+    "def": 1
+   }
+  },
+  "152": {
+   "k": "heal",
+   "num": 1,
+   "den": 2
+  },
+  "153": {
+   "k": "fake_out"
+  },
+  "155": {
+   "k": "stockpile"
+  },
+  "156": {
+   "k": "spit_up"
+  },
+  "157": {
+   "k": "swallow"
+  },
+  "158": {
+   "k": "set_ability",
+   "to": "insomnia"
+  },
+  "159": {
+   "k": "weather",
+   "w": "hail"
+  },
+  "160": {
+   "k": "torment"
+  },
+  "161": {
+   "k": "flatter"
+  },
+  "162": {
+   "k": "status",
+   "s": "brn"
+  },
+  "163": {
+   "k": "memento"
+  },
+  "164": {
+   "k": "facade"
+  },
+  "165": {
+   "k": "focus_punch"
+  },
+  "166": {
+   "k": "double_if",
+   "cond": "paralyzed",
+   "cure": "par"
+  },
+  "167": {
+   "k": "follow_me"
+  },
+  "169": {
+   "k": "charge"
+  },
+  "170": {
+   "k": "taunt"
+  },
+  "171": {
+   "k": "helping_hand"
+  },
+  "172": {
+   "k": "trick"
+  },
+  "173": {
+   "k": "role_play"
+  },
+  "174": {
+   "k": "wish"
+  },
+  "176": {
+   "k": "ingrain"
+  },
+  "177": {
+   "k": "hit_self_drop",
+   "st": {
+    "atk": -1,
+    "def": -1
+   }
+  },
+  "180": {
+   "k": "double_if",
+   "cond": "user_hurt"
+  },
+  "181": {
+   "k": "brick_break"
+  },
+  "182": {
+   "k": "yawn"
+  },
+  "183": {
+   "k": "knock_off"
+  },
+  "184": {
+   "k": "endeavor"
+  },
+  "185": {
+   "k": "eruption"
+  },
+  "186": {
+   "k": "skill_swap"
+  },
+  "188": {
+   "k": "refresh"
+  },
+  "191": {
+   "k": "weight_power",
+   "mode": "target"
+  },
+  "192": {
+   "k": "status_hit",
+   "s": "par"
+  },
+  "193": {
+   "k": "recoil",
+   "num": 33,
+   "den": 100
+  },
+  "194": {
+   "k": "confuse"
+  },
+  "195": {
+   "k": "pivot"
+  },
+  "197": {
+   "k": "status_hit",
+   "s": "tox"
+  },
+  "198": {
+   "k": "weather_ball"
+  },
+  "199": {
+   "k": "hit_self_drop",
+   "st": {
+    "spa": -2
+   }
+  },
+  "200": {
+   "k": "boost_target",
+   "st": {
+    "atk": -1,
+    "def": -1
+   }
+  },
+  "201": {
+   "k": "boost_self",
+   "st": {
+    "def": 1,
+    "spd": 1
+   }
+  },
+  "202": {
+   "k": "hit"
+  },
+  "203": {
+   "k": "boost_self",
+   "st": {
+    "atk": 1,
+    "def": 1
+   }
+  },
+  "206": {
+   "k": "boost_self",
+   "st": {
+    "spa": 1,
+    "spd": 1
+   }
+  },
+  "207": {
+   "k": "boost_self",
+   "st": {
+    "atk": 1,
+    "spe": 1
+   }
+  },
+  "212": {
+   "k": "double_if",
+   "cond": "asleep",
+   "cure": "slp"
+  },
+  "213": {
+   "k": "wring_out"
+  },
+  "214": {
+   "k": "double_if",
+   "cond": "status"
+  },
+  "215": {
+   "k": "double_if",
+   "cond": "target_hurt"
+  },
+  "216": {
+   "k": "trump_card"
+  },
+  "217": {
+   "k": "acrobatics"
+  },
+  "218": {
+   "k": "weight_power",
+   "mode": "ratio"
+  },
+  "219": {
+   "k": "punishment"
+  },
+  "220": {
+   "k": "stored_power"
+  },
+  "221": {
+   "k": "electro_ball"
+  },
+  "222": {
+   "k": "gyro_ball"
+  },
+  "223": {
+   "k": "echoed_voice"
+  },
+  "224": {
+   "k": "double_if",
+   "cond": "target_moved"
+  },
+  "226": {
+   "k": "double_if",
+   "cond": "half_hp"
+  },
+  "227": {
+   "k": "double_if",
+   "cond": "poisoned"
+  },
+  "228": {
+   "k": "retaliate"
+  },
+  "229": {
+   "k": "hit_boost_target",
+   "st": {
+    "spe": -1
+   }
+  },
+  "230": {
+   "k": "foul_play"
+  },
+  "231": {
+   "k": "psyshock"
+  },
+  "232": {
+   "k": "heal",
+   "num": 1,
+   "den": 2
+  },
+  "233": {
+   "k": "room",
+   "r": "gravity"
+  },
+  "234": {
+   "k": "foresight"
+  },
+  "235": {
+   "k": "tailwind"
+  },
+  "236": {
+   "k": "embargo"
+  },
+  "237": {
+   "k": "aqua_ring"
+  },
+  "238": {
+   "k": "room",
+   "r": "trick_room"
+  },
+  "239": {
+   "k": "room",
+   "r": "wonder_room"
+  },
+  "240": {
+   "k": "room",
+   "r": "magic_room"
+  },
+  "241": {
+   "k": "magnet_rise"
+  },
+  "242": {
+   "k": "hazard",
+   "h": "toxic_spikes"
+  },
+  "243": {
+   "k": "gastro_acid"
+  },
+  "244": {
+   "k": "hazard",
+   "h": "stealth_rock"
+  },
+  "251": {
+   "k": "hazard",
+   "h": "sticky_web"
+  },
+  "252": {
+   "k": "counter",
+   "cat": -1
+  },
+  "253": {
+   "k": "lucky_chant"
+  },
+  "254": {
+   "k": "sucker_punch"
+  },
+  "255": {
+   "k": "hit_boost_target",
+   "st": {
+    "spd": -2
+   }
+  },
+  "256": {
+   "k": "set_ability",
+   "to": "simple"
+  },
+  "257": {
+   "k": "entrainment"
+  },
+  "258": {
+   "k": "heal_target"
+  },
+  "261": {
+   "k": "status_hit",
+   "s": "frz"
+  },
+  "262": {
+   "k": "topsy_turvy"
+  },
+  "263": {
+   "k": "terrain",
+   "t": "misty"
+  },
+  "264": {
+   "k": "terrain",
+   "t": "grassy"
+  },
+  "265": {
+   "k": "terrain",
+   "t": "electric"
+  },
+  "266": {
+   "k": "terrain",
+   "t": "psychic"
+  },
+  "267": {
+   "k": "boost_self",
+   "st": {
+    "atk": 1,
+    "acc": 1
+   }
+  },
+  "268": {
+   "k": "boost_self",
+   "st": {
+    "atk": 1,
+    "spa": 1
+   }
+  },
+  "269": {
+   "k": "confuse_hit",
+   "rain_acc": true
+  },
+  "270": {
+   "k": "flying_press"
+  },
+  "272": {
+   "k": "hit_boost_self",
+   "st": {
+    "spe": 1
+   }
+  },
+  "273": {
+   "k": "boost_self",
+   "st": {
+    "spa": 1,
+    "spd": 1,
+    "spe": 1
+   }
+  },
+  "274": {
+   "k": "boost_self",
+   "st": {
+    "atk": 1,
+    "def": 1,
+    "acc": 1
+   }
+  },
+  "277": {
+   "k": "soak"
+  },
+  "278": {
+   "k": "boost_self",
+   "st": {
+    "atk": 1,
+    "spa": 1
+   }
+  },
+  "279": {
+   "k": "hit_self_drop",
+   "st": {
+    "def": -1,
+    "spd": -1
+   }
+  },
+  "280": {
+   "k": "hit"
+  },
+  "281": {
+   "k": "recoil",
+   "num": 33,
+   "den": 100,
+   "sec_by_type": true
+  },
+  "282": {
+   "k": "fang_hit"
+  },
+  "283": {
+   "k": "recoil",
+   "num": 1,
+   "den": 2
+  },
+  "284": {
+   "k": "boost_self",
+   "st": {
+    "atk": 2,
+    "def": -1,
+    "spa": 2,
+    "spd": -1,
+    "spe": 2
+   }
+  },
+  "285": {
+   "k": "boost_self",
+   "st": {
+    "atk": 1,
+    "spe": 2
+   }
+  },
+  "286": {
+   "k": "boost_self",
+   "st": {
+    "def": 3
+   }
+  },
+  "287": {
+   "k": "boost_target",
+   "st": {
+    "atk": -1,
+    "spa": -1
+   }
+  },
+  "288": {
+   "k": "venom_drench"
+  },
+  "289": {
+   "k": "toxic_thread"
+  },
+  "290": {
+   "k": "clear_smog"
+  },
+  "291": {
+   "k": "hit_force_out"
+  },
+  "292": {
+   "k": "final_gambit"
+  },
+  "294": {
+   "k": "boost_self",
+   "st": {
+    "spe": 2
+   }
+  },
+  "296": {
+   "k": "defog"
+  },
+  "298": {
+   "k": "smack_down"
+  },
+  "300": {
+   "k": "psycho_shift"
+  },
+  "307": {
+   "k": "mean_look_hit"
+  },
+  "311": {
+   "k": "aurora_veil"
+  },
+  "313": {
+   "k": "feint"
+  },
+  "315": {
+   "k": "acupressure"
+  },
+  "316": {
+   "k": "boost_self",
+   "st": {
+    "spd": 1
+   }
+  },
+  "318": {
+   "k": "hit_boost_self",
+   "st": {
+    "spa": 1
+   }
+  },
+  "320": {
+   "k": "parting_shot"
+  },
+  "322": {
+   "k": "hit_self_drop",
+   "st": {
+    "def": -1,
+    "spd": -1,
+    "spe": -1
+   }
+  },
+  "324": {
+   "k": "stomping_tantrum"
+  },
+  "327": {
+   "k": "throat_chop"
+  },
+  "331": {
+   "k": "incinerate"
+  },
+  "332": {
+   "k": "pluck"
+  },
+  "333": {
+   "k": "strength_sap"
+  },
+  "334": {
+   "k": "self_half_hp"
+  },
+  "336": {
+   "k": "burn_up"
+  },
+  "337": {
+   "k": "shore_up"
+  },
+  "338": {
+   "k": "boost_self",
+   "st": {
+    "spa": 2,
+    "spd": 2,
+    "spe": 2
+   }
+  },
+  "341": {
+   "k": "status_hit",
+   "s": "slp"
+  },
+  "343": {
+   "k": "body_press"
+  },
+  "345": {
+   "k": "heal",
+   "num": 1,
+   "den": 4
+  },
+  "346": {
+   "k": "boost_self",
+   "st": {
+    "atk": 1,
+    "def": 1
+   }
+  },
+  "347": {
+   "k": "lash_out"
+  },
+  "348": {
+   "k": "hit"
+  },
+  "350": {
+   "k": "boost_self",
+   "st": {
+    "atk": 2,
+    "spa": 2
+   }
+  },
+  "352": {
+   "k": "struggle"
+  },
+  "354": {
+   "k": "hit_boost_target",
+   "st": {
+    "def": -1
+   }
+  },
+  "355": {
+   "k": "hit_boost_self",
+   "st": {
+    "eva": 1
+   }
+  },
+  "362": {
+   "k": "hit_self_drop",
+   "st": {
+    "def": -1
+   }
+  },
+  "363": {
+   "k": "hit_boost_self",
+   "st": {
+    "spe": 1
+   }
+  },
+  "365": {
+   "k": "status_hit",
+   "s": "psn"
+  },
+  "366": {
+   "k": "terrain_pulse"
+  },
+  "367": {
+   "k": "mean_look_hit"
+  },
+  "368": {
+   "k": "boost_self",
+   "st": {
+    "atk": 1,
+    "def": 1,
+    "spa": 1,
+    "spd": 1,
+    "spe": 1
+   }
+  },
+  "369": {
+   "k": "tar_shot"
+  },
+  "370": {
+   "k": "poltergeist"
+  },
+  "372": {
+   "k": "boost_self",
+   "st": {
+    "atk": 1,
+    "def": 1,
+    "spa": 1,
+    "spd": 1,
+    "spe": 1
+   }
+  },
+  "373": {
+   "k": "bolt_beak"
+  },
+  "375": {
+   "k": "terrain_power",
+   "t": "psychic",
+   "who": "user",
+   "m": 1.5
+  },
+  "376": {
+   "k": "two_turn",
+   "charge_boost": {
+    "spa": 1
+   }
+  },
+  "377": {
+   "k": "terrain_power",
+   "t": "electric",
+   "who": "target"
+  },
+  "379": {
+   "k": "court_change"
+  },
+  "380": {
+   "k": "self_half_hp"
+  },
+  "382": {
+   "k": "steel_roller"
+  },
+  "383": {
+   "k": "status",
+   "s": "slp"
+  },
+  "384": {
+   "k": "status_hit",
+   "s": "slp"
+  },
+  "385": {
+   "k": "double_shock"
+  },
+  "386": {
+   "k": "hit_boost_self",
+   "st": {
+    "spa": 1
+   }
+  },
+  "387": {
+   "k": "boost_self",
+   "st": {
+    "atk": 1,
+    "def": 1,
+    "spe": 1
+   }
+  },
+  "389": {
+   "k": "boost_self",
+   "st": {
+    "atk": 1
+   }
+  },
+  "391": {
+   "k": "hit"
+  },
+  "392": {
+   "k": "hit"
+  },
+  "394": {
+   "k": "dire_claw"
+  },
+  "395": {
+   "k": "status_hit",
+   "s": "psn"
+  },
+  "398": {
+   "k": "weather",
+   "w": "snow"
+  },
+  "399": {
+   "k": "triple_arrows"
+  },
+  "400": {
+   "k": "status_hit",
+   "s": "brn"
+  },
+  "401": {
+   "k": "take_heart"
+  },
+  "402": {
+   "k": "confuse_hit"
+  },
+  "403": {
+   "k": "se_boost"
+  },
+  "404": {
+   "k": "hit_self_drop",
+   "st": {
+    "spe": -2
+   }
+  },
+  "405": {
+   "k": "hit_self_drop",
+   "st": {
+    "spa": -1
+   }
+  },
+  "407": {
+   "k": "multi_hit",
+   "lo": 10,
+   "hi": 10,
+   "per_hit_acc": true
+  },
+  "408": {
+   "k": "status_hit",
+   "s": "psn"
+  },
+  "409": {
+   "k": "salt_cure"
+  },
+  "410": {
+   "k": "chilly_reception"
+  },
+  "411": {
+   "k": "status_hit",
+   "s": "brn"
+  },
+  "412": {
+   "k": "hit_boost_target",
+   "st": {
+    "spe": -1
+   }
+  },
+  "416": {
+   "k": "rage_fist"
+  },
+  "417": {
+   "k": "hit"
+  },
+  "418": {
+   "k": "multi_hit",
+   "lo": 2,
+   "hi": 2
+  },
+  "420": {
+   "k": "last_respects"
+  },
+  "422": {
+   "k": "boost_self",
+   "st": {
+    "atk": 2,
+    "def": -2
+   }
+  },
+  "424": {
+   "k": "boost_self",
+   "st": {
+    "atk": 2,
+    "spa": 2,
+    "spe": 2
+   }
+  },
+  "425": {
+   "k": "shed_tail"
+  },
+  "426": {
+   "k": "tidy_up"
+  },
+  "428": {
+   "k": "two_turn",
+   "charge_boost": {
+    "spa": 1
+   },
+   "rain_skip": true
+  },
+  "431": {
+   "k": "heal_block_hit"
+  },
+  "432": {
+   "k": "flinch_hit"
+  },
+  "436": {
+   "k": "self_half_hp"
+  },
+  "439": {
+   "k": "heal",
+   "num": 1,
+   "den": 2
+  }
+ },
+ "abilities": {
+  "65": {
+   "k": "pinch_boost",
+   "type": 12
+  },
+  "66": {
+   "k": "pinch_boost",
+   "type": 10
+  },
+  "67": {
+   "k": "pinch_boost",
+   "type": 11
+  },
+  "68": {
+   "k": "pinch_boost",
+   "type": 6
+  },
+  "22": {
+   "k": "entry_drop_foe",
+   "st": {
+    "atk": -1
+   }
+  },
+  "9": {
+   "k": "contact_status",
+   "s": "par",
+   "pct": 30
+  },
+  "38": {
+   "k": "contact_status",
+   "s": "psn",
+   "pct": 30
+  },
+  "49": {
+   "k": "contact_status",
+   "s": "brn",
+   "pct": 30
+  },
+  "24": {
+   "k": "contact_chip",
+   "den": 8
+  },
+  "160": {
+   "k": "contact_chip",
+   "den": 8
+  },
+  "26": {
+   "k": "type_immune",
+   "type": 4
+  },
+  "10": {
+   "k": "absorb_heal",
+   "type": 13
+  },
+  "11": {
+   "k": "absorb_heal",
+   "type": 11
+  },
+  "18": {
+   "k": "absorb_boost",
+   "type": 10
+  },
+  "5": {
+   "k": "sturdy"
+  },
+  "62": {
+   "k": "guts"
+  },
+  "37": {
+   "k": "double_atk"
+  },
+  "74": {
+   "k": "double_atk"
+  },
+  "47": {
+   "k": "resist_types",
+   "types": [
+    10,
+    15
+   ]
+  },
+  "101": {
+   "k": "technician"
+  },
+  "91": {
+   "k": "adaptability"
+  },
+  "50": {
+   "k": "run_away"
+  },
+  "39": {
+   "k": "no_flinch"
+  },
+  "19": {
+   "k": "no_secondary"
+  },
+  "51": {
+   "k": "no_acc_drop"
+  },
+  "52": {
+   "k": "no_atk_drop"
+  },
+  "29": {
+   "k": "no_stat_drop"
+  },
+  "73": {
+   "k": "no_stat_drop"
+  },
+  "20": {
+   "k": "no_confuse"
+  },
+  "15": {
+   "k": "status_immune",
+   "s": [
+    "slp"
+   ]
+  },
+  "72": {
+   "k": "status_immune",
+   "s": [
+    "slp"
+   ]
+  },
+  "7": {
+   "k": "status_immune",
+   "s": [
+    "par"
+   ]
+  },
+  "17": {
+   "k": "status_immune",
+   "s": [
+    "psn",
+    "tox"
+   ]
+  },
+  "41": {
+   "k": "status_immune",
+   "s": [
+    "brn"
+   ]
+  },
+  "40": {
+   "k": "status_immune",
+   "s": [
+    "frz"
+   ]
+  },
+  "69": {
+   "k": "no_recoil"
+  },
+  "14": {
+   "k": "acc_mult",
+   "num": 13,
+   "den": 10
+  },
+  "3": {
+   "k": "speed_boost"
+  },
+  "4": {
+   "k": "no_crit"
+  },
+  "75": {
+   "k": "no_crit"
+  },
+  "105": {
+   "k": "crit_up"
+  },
+  "97": {
+   "k": "sniper"
+  },
+  "46": {
+   "k": "pressure"
+  },
+  "55": {
+   "k": "hustle"
+  },
+  "30": {
+   "k": "natural_cure"
+  },
+  "61": {
+   "k": "shed_skin"
+  },
+  "125": {
+   "k": "sheer_force"
+  },
+  "89": {
+   "k": "flag_boost",
+   "flag": "punch",
+   "m": 1.2
+  },
+  "120": {
+   "k": "reckless"
+  },
+  "110": {
+   "k": "tinted_lens"
+  },
+  "116": {
+   "k": "filter"
+  },
+  "111": {
+   "k": "filter"
+  },
+  "99": {
+   "k": "no_guard"
+  },
+  "92": {
+   "k": "skill_link"
+  },
+  "63": {
+   "k": "marvel_scale"
+  },
+  "34": {
+   "k": "weather_speed",
+   "w": "sun"
+  },
+  "33": {
+   "k": "weather_speed",
+   "w": "rain"
+  },
+  "146": {
+   "k": "weather_speed",
+   "w": "sand"
+  },
+  "2": {
+   "k": "entry_weather",
+   "w": "rain"
+  },
+  "70": {
+   "k": "entry_weather",
+   "w": "sun"
+  },
+  "45": {
+   "k": "entry_weather",
+   "w": "sand"
+  },
+  "117": {
+   "k": "entry_weather",
+   "w": "hail"
+  },
+  "25": {
+   "k": "wonder_guard"
+  },
+  "77": {
+   "k": "none"
+  },
+  "1": {
+   "k": "none"
+  },
+  "173": {
+   "k": "flag_boost",
+   "flag": "bite",
+   "m": 1.5
+  },
+  "178": {
+   "k": "flag_boost",
+   "flag": "pulse",
+   "m": 1.5
+  },
+  "181": {
+   "k": "flag_boost",
+   "flag": "contact",
+   "m": 1.3
+  },
+  "292": {
+   "k": "flag_boost",
+   "flag": "slicing",
+   "m": 1.5
+  },
+  "244": {
+   "k": "punk_rock"
+  },
+  "151": {
+   "k": "infiltrator"
+  },
+  "127": {
+   "k": "unnerve"
+  },
+  "31": {
+   "k": "absorb_stat",
+   "type": 13,
+   "st": "spa"
+  },
+  "114": {
+   "k": "absorb_stat",
+   "type": 11,
+   "st": "spa"
+  },
+  "157": {
+   "k": "absorb_stat",
+   "type": 12,
+   "st": "atk"
+  },
+  "78": {
+   "k": "absorb_stat",
+   "type": 13,
+   "st": "spe"
+  },
+  "82": {
+   "k": "gluttony"
+  },
+  "144": {
+   "k": "regenerator"
+  },
+  "153": {
+   "k": "moxie",
+   "st": "atk"
+  },
+  "264": {
+   "k": "moxie",
+   "st": "atk"
+  },
+  "265": {
+   "k": "moxie",
+   "st": "spa"
+  },
+  "224": {
+   "k": "beast_boost"
+  },
+  "6": {
+   "k": "damp"
+  },
+  "12": {
+   "k": "oblivious"
+  },
+  "44": {
+   "k": "weather_heal",
+   "w": "rain"
+  },
+  "115": {
+   "k": "weather_heal",
+   "w": "hail"
+  },
+  "87": {
+   "k": "dry_skin"
+  },
+  "94": {
+   "k": "solar_power"
+  },
+  "104": {
+   "k": "mold_breaker"
+  },
+  "164": {
+   "k": "mold_breaker"
+  },
+  "163": {
+   "k": "mold_breaker"
+  },
+  "93": {
+   "k": "hydration"
+  },
+  "79": {
+   "k": "rivalry"
+  },
+  "80": {
+   "k": "steadfast"
+  },
+  "8": {
+   "k": "weather_evasion",
+   "w": "sand"
+  },
+  "81": {
+   "k": "weather_evasion",
+   "w": "hail"
+  },
+  "133": {
+   "k": "weak_armor"
+  },
+  "148": {
+   "k": "analytic"
+  },
+  "142": {
+   "k": "overcoat"
+  },
+  "102": {
+   "k": "leaf_guard"
+  },
+  "140": {
+   "k": "telepathy"
+  },
+  "145": {
+   "k": "no_def_drop"
+  },
+  "28": {
+   "k": "synchronize"
+  },
+  "175": {
+   "k": "status_immune",
+   "s": [
+    "slp"
+   ]
+  },
+  "48": {
+   "k": "early_bird"
+  },
+  "84": {
+   "k": "unburden"
+  },
+  "158": {
+   "k": "prankster"
+  },
+  "128": {
+   "k": "defiant",
+   "st": "atk"
+  },
+  "172": {
+   "k": "defiant",
+   "st": "spa"
+  },
+  "155": {
+   "k": "rattled"
+  },
+  "143": {
+   "k": "poison_touch"
+  },
+  "32": {
+   "k": "serene_grace"
+  },
+  "113": {
+   "k": "scrappy"
+  },
+  "299": {
+   "k": "scrappy"
+  },
+  "98": {
+   "k": "magic_guard"
+  },
+  "56": {
+   "k": "cute_charm"
+  },
+  "165": {
+   "k": "aroma_veil"
+  },
+  "159": {
+   "k": "sand_force"
+  },
+  "42": {
+   "k": "trap",
+   "type": 8
+  },
+  "23": {
+   "k": "trap"
+  },
+  "71": {
+   "k": "trap",
+   "grounded": true
+  },
+  "35": {
+   "k": "no_acc_drop"
+  },
+  "154": {
+   "k": "justified"
+  },
+  "130": {
+   "k": "cursed_body"
+  },
+  "83": {
+   "k": "anger_point"
+  },
+  "27": {
+   "k": "effect_spore"
+  },
+  "43": {
+   "k": "flag_immune",
+   "flag": "sound"
+  },
+  "171": {
+   "k": "flag_immune",
+   "flag": "bullet"
+  },
+  "106": {
+   "k": "aftermath"
+  },
+  "95": {
+   "k": "quick_feet"
+  },
+  "132": {
+   "k": "friend_guard"
+  },
+  "109": {
+   "k": "unaware"
+  },
+  "103": {
+   "k": "klutz"
+  },
+  "60": {
+   "k": "sticky_hold"
+  },
+  "147": {
+   "k": "wonder_skin"
+  },
+  "126": {
+   "k": "contrary"
+  },
+  "86": {
+   "k": "simple"
+  },
+  "156": {
+   "k": "magic_bounce"
+  },
+  "13": {
+   "k": "cloud_nine"
+  },
+  "76": {
+   "k": "cloud_nine"
+  },
+  "141": {
+   "k": "moody"
+  },
+  "21": {
+   "k": "suction_cups"
+  },
+  "36": {
+   "k": "trace"
+  },
+  "168": {
+   "k": "protean"
+  },
+  "236": {
+   "k": "protean"
+  },
+  "202": {
+   "k": "weather_speed",
+   "w": "hail"
+  },
+  "88": {
+   "k": "download"
+  },
+  "177": {
+   "k": "gale_wings"
+  },
+  "205": {
+   "k": "triage"
+  },
+  "169": {
+   "k": "fur_coat"
+  },
+  "85": {
+   "k": "heatproof"
+  },
+  "183": {
+   "k": "contact_drop",
+   "st": "spe"
+  },
+  "221": {
+   "k": "contact_drop",
+   "st": "spe"
+  },
+  "64": {
+   "k": "liquid_ooze"
+  },
+  "212": {
+   "k": "corrosion"
+  },
+  "90": {
+   "k": "poison_heal"
+  },
+  "192": {
+   "k": "stamina"
+  },
+  "96": {
+   "k": "normalize"
+  },
+  "182": {
+   "k": "ate",
+   "type": 18
+  },
+  "184": {
+   "k": "ate",
+   "type": 2
+  },
+  "174": {
+   "k": "ate",
+   "type": 15
+  },
+  "206": {
+   "k": "ate",
+   "type": 13
+  },
+  "209": {
+   "k": "disguise"
+  },
+  "218": {
+   "k": "fluffy"
+  },
+  "227": {
+   "k": "entry_terrain",
+   "t": "psychic"
+  },
+  "229": {
+   "k": "entry_terrain",
+   "t": "grassy"
+  },
+  "228": {
+   "k": "entry_terrain",
+   "t": "misty"
+  },
+  "226": {
+   "k": "entry_terrain",
+   "t": "electric"
+  },
+  "136": {
+   "k": "multiscale"
+  },
+  "231": {
+   "k": "multiscale"
+  },
+  "232": {
+   "k": "filter"
+  },
+  "199": {
+   "k": "water_bubble"
+  },
+  "196": {
+   "k": "merciless"
+  },
+  "207": {
+   "k": "terrain_speed",
+   "t": "electric"
+  },
+  "200": {
+   "k": "type_atk",
+   "type": 8
+  },
+  "262": {
+   "k": "type_atk",
+   "type": 13
+  },
+  "263": {
+   "k": "type_atk",
+   "type": 16
+  },
+  "219": {
+   "k": "block_priority"
+  },
+  "214": {
+   "k": "block_priority"
+  },
+  "296": {
+   "k": "block_priority"
+  },
+  "246": {
+   "k": "ice_scales"
+  },
+  "234": {
+   "k": "entry_boost",
+   "st": "atk"
+  },
+  "235": {
+   "k": "entry_boost",
+   "st": "def"
+  },
+  "54": {
+   "k": "truant"
+  },
+  "100": {
+   "k": "stall"
+  },
+  "129": {
+   "k": "defeatist"
+  },
+  "201": {
+   "k": "berserk"
+  },
+  "119": {
+   "k": "frisk"
+  },
+  "282": {
+   "k": "paradox",
+   "t": "electric"
+  },
+  "281": {
+   "k": "paradox",
+   "w": "sun"
+  },
+  "257": {
+   "k": "status_immune",
+   "s": [
+    "psn",
+    "tox"
+   ]
+  },
+  "272": {
+   "k": "status_immune",
+   "s": [
+    "psn",
+    "tox",
+    "brn",
+    "par",
+    "slp",
+    "frz"
+   ]
+  },
+  "213": {
+   "k": "status_immune",
+   "s": [
+    "psn",
+    "tox",
+    "brn",
+    "par",
+    "slp",
+    "frz"
+   ]
+  },
+  "138": {
+   "k": "flare_boost"
+  },
+  "137": {
+   "k": "toxic_boost"
+  },
+  "270": {
+   "k": "status_immune",
+   "s": [
+    "brn"
+   ]
+  },
+  "204": {
+   "k": "none"
+  },
+  "53": {
+   "k": "none"
+  },
+  "118": {
+   "k": "none"
+  },
+  "233": {
+   "k": "neuroforce"
+  }
+ },
+ "evolutions": "0x59CC90",
+ "evo_slots": 11,
+ "items": {
+  "472": {
+   "k": "residual_heal"
+  },
+  "487": {
+   "k": "black_sludge"
+  },
+  "479": {
+   "k": "life_orb"
+  },
+  "442": {
+   "k": "choice",
+   "st": "atk"
+  },
+  "443": {
+   "k": "choice",
+   "st": "spa"
+  },
+  "444": {
+   "k": "choice",
+   "st": "spe"
+  },
+  "503": {
+   "k": "assault_vest"
+  },
+  "494": {
+   "k": "eviolite"
+  },
+  "481": {
+   "k": "focus_sash"
+  },
+  "469": {
+   "k": "focus_band"
+  },
+  "502": {
+   "k": "weakness_policy"
+  },
+  "497": {
+   "k": "air_balloon"
+  },
+  "496": {
+   "k": "rocky_helmet"
+  },
+  "477": {
+   "k": "expert_belt"
+  },
+  "475": {
+   "k": "cat_boost",
+   "cat": 0
+  },
+  "476": {
+   "k": "cat_boost",
+   "cat": 1
+  },
+  "523": {
+   "k": "pinch_heal",
+   "frac": 4,
+   "at": 2
+  },
+  "520": {
+   "k": "pinch_heal",
+   "hp": 10,
+   "at": 2
+  },
+  "53": {
+   "k": "pinch_heal",
+   "hp": 20,
+   "at": 2
+  },
+  "524": {
+   "k": "pinch_heal",
+   "frac": 3,
+   "at": 4,
+   "hates": "atk"
+  },
+  "525": {
+   "k": "pinch_heal",
+   "frac": 3,
+   "at": 4,
+   "hates": "spa"
+  },
+  "526": {
+   "k": "pinch_heal",
+   "frac": 3,
+   "at": 4,
+   "hates": "spe"
+  },
+  "527": {
+   "k": "pinch_heal",
+   "frac": 3,
+   "at": 4,
+   "hates": "spd"
+  },
+  "528": {
+   "k": "pinch_heal",
+   "frac": 3,
+   "at": 4,
+   "hates": "def"
+  },
+  "522": {
+   "k": "cure_berry",
+   "s": [
+    "psn",
+    "tox",
+    "brn",
+    "par",
+    "slp",
+    "frz",
+    "confusion"
+   ]
+  },
+  "514": {
+   "k": "cure_berry",
+   "s": [
+    "par"
+   ]
+  },
+  "515": {
+   "k": "cure_berry",
+   "s": [
+    "slp"
+   ]
+  },
+  "516": {
+   "k": "cure_berry",
+   "s": [
+    "psn",
+    "tox"
+   ]
+  },
+  "517": {
+   "k": "cure_berry",
+   "s": [
+    "brn"
+   ]
+  },
+  "518": {
+   "k": "cure_berry",
+   "s": [
+    "frz"
+   ]
+  },
+  "521": {
+   "k": "cure_berry",
+   "s": [
+    "confusion"
+   ]
+  },
+  "567": {
+   "k": "pinch_boost",
+   "st": "atk"
+  },
+  "568": {
+   "k": "pinch_boost",
+   "st": "def"
+  },
+  "569": {
+   "k": "pinch_boost",
+   "st": "spe"
+  },
+  "570": {
+   "k": "pinch_boost",
+   "st": "spa"
+  },
+  "571": {
+   "k": "pinch_boost",
+   "st": "spd"
+  },
+  "460": {
+   "k": "white_herb"
+  },
+  "464": {
+   "k": "mental_herb"
+  },
+  "480": {
+   "k": "power_herb"
+  },
+  "465": {
+   "k": "flinch_item"
+  },
+  "493": {
+   "k": "flinch_item"
+  },
+  "462": {
+   "k": "quick_claw"
+  },
+  "459": {
+   "k": "evasion_item"
+  },
+  "405": {
+   "k": "evasion_item"
+  },
+  "474": {
+   "k": "wide_lens"
+  },
+  "482": {
+   "k": "zoom_lens"
+  },
+  "471": {
+   "k": "crit_item"
+  },
+  "492": {
+   "k": "crit_item"
+  },
+  "473": {
+   "k": "shell_bell"
+  },
+  "445": {
+   "k": "orb",
+   "s": "brn"
+  },
+  "446": {
+   "k": "orb",
+   "s": "tox"
+  },
+  "478": {
+   "k": "light_clay"
+  },
+  "448": {
+   "k": "weather_rock",
+   "w": "sun"
+  },
+  "447": {
+   "k": "weather_rock",
+   "w": "rain"
+  },
+  "449": {
+   "k": "weather_rock",
+   "w": "sand"
+  },
+  "450": {
+   "k": "weather_rock",
+   "w": "hail"
+  },
+  "506": {
+   "k": "terrain_extender"
+  },
+  "510": {
+   "k": "boots"
+  },
+  "491": {
+   "k": "big_root"
+  },
+  "470": {
+   "k": "lucky_egg"
+  },
+  "764": {
+   "k": "loaded_dice"
+  },
+  "508": {
+   "k": "throat_spray"
+  },
+  "468": {
+   "k": "smoke_ball"
+  },
+  "490": {
+   "k": "shed_shell"
+  },
+  "507": {
+   "k": "pads"
+  },
+  "504": {
+   "k": "goggles"
+  },
+  "763": {
+   "k": "cloak"
+  },
+  "761": {
+   "k": "clear_amulet"
+  },
+  "762": {
+   "k": "punch_glove"
+  },
+  "511": {
+   "k": "blunder_policy"
+  },
+  "461": {
+   "k": "exp_share"
+  },
+  "485": {
+   "k": "lagging"
+  },
+  "408": {
+   "k": "lagging"
+  },
+  "484": {
+   "k": "iron_ball"
+  },
+  "483": {
+   "k": "metronome_item"
+  },
+  "245": {
+   "k": "everstone"
+  },
+  "425": {
+   "k": "type_boost",
+   "type": 0
+  },
+  "431": {
+   "k": "type_boost",
+   "type": 1
+  },
+  "255": {
+   "k": "type_boost",
+   "type": 1
+  },
+  "434": {
+   "k": "type_boost",
+   "type": 2
+  },
+  "258": {
+   "k": "type_boost",
+   "type": 2
+  },
+  "432": {
+   "k": "type_boost",
+   "type": 3
+  },
+  "256": {
+   "k": "type_boost",
+   "type": 3
+  },
+  "433": {
+   "k": "type_boost",
+   "type": 4
+  },
+  "257": {
+   "k": "type_boost",
+   "type": 4
+  },
+  "437": {
+   "k": "type_boost",
+   "type": 5
+  },
+  "261": {
+   "k": "type_boost",
+   "type": 5
+  },
+  "407": {
+   "k": "type_boost",
+   "type": 5
+  },
+  "436": {
+   "k": "type_boost",
+   "type": 6
+  },
+  "260": {
+   "k": "type_boost",
+   "type": 6
+  },
+  "438": {
+   "k": "type_boost",
+   "type": 7
+  },
+  "262": {
+   "k": "type_boost",
+   "type": 7
+  },
+  "441": {
+   "k": "type_boost",
+   "type": 8
+  },
+  "265": {
+   "k": "type_boost",
+   "type": 8
+  },
+  "426": {
+   "k": "type_boost",
+   "type": 10
+  },
+  "250": {
+   "k": "type_boost",
+   "type": 10
+  },
+  "427": {
+   "k": "type_boost",
+   "type": 11
+  },
+  "251": {
+   "k": "type_boost",
+   "type": 11
+  },
+  "404": {
+   "k": "type_boost",
+   "type": 11
+  },
+  "409": {
+   "k": "type_boost",
+   "type": 11
+  },
+  "429": {
+   "k": "type_boost",
+   "type": 12
+  },
+  "253": {
+   "k": "type_boost",
+   "type": 12
+  },
+  "410": {
+   "k": "type_boost",
+   "type": 12
+  },
+  "428": {
+   "k": "type_boost",
+   "type": 13
+  },
+  "252": {
+   "k": "type_boost",
+   "type": 13
+  },
+  "435": {
+   "k": "type_boost",
+   "type": 14
+  },
+  "259": {
+   "k": "type_boost",
+   "type": 14
+  },
+  "406": {
+   "k": "type_boost",
+   "type": 14
+  },
+  "430": {
+   "k": "type_boost",
+   "type": 15
+  },
+  "254": {
+   "k": "type_boost",
+   "type": 15
+  },
+  "439": {
+   "k": "type_boost",
+   "type": 16
+  },
+  "263": {
+   "k": "type_boost",
+   "type": 16
+  },
+  "440": {
+   "k": "type_boost",
+   "type": 17
+  },
+  "264": {
+   "k": "type_boost",
+   "type": 17
+  },
+  "810": {
+   "k": "type_boost",
+   "type": 18
+  },
+  "266": {
+   "k": "type_boost",
+   "type": 18
+  },
+  "339": {
+   "k": "gem",
+   "type": 0
+  },
+  "345": {
+   "k": "gem",
+   "type": 1
+  },
+  "348": {
+   "k": "gem",
+   "type": 2
+  },
+  "346": {
+   "k": "gem",
+   "type": 3
+  },
+  "347": {
+   "k": "gem",
+   "type": 4
+  },
+  "351": {
+   "k": "gem",
+   "type": 5
+  },
+  "350": {
+   "k": "gem",
+   "type": 6
+  },
+  "352": {
+   "k": "gem",
+   "type": 7
+  },
+  "355": {
+   "k": "gem",
+   "type": 8
+  },
+  "340": {
+   "k": "gem",
+   "type": 10
+  },
+  "341": {
+   "k": "gem",
+   "type": 11
+  },
+  "343": {
+   "k": "gem",
+   "type": 12
+  },
+  "342": {
+   "k": "gem",
+   "type": 13
+  },
+  "349": {
+   "k": "gem",
+   "type": 14
+  },
+  "344": {
+   "k": "gem",
+   "type": 15
+  },
+  "353": {
+   "k": "gem",
+   "type": 16
+  },
+  "354": {
+   "k": "gem",
+   "type": 17
+  },
+  "356": {
+   "k": "gem",
+   "type": 18
+  },
+  "549": {
+   "k": "resist_berry",
+   "type": 0
+  },
+  "555": {
+   "k": "resist_berry",
+   "type": 1
+  },
+  "558": {
+   "k": "resist_berry",
+   "type": 2
+  },
+  "556": {
+   "k": "resist_berry",
+   "type": 3
+  },
+  "557": {
+   "k": "resist_berry",
+   "type": 4
+  },
+  "561": {
+   "k": "resist_berry",
+   "type": 5
+  },
+  "560": {
+   "k": "resist_berry",
+   "type": 6
+  },
+  "562": {
+   "k": "resist_berry",
+   "type": 7
+  },
+  "565": {
+   "k": "resist_berry",
+   "type": 8
+  },
+  "550": {
+   "k": "resist_berry",
+   "type": 10
+  },
+  "551": {
+   "k": "resist_berry",
+   "type": 11
+  },
+  "553": {
+   "k": "resist_berry",
+   "type": 12
+  },
+  "552": {
+   "k": "resist_berry",
+   "type": 13
+  },
+  "559": {
+   "k": "resist_berry",
+   "type": 14
+  },
+  "554": {
+   "k": "resist_berry",
+   "type": 15
+  },
+  "563": {
+   "k": "resist_berry",
+   "type": 16
+  },
+  "564": {
+   "k": "resist_berry",
+   "type": 17
+  },
+  "566": {
+   "k": "resist_berry",
+   "type": 18
+  }
+ },
+ "balls": {
+  "1": {
+   "k": "basic"
+  },
+  "5": {
+   "k": "basic"
+  },
+  "14": {
+   "k": "basic"
+  },
+  "27": {
+   "k": "basic"
+  },
+  "6": {
+   "k": "heal"
+  },
+  "18": {
+   "k": "basic"
+  },
+  "2": {
+   "k": "great"
+  },
+  "23": {
+   "k": "great"
+  },
+  "24": {
+   "k": "great"
+  },
+  "3": {
+   "k": "ultra"
+  },
+  "4": {
+   "k": "master"
+  },
+  "7": {
+   "k": "net"
+  },
+  "8": {
+   "k": "nest"
+  },
+  "9": {
+   "k": "dive"
+  },
+  "10": {
+   "k": "dusk"
+  },
+  "11": {
+   "k": "timer"
+  },
+  "12": {
+   "k": "quick"
+  },
+  "13": {
+   "k": "repeat"
+  },
+  "15": {
+   "k": "level"
+  },
+  "16": {
+   "k": "lure"
+  },
+  "17": {
+   "k": "moon"
+  },
+  "19": {
+   "k": "love"
+  },
+  "20": {
+   "k": "fast"
+  },
+  "21": {
+   "k": "heavy"
+  },
+  "22": {
+   "k": "dream"
+  },
+  "26": {
+   "k": "beast"
+  }
+ },
+ "bag": {
+  "28": {
+   "k": "heal",
+   "hp": 20
+  },
+  "29": {
+   "k": "heal",
+   "hp": 60
+  },
+  "30": {
+   "k": "heal",
+   "hp": 120
+  },
+  "31": {
+   "k": "heal",
+   "hp": 9999
+  },
+  "32": {
+   "k": "heal",
+   "hp": 9999,
+   "cure": true
+  },
+  "35": {
+   "k": "heal",
+   "hp": 30
+  },
+  "36": {
+   "k": "heal",
+   "hp": 50
+  },
+  "37": {
+   "k": "heal",
+   "hp": 70
+  },
+  "38": {
+   "k": "heal",
+   "hp": 100
+  },
+  "39": {
+   "k": "heal",
+   "hp": 60
+  },
+  "40": {
+   "k": "heal",
+   "hp": 120
+  },
+  "53": {
+   "k": "heal",
+   "hp": 20
+  },
+  "55": {
+   "k": "heal",
+   "hp": 20
+  },
+  "33": {
+   "k": "revive",
+   "frac": 2
+  },
+  "34": {
+   "k": "revive",
+   "frac": 1
+  },
+  "42": {
+   "k": "revive",
+   "frac": 1
+  },
+  "43": {
+   "k": "cure",
+   "s": [
+    "psn",
+    "tox"
+   ]
+  },
+  "44": {
+   "k": "cure",
+   "s": [
+    "par"
+   ]
+  },
+  "45": {
+   "k": "cure",
+   "s": [
+    "brn"
+   ]
+  },
+  "46": {
+   "k": "cure",
+   "s": [
+    "frz"
+   ]
+  },
+  "47": {
+   "k": "cure",
+   "s": [
+    "slp"
+   ]
+  },
+  "48": {
+   "k": "cure",
+   "s": [
+    "psn",
+    "tox",
+    "brn",
+    "par",
+    "slp",
+    "frz",
+    "confusion"
+   ]
+  },
+  "41": {
+   "k": "cure",
+   "s": [
+    "psn",
+    "tox",
+    "brn",
+    "par",
+    "slp",
+    "frz",
+    "confusion"
+   ]
+  },
+  "59": {
+   "k": "cure",
+   "s": [
+    "psn",
+    "tox",
+    "brn",
+    "par",
+    "slp",
+    "frz",
+    "confusion"
+   ]
+  },
+  "60": {
+   "k": "cure",
+   "s": [
+    "psn",
+    "tox",
+    "brn",
+    "par",
+    "slp",
+    "frz",
+    "confusion"
+   ]
+  },
+  "61": {
+   "k": "cure",
+   "s": [
+    "psn",
+    "tox",
+    "brn",
+    "par",
+    "slp",
+    "frz",
+    "confusion"
+   ]
+  },
+  "49": {
+   "k": "pp",
+   "n": 10,
+   "all": false
+  },
+  "50": {
+   "k": "pp",
+   "n": 99,
+   "all": false
+  },
+  "51": {
+   "k": "pp",
+   "n": 10,
+   "all": true
+  },
+  "52": {
+   "k": "pp",
+   "n": 99,
+   "all": true
+  },
+  "121": {
+   "k": "x",
+   "st": "atk"
+  },
+  "122": {
+   "k": "x",
+   "st": "def"
+  },
+  "123": {
+   "k": "x",
+   "st": "spa"
+  },
+  "124": {
+   "k": "x",
+   "st": "spd"
+  },
+  "125": {
+   "k": "x",
+   "st": "spe"
+  },
+  "126": {
+   "k": "x",
+   "st": "acc"
+  },
+  "127": {
+   "k": "dire_hit"
+  },
+  "128": {
+   "k": "guard_spec"
+  }
+ },
+ "pokedex": "0x11C5BA8"
+}

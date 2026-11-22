@@ -1,0 +1,552 @@
+{
+ "EFFECT_ACCURACY_DOWN": {
+  "k": "boost_target",
+  "st": {
+   "acc": -1
+  }
+ },
+ "EFFECT_ACCURACY_DOWN_HIT": {
+  "k": "hit_boost_target",
+  "st": {
+   "acc": -1
+  }
+ },
+ "EFFECT_ALL_UP_HIT": {
+  "k": "hit_boost_self",
+  "st": {
+   "atk": 1,
+   "def": 1,
+   "spa": 1,
+   "spd": 1,
+   "spe": 1
+  }
+ },
+ "EFFECT_ALWAYS_HIT": {
+  "k": "hit"
+ },
+ "EFFECT_ATTACK_DOWN": {
+  "k": "boost_target",
+  "st": {
+   "atk": -1
+  }
+ },
+ "EFFECT_ATTACK_DOWN_2": {
+  "k": "boost_target",
+  "st": {
+   "atk": -2
+  }
+ },
+ "EFFECT_ATTACK_DOWN_HIT": {
+  "k": "hit_boost_target",
+  "st": {
+   "atk": -1
+  }
+ },
+ "EFFECT_ATTACK_UP": {
+  "k": "boost_self",
+  "st": {
+   "atk": 1
+  }
+ },
+ "EFFECT_ATTACK_UP_2": {
+  "k": "boost_self",
+  "st": {
+   "atk": 2
+  }
+ },
+ "EFFECT_ATTACK_UP_HIT": {
+  "k": "hit_boost_self",
+  "st": {
+   "atk": 1
+  }
+ },
+ "EFFECT_ATTRACT": {
+  "k": "attract"
+ },
+ "EFFECT_BATON_PASS": {
+  "k": "baton_pass"
+ },
+ "EFFECT_BEAT_UP": {
+  "k": "unknown"
+ },
+ "EFFECT_BELLY_DRUM": {
+  "k": "belly_drum"
+ },
+ "EFFECT_BIDE": {
+  "k": "unknown"
+ },
+ "EFFECT_BURN": {
+  "k": "status",
+  "s": "brn"
+ },
+ "EFFECT_BURN_HIT": {
+  "k": "status_hit",
+  "s": "brn"
+ },
+ "EFFECT_CONFUSE": {
+  "k": "confuse"
+ },
+ "EFFECT_CONFUSE_HIT": {
+  "k": "confuse_hit"
+ },
+ "EFFECT_CONVERSION": {
+  "k": "unknown"
+ },
+ "EFFECT_CONVERSION2": {
+  "k": "unknown"
+ },
+ "EFFECT_COUNTER": {
+  "cat": 0,
+  "k": "counter"
+ },
+ "EFFECT_CRUSH_GRIP": {
+  "k": "wring_out"
+ },
+ "EFFECT_CURSE": {
+  "k": "curse"
+ },
+ "EFFECT_DEFENSE_CURL": {
+  "k": "boost_self",
+  "st": {
+   "def": 1
+  }
+ },
+ "EFFECT_DEFENSE_DOWN": {
+  "k": "boost_target",
+  "st": {
+   "def": -1
+  }
+ },
+ "EFFECT_DEFENSE_DOWN_2": {
+  "k": "boost_target",
+  "st": {
+   "def": -2
+  }
+ },
+ "EFFECT_DEFENSE_DOWN_HIT": {
+  "k": "hit_boost_target",
+  "st": {
+   "def": -1
+  }
+ },
+ "EFFECT_DEFENSE_UP": {
+  "k": "boost_self",
+  "st": {
+   "def": 1
+  }
+ },
+ "EFFECT_DEFENSE_UP_2": {
+  "k": "boost_self",
+  "st": {
+   "def": 2
+  }
+ },
+ "EFFECT_DEFENSE_UP_HIT": {
+  "k": "hit_boost_self",
+  "st": {
+   "def": 1
+  }
+ },
+ "EFFECT_DESTINY_BOND": {
+  "k": "destiny_bond"
+ },
+ "EFFECT_DISABLE": {
+  "k": "disable"
+ },
+ "EFFECT_DOUBLE_HIT": {
+  "hi": 2,
+  "k": "multi_hit",
+  "lo": 2
+ },
+ "EFFECT_DRAGON_ENERGY": {
+  "k": "eruption"
+ },
+ "EFFECT_DRAINING_KISS": {
+  "den": 4,
+  "k": "drain",
+  "num": 3
+ },
+ "EFFECT_DREAM_EATER": {
+  "k": "dream_eater"
+ },
+ "EFFECT_EARTHQUAKE": {
+  "k": "hit"
+ },
+ "EFFECT_ENCORE": {
+  "k": "encore"
+ },
+ "EFFECT_ENDURE": {
+  "k": "endure"
+ },
+ "EFFECT_EVASION_DOWN": {
+  "k": "boost_target",
+  "st": {
+   "eva": -1
+  }
+ },
+ "EFFECT_EVASION_UP": {
+  "k": "boost_self",
+  "st": {
+   "eva": 1
+  }
+ },
+ "EFFECT_FALSE_SWIPE": {
+  "k": "false_swipe"
+ },
+ "EFFECT_FLAME_WHEEL": {
+  "k": "status_hit",
+  "s": "brn"
+ },
+ "EFFECT_FLINCH_HIT": {
+  "k": "flinch_hit"
+ },
+ "EFFECT_FLY": {
+  "k": "semi_invuln"
+ },
+ "EFFECT_FOCUS_ENERGY": {
+  "k": "focus_energy"
+ },
+ "EFFECT_FORCE_SWITCH": {
+  "k": "hit_force_out"
+ },
+ "EFFECT_FORESIGHT": {
+  "k": "foresight"
+ },
+ "EFFECT_FREEZE_HIT": {
+  "k": "status_hit",
+  "s": "frz"
+ },
+ "EFFECT_FRUSTRATION": {
+  "k": "frustration_power"
+ },
+ "EFFECT_FURY_CUTTER": {
+  "k": "fury_cutter"
+ },
+ "EFFECT_FUTURE_SIGHT": {
+  "k": "unknown"
+ },
+ "EFFECT_GUST": {
+  "k": "hit"
+ },
+ "EFFECT_HEAL": {
+  "den": 2,
+  "k": "heal",
+  "num": 1
+ },
+ "EFFECT_HEAL_BELL": {
+  "k": "heal_bell"
+ },
+ "EFFECT_HIDDEN_POWER": {
+  "k": "hidden_power"
+ },
+ "EFFECT_HYPER_BEAM": {
+  "k": "recharge"
+ },
+ "EFFECT_JUMP_KICK": {
+  "k": "crash_on_miss"
+ },
+ "EFFECT_LEECH_HIT": {
+  "den": 2,
+  "k": "drain",
+  "num": 1
+ },
+ "EFFECT_LEECH_SEED": {
+  "k": "leech_seed"
+ },
+ "EFFECT_LEVEL_DAMAGE": {
+  "k": "level_damage"
+ },
+ "EFFECT_LIGHT_SCREEN": {
+  "k": "screen",
+  "side": "lightscreen"
+ },
+ "EFFECT_LOCK_ON": {
+  "k": "lock_on"
+ },
+ "EFFECT_MAGNITUDE": {
+  "k": "magnitude"
+ },
+ "EFFECT_MEAN_LOOK": {
+  "k": "mean_look"
+ },
+ "EFFECT_MEMENTO": {
+  "k": "memento"
+ },
+ "EFFECT_METRONOME": {
+  "k": "unknown"
+ },
+ "EFFECT_MIMIC": {
+  "k": "unknown"
+ },
+ "EFFECT_MIRROR_COAT": {
+  "cat": 1,
+  "k": "counter"
+ },
+ "EFFECT_MIRROR_MOVE": {
+  "k": "unknown"
+ },
+ "EFFECT_MIST": {
+  "k": "side_cond",
+  "side": "mist"
+ },
+ "EFFECT_MOONLIGHT": {
+  "k": "weather_heal"
+ },
+ "EFFECT_MORNING_SUN": {
+  "k": "weather_heal"
+ },
+ "EFFECT_MULTI_HIT": {
+  "hi": 5,
+  "k": "multi_hit",
+  "lo": 2
+ },
+ "EFFECT_NIGHTMARE": {
+  "k": "nightmare"
+ },
+ "EFFECT_NORMAL_HIT": {
+  "k": "hit"
+ },
+ "EFFECT_OHKO": {
+  "k": "ohko"
+ },
+ "EFFECT_PAIN_SPLIT": {
+  "k": "pain_split"
+ },
+ "EFFECT_PARALYZE": {
+  "k": "status",
+  "s": "par"
+ },
+ "EFFECT_PARALYZE_HIT": {
+  "k": "status_hit",
+  "s": "par"
+ },
+ "EFFECT_PAY_DAY": {
+  "k": "hit"
+ },
+ "EFFECT_PERISH_SONG": {
+  "k": "perish_song"
+ },
+ "EFFECT_POISON": {
+  "k": "status",
+  "s": "psn"
+ },
+ "EFFECT_POISON_HIT": {
+  "k": "status_hit",
+  "s": "psn"
+ },
+ "EFFECT_POISON_MULTI_HIT": {
+  "hi": 5,
+  "k": "multi_hit",
+  "lo": 2
+ },
+ "EFFECT_PRESENT": {
+  "k": "present"
+ },
+ "EFFECT_PRIORITY_HIT": {
+  "k": "hit"
+ },
+ "EFFECT_PROTECT": {
+  "k": "protect"
+ },
+ "EFFECT_PSYCH_UP": {
+  "k": "psych_up"
+ },
+ "EFFECT_PSYWAVE": {
+  "k": "psywave"
+ },
+ "EFFECT_PURSUIT": {
+  "k": "unknown"
+ },
+ "EFFECT_RAGE": {
+  "k": "unknown"
+ },
+ "EFFECT_RAIN_DANCE": {
+  "k": "weather",
+  "w": "rain"
+ },
+ "EFFECT_RAMPAGE": {
+  "k": "rampage"
+ },
+ "EFFECT_RAPID_SPIN": {
+  "k": "rapid_spin"
+ },
+ "EFFECT_RAZOR_WIND": {
+  "k": "two_turn"
+ },
+ "EFFECT_RECOIL_HIT": {
+  "den": 4,
+  "k": "recoil",
+  "num": 1
+ },
+ "EFFECT_REFLECT": {
+  "k": "screen",
+  "side": "reflect"
+ },
+ "EFFECT_RESET_STATS": {
+  "k": "haze"
+ },
+ "EFFECT_RETURN": {
+  "k": "return_power"
+ },
+ "EFFECT_REVERSAL": {
+  "k": "flail"
+ },
+ "EFFECT_ROLLOUT": {
+  "k": "rollout"
+ },
+ "EFFECT_SACRED_FIRE": {
+  "k": "status_hit",
+  "s": "brn"
+ },
+ "EFFECT_SAFEGUARD": {
+  "k": "side_cond",
+  "side": "safeguard"
+ },
+ "EFFECT_SANDSTORM": {
+  "k": "weather",
+  "w": "sand"
+ },
+ "EFFECT_SELFDESTRUCT": {
+  "k": "explode"
+ },
+ "EFFECT_SKETCH": {
+  "k": "unknown"
+ },
+ "EFFECT_SKULL_BASH": {
+  "k": "two_turn"
+ },
+ "EFFECT_SKY_ATTACK": {
+  "k": "two_turn"
+ },
+ "EFFECT_SLEEP": {
+  "k": "status",
+  "s": "slp"
+ },
+ "EFFECT_SLEEP_TALK": {
+  "k": "sleep_talk"
+ },
+ "EFFECT_SNORE": {
+  "k": "hit"
+ },
+ "EFFECT_SOLARBEAM": {
+  "k": "two_turn"
+ },
+ "EFFECT_SPEED_DOWN": {
+  "k": "boost_target",
+  "st": {
+   "spe": -1
+  }
+ },
+ "EFFECT_SPEED_DOWN_2": {
+  "k": "boost_target",
+  "st": {
+   "spe": -2
+  }
+ },
+ "EFFECT_SPEED_DOWN_HIT": {
+  "k": "hit_boost_target",
+  "st": {
+   "spe": -1
+  }
+ },
+ "EFFECT_SPEED_UP_2": {
+  "k": "boost_self",
+  "st": {
+   "spe": 2
+  }
+ },
+ "EFFECT_SPIKES": {
+  "h": "spikes",
+  "k": "hazard"
+ },
+ "EFFECT_SPITE": {
+  "k": "spite"
+ },
+ "EFFECT_SPLASH": {
+  "k": "nothing"
+ },
+ "EFFECT_SP_ATK_DOWN_HIT": {
+  "k": "hit_boost_target",
+  "st": {
+   "spa": -1
+  }
+ },
+ "EFFECT_SP_ATK_UP": {
+  "k": "boost_self",
+  "st": {
+   "spa": 1
+  }
+ },
+ "EFFECT_SP_ATK_UP_2": {
+  "k": "boost_self",
+  "st": {
+   "spa": 2
+  }
+ },
+ "EFFECT_SP_DEF_DOWN_HIT": {
+  "k": "hit_boost_target",
+  "st": {
+   "spd": -1
+  }
+ },
+ "EFFECT_SP_DEF_UP_2": {
+  "k": "boost_self",
+  "st": {
+   "spd": 2
+  }
+ },
+ "EFFECT_STATIC_DAMAGE": {
+  "d": 20,
+  "k": "fixed_damage"
+ },
+ "EFFECT_STOMP": {
+  "k": "hit"
+ },
+ "EFFECT_SUBSTITUTE": {
+  "k": "substitute"
+ },
+ "EFFECT_SUNNY_DAY": {
+  "k": "weather",
+  "w": "sun"
+ },
+ "EFFECT_SUPER_FANG": {
+  "k": "half_hp"
+ },
+ "EFFECT_SWAGGER": {
+  "k": "swagger"
+ },
+ "EFFECT_SYNTHESIS": {
+  "k": "weather_heal"
+ },
+ "EFFECT_TELEPORT": {
+  "k": "teleport"
+ },
+ "EFFECT_THIEF": {
+  "k": "thief"
+ },
+ "EFFECT_THUNDER": {
+  "k": "hit"
+ },
+ "EFFECT_TOXIC": {
+  "k": "status",
+  "s": "tox"
+ },
+ "EFFECT_TRANSFORM": {
+  "k": "unknown"
+ },
+ "EFFECT_TRAP_TARGET": {
+  "k": "trap_hit"
+ },
+ "EFFECT_TRIPLE_KICK": {
+  "k": "triple_kick"
+ },
+ "EFFECT_TRI_ATTACK": {
+  "k": "tri_attack"
+ },
+ "EFFECT_TWISTER": {
+  "k": "flinch_hit"
+ },
+ "EFFECT_YAWN": {
+  "k": "yawn"
+ }
+}
