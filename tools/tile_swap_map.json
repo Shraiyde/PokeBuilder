@@ -1,0 +1,657 @@
+{
+ "berry_planted.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "berrytree_aspear.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "berrytree_cheri.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "berrytree_chesto.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "berrytree_lum.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "berrytree_pecha.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "berrytree_persim.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "berrytree_rawst.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "bridge1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 42
+ },
+ "bridge1_lower.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 42
+ },
+ "bush1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "bush1_color.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "bush2_color.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "bush2_color_fertilized.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "bush_savanna1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "desert1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sand.png",
+  "col": 2,
+  "row": 2
+ },
+ "desert2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sand.png",
+  "col": 2,
+  "row": 2
+ },
+ "desert3.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sand.png",
+  "col": 2,
+  "row": 2
+ },
+ "desert4.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sand.png",
+  "col": 2,
+  "row": 2
+ },
+ "desert4_cracked.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sand.png",
+  "col": 2,
+  "row": 2
+ },
+ "desert6.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Dirt.png",
+  "col": 2,
+  "row": 2
+ },
+ "flower1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 7,
+  "row": 3
+ },
+ "flower2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 7,
+  "row": 3
+ },
+ "flower3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 7,
+  "row": 3
+ },
+ "flower4.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 7,
+  "row": 3
+ },
+ "flower5.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 7,
+  "row": 3
+ },
+ "grass1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "grass2_over.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 6,
+  "row": 0
+ },
+ "grass2_under.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "grass3_over.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 6,
+  "row": 0
+ },
+ "grass3_under.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "grass4_over.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 6,
+  "row": 0
+ },
+ "grass5_over.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 7,
+  "row": 0
+ },
+ "grass6_over.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 7,
+  "row": 0
+ },
+ "grass_fairy1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "grass_fairy2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "grass_fairy3.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "grass_planted.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "grass_safari.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "grass_savanna1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "grass_savanna2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "grass_short2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "grass_short3.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "green1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "green10.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "green11.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "green12.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "green5.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "green6.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "green7.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "green8.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "green9.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "green_savanna1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "green_savanna3.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "green_savanna4.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "green_savanna5.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "ground3.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Dirt.png",
+  "col": 2,
+  "row": 2
+ },
+ "ice2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "mountain1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "mountain1_bl1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "mountain1_bl_inner1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "mountain1_bottom1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "mountain1_br1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "mountain1_br_inner1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "mountain1_left1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "mountain1_right1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "mountain1_tl1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "mountain1_top1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "mountain1_tr1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "mountain2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "mountain3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "mountain6.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "path1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Dirt.png",
+  "col": 2,
+  "row": 2
+ },
+ "rock1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "rock1_color.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "rock4.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "rock5.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "rock6.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "rock_ice2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "rock_volcano1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "rubble1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruins2_floor.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruins2_path1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 50
+ },
+ "ruins_floor2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruins_floor2_old.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "sand1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sand.png",
+  "col": 2,
+  "row": 2
+ },
+ "sand2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sand.png",
+  "col": 2,
+  "row": 2
+ },
+ "sand3.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sand.png",
+  "col": 2,
+  "row": 2
+ },
+ "sand3_black.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Gravel.png",
+  "col": 2,
+  "row": 2
+ },
+ "sand4_black.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Gravel.png",
+  "col": 2,
+  "row": 2
+ },
+ "snow1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "snow2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "snow3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "snow4.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "snow5.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "snow6.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "soot1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Gravel.png",
+  "col": 2,
+  "row": 2
+ },
+ "stalagmite1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "tree1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "tree2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "tree2_over.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 0,
+  "row": 53
+ },
+ "tree2_under.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 0,
+  "row": 54
+ },
+ "tree3_over.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 0,
+  "row": 53
+ },
+ "tree3_under.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 0,
+  "row": 54
+ },
+ "tree4.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "tree4_over.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 0,
+  "row": 53
+ },
+ "tree4_under.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 0,
+  "row": 54
+ },
+ "tree5_over.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 0,
+  "row": 53
+ },
+ "tree5_under.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 0,
+  "row": 54
+ },
+ "tree6.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 55
+ },
+ "tree7.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 55
+ },
+ "tree8.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 55
+ },
+ "tree9.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 55
+ },
+ "tree_fairy1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "tree_fairy2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "tree_large1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "tree_large1_color.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "tree_large2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "tree_large3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "tree_large4.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "tree_planted.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "tree_planted2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "tree_planted2_fertilized.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "tree_savanna1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 55
+ },
+ "tree_small1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 55
+ },
+ "water1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sea.png",
+  "col": 2,
+  "row": 2
+ },
+ "water2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sea.png",
+  "col": 2,
+  "row": 2
+ },
+ "water3.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sea.png",
+  "col": 2,
+  "row": 2
+ },
+ "water4.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Still water.png",
+  "col": 2,
+  "row": 2
+ },
+ "water5.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sea.png",
+  "col": 2,
+  "row": 2
+ },
+ "water6.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sea.png",
+  "col": 2,
+  "row": 2
+ }
+}
