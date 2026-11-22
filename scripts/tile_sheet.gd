@@ -1,0 +1,95 @@
+extends RefCounted
+## Tile art drawn from shared sheets, as the original game's TilesAtlas does.
+##
+## Each tile's image is still its own file (so mods replace it by path, as
+## before), but the first time it is used it is copied onto a shared sheet in
+## memory and drawn from there. The graphics chip can then draw a screen of
+## mixed terrain in a few calls instead of one call per kind of tile. A tile's
+## pixels come from its imported file (TexturePixels), never from reading the
+## texture back from the graphics chip.
+const TexturePixels = preload("res://scripts/texture_pixels.gd")
+const SIZE := 2048
+## Space kept round every tile, filled with a copy of its own edge pixels, so
+## a neighbour on the sheet never shows through at a tile's border.
+const GAP := 1
+const LARGEST := 256
+## Frames without a new tile after which a page lets its image go.
+const KEEP_FRAMES := 120
+
+static var enabled := true
+## Each: {"image", "texture", "tiles", "x", "y", "row", "dirty", "added"}.
+## A page's 16 MB image is let go once no tile was added for KEEP_FRAMES
+## (the graphics chip has the texture); a tile added later draws the page
+## again from its tiles' sources ("tiles": [source, region, place] each),
+## never by reading the texture back.
+# ponytail: whole-page redraw and upload per new tile; a partial texture
+# update would need neither, if the engine offered one.
+static var pages: Array = []
+static var placed: Dictionary = {}
+static var sources: Dictionary = {}
+
+## Returns [sheet texture, region on the sheet, whether the tile is fully
+## transparent], or [] to draw the tile from its own image (switched off, an
+## unusual kind of texture, or too large).
+static func place(texture: Texture2D, region: Rect2) -> Array:
+    if not enabled or texture == null: return []
+    if not (texture is CompressedTexture2D or texture is ImageTexture or texture is PortableCompressedTexture2D): return []
+    var size := Vector2i(region.size)
+    if size.x <= 0 or size.y <= 0 or size.x > LARGEST or size.y > LARGEST: return []
+    var key := "%d|%d,%d,%d,%d" % [texture.get_instance_id(), int(region.position.x), int(region.position.y), size.x, size.y]
+    if placed.has(key): return placed[key]
+    var id := texture.get_instance_id()
+    if not sources.has(id):
+        var image := TexturePixels.of(texture)
+        if image != null:
+            if image.is_compressed(): image.decompress()
+            image.convert(Image.FORMAT_RGBA8)
+        sources[id] = image
+    var source: Image = sources[id]
+    var from := Rect2i(Vector2i(region.position), size)
+    if source == null or not Rect2i(Vector2i.ZERO, source.get_size()).encloses(from):
+        placed[key] = []
+        return []
+    var need := size + Vector2i(GAP * 2, GAP * 2)
+    var page: Dictionary = {} if pages.is_empty() else pages[-1]
+    if not page.is_empty() and int(page.x) + need.x > SIZE:
+        page.x = 0
+        page.y = int(page.y) + int(page.row)
+        page.row = 0
+    if page.is_empty() or int(page.y) + need.y > SIZE:
+        var blank := Image.create(SIZE, SIZE, false, Image.FORMAT_RGBA8)
+        blank.fill(Color(0, 0, 0, 0))
+        page = {"image": blank, "texture": ImageTexture.create_from_image(blank), "tiles": [], "x": 0, "y": 0, "row": 0, "dirty": false, "added": 0}
+        pages.append(page)
+    var at := Vector2i(int(page.x) + GAP, int(page.y) + GAP)
+    if page.image == null:
+        page.image = Image.create(SIZE, SIZE, false, Image.FORMAT_RGBA8)
+        page.image.fill(Color(0, 0, 0, 0))
+        for tile in page.tiles: _draw(page.image, tile[0], tile[1], tile[2])
+    _draw(page.image, source, from, at)
+    page.tiles.append([source, from, at])
+    page.x = int(page.x) + need.x
+    page.row = maxi(int(page.row), need.y)
+    page.dirty = true
+    page.added = Engine.get_process_frames()
+    placed[key] = [page.texture, Rect2(Vector2(at), Vector2(size)), source.get_region(from).is_invisible()]
+    return placed[key]
+
+static func _draw(sheet: Image, source: Image, from: Rect2i, at: Vector2i) -> void:
+    var size := from.size
+    sheet.blit_rect(source, from, at)
+    # Repeat the tile's own edge into the gap round it.
+    sheet.blit_rect(source, Rect2i(from.position, Vector2i(size.x, 1)), at + Vector2i(0, -1))
+    sheet.blit_rect(source, Rect2i(from.position + Vector2i(0, size.y - 1), Vector2i(size.x, 1)), at + Vector2i(0, size.y))
+    sheet.blit_rect(source, Rect2i(from.position, Vector2i(1, size.y)), at + Vector2i(-1, 0))
+    sheet.blit_rect(source, Rect2i(from.position + Vector2i(size.x - 1, 0), Vector2i(1, size.y)), at + Vector2i(size.x, 0))
+
+## Sends newly added tiles to the graphics chip: once per frame, however many
+## were added. Lets go of the images of pages that stopped growing.
+static func flush() -> void:
+    for page in pages:
+        if page.dirty:
+            page.dirty = false
+            (page.texture as ImageTexture).update(page.image)
+        elif page.image != null and Engine.get_process_frames() - int(page.added) > KEEP_FRAMES:
+            page.image = null
