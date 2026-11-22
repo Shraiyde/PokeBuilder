@@ -236,7 +236,7 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: .godot
-                    key: godot-import-android-${{ env.GODOT_VERSION }}-${{ hashFiles('assets/**/*.import', 'tools/tile_swap_map.json', 'tools/species_map.json') }}
+          key: godot-import-android-${{ env.GODOT_VERSION }}-${{ hashFiles('assets/**/*.import', 'tools/tile_swap_map.json', 'tools/species_map.json') }}
           restore-keys: godot-import-android-${{ env.GODOT_VERSION }}-
 
       - name: Import + export the APK
