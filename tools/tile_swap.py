@@ -49,7 +49,19 @@ def main() -> int:
                   file=sys.stderr)
             return 1
         cell = atlas.crop((x, y, x + TILE, y + TILE))
-        cell.resize((OUT, OUT), Image.BOX).save(target)
+        cell16 = cell.resize((OUT, OUT), Image.BOX)
+        # Sheets / autotile strips are larger than 16x16: tile the cell to
+        # fill the target's own dimensions so the animation layout survives.
+        with Image.open(target) as orig:
+            w, h = orig.size
+        if w == OUT and h == OUT:
+            cell16.save(target)
+        else:
+            sheet = Image.new("RGBA", (w, h))
+            for ty in range(0, h, OUT):
+                for tx in range(0, w, OUT):
+                    sheet.paste(cell16, (tx, ty))
+            sheet.save(target)
         converted += 1
     print(f"tile swap: converted {converted}, skipped {skipped}, "
           f"unmapped tiles left as-is")

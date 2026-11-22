@@ -1,4 +1,354 @@
 {
+ "aloe_large1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "autotiles/autotile_building1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_building10.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_building11.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_building12.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_building13.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_building14.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_building15.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_building16.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_building17.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_building18.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_building2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_building3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_building4.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_building5.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_building6.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_building7.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_building8.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_building9.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_carpet1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "autotiles/autotile_carpet2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "autotiles/autotile_cliff1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_cliff2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_cliff3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_fence1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "autotiles/autotile_fence2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "autotiles/autotile_fence3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "autotiles/autotile_fence4.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "autotiles/autotile_fence5.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "autotiles/autotile_fence6.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "autotiles/autotile_garden1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "autotiles/autotile_path1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Dirt.png",
+  "col": 2,
+  "row": 2
+ },
+ "autotiles/autotile_roof1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof10.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof11.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof12.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof13.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof14.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof15.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof16.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof17.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof18.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof19.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof20.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof21.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof22.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof23.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof24.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof25.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof26.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof27.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof28.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof4.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof5.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof6.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof7.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof8.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_roof9.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_scliff1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_scliff2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_scliff3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "autotiles/autotile_shore1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sea.png",
+  "col": 2,
+  "row": 2
+ },
+ "autotiles/autotile_shore2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sea.png",
+  "col": 2,
+  "row": 2
+ },
+ "autotiles/autotile_shore3.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sea.png",
+  "col": 2,
+  "row": 2
+ },
+ "autotiles/autotile_table1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "autotiles/autotile_trees.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "autotiles/testauto.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "ball_kiln1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
  "berry_planted.png": {
   "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
   "col": 3,
@@ -49,6 +399,1146 @@
   "col": 1,
   "row": 42
  },
+ "buildings/building1_cables1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/building1_floor1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/building1_floor2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/building1_machine1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/building1_machine2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/building1_pc1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/building1_pc2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/building1_pokecenter1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/building1_wall1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/chimney1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/exteriorwindows1-revertme.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/exteriorwindows1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/house10_all.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house10_door1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/house10_roof_all.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house10_roof_left1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house10_roof_middle1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house10_roof_right1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house11_all.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house11_door1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/house11_roof_all.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house11_roof_left1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house11_roof_middle1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house11_roof_right1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house12_all.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house12_door1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/house12_roof_all.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house12_roof_left1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house12_roof_middle1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house12_roof_right1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house1_door1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/house1_door1_dark.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/house1_left1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house1_middle1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house1_right1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house1_roof_left1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house1_roof_middle1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house1_roof_right1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house2_door1_dark.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/house2_middle1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house2_roof_left1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house2_roof_middle1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house2_roof_right1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house3_left1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house3_middle1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house3_right1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house3_roof_left1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house3_roof_middle1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house3_roof_right1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house4_middle1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house5_E.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house5_W.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house5_door1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/house5_floor1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/house5_floor_rug1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/house5_left1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house5_middle1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house5_middle1_fence1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "buildings/house5_right1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house5_roof_NE.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house5_roof_NEW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house5_roof_NSE.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house5_roof_NSEW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house5_roof_NSW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house5_roof_NW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house5_roof_SE.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house5_roof_SEW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house5_roof_SW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house5_roof_left1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house5_roof_middle1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house5_roof_right1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house5_wall1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house6_all.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house6_door1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/house6_roof_all.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house6_roof_inner_all.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house6_roof_left1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house6_roof_middle1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house6_roof_right1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house8_all.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house8_door1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/house8_roof_all.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house8_roof_left1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house8_roof_middle1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house8_roof_right1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house9_all.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house9_door1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/house9_roof_all.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house9_roof_left1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house9_roof_middle1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house9_roof_right1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house9_window1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_bed1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_bed1_colorbase.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_carpet1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/house_carpet2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/house_carpet3.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/house_carpet4.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/house_carpet5.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/house_carpet6.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/house_carpet7.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/house_carpet8.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/house_clock1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_couch1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_couch2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_couch3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_couch4.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_couch5.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_gym1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_picture1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_picture10.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_picture11.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_picture12.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_picture13.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_picture14.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_picture15.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_picture16.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_picture17.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_picture18.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_picture19.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_picture2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_picture20.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_picture3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_picture4.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_picture5.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_picture6.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_picture7.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_picture8.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_picture9.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_plant1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "buildings/house_plant2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "buildings/house_plushduskull.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_plushjigglypuff.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_plushpichu.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_plushskitty.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_shelf1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_stool1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_table1_NE.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_table1_NEW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_table1_NSE.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_table1_NSEW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_table1_NSW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_table1_NW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_table1_SE.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_table1_SEW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_table1_SW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_table1_default.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_table1_down1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_table1_left1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_table1_middle1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_table1_middle2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_table1_right1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_table1_up1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_trashcan1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_vanity1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_vanity2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_wardrobe1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_window1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/house_window2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/interiorwall1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_block1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_ext.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_ext_E.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_ext_E_window.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_ext_E_window_damaged.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_ext_S.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_ext_SE.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_ext_SE_damaged.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_ext_SW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_ext_S_windows.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_ext_S_windows_damaged.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_ext_W.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_ext_W_window.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_ext_door.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/pkmnmansion_ext_locked.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_ext_windows.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_ext_windows_E.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_ext_windows_E_damaged.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_ext_windows_W.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_ext_windows_W_damaged.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_floor1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/pkmnmansion_floor2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/pkmnmansion_floor2_E.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/pkmnmansion_floor2_W.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/pkmnmansion_gate_EW__off.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/pkmnmansion_gate_EW__on.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/pkmnmansion_gate_NS__off.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/pkmnmansion_gate_NS__on.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/pkmnmansion_roof.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_roof_E.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_roof_N.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_roof_NE.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_roof_NW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_roof_N_damaged.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_roof_S.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_roof_SE.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_roof_SW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_roof_S_damaged.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_roof_W.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_rug.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/pkmnmansion_shelf1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_shelf1_NS.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_statue1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_struct1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_wall.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_wall_E.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_wall_N.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_wall_NE.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_wall_NS.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_wall_NW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_wall_S.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/pkmnmansion_wall_W.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/plant1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "buildings/rock1_color.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "buildings/rug2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/rug2_left.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/rug2_right.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/stairs_down2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/table.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/table_E.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/table_N.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/table_NE.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/table_NW.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/table_S.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/table_SE.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/table_SW.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/table_W.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "buildings/tree_planted.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
  "bush1.png": {
   "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
   "col": 3,
@@ -73,6 +1563,261 @@
   "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
   "col": 3,
   "row": 59
+ },
+ "cactus1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "cactus10.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "cactus2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "cactus2_cacturne.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "cactus3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "cactus4.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "cactus5.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "cactus6.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "cactus7.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "cactus8.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "cactus9.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "campfire1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "cave1/cave1_bl1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave1_bl_inner.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave1_br1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave1_br_inner.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave1_door1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave1_down1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave1_down1_dark.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave1_entrance1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave1_floor1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave1_floor2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave1_left1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave1_ramp1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave1_regi1-old.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave1_regi1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave1_regi5.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave1_regipedistal1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave1_right1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave1_stone1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "cave1/cave1_tl1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave1_tr1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave1_up1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave2_bl.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave2_bl_inner.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave2_br.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave2_br_inner.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave2_down.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave2_floor.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave2_left.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave2_right.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave2_tl.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave2_tl_alternate.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave2_tr.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave2_tr_alternate.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/cave2_up.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/overworld2-deleteme.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/overworld2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "cave1/regi_eye1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "chest1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "chimney_sheet1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
  },
  "desert1.png": {
   "atlas": "assets/graphics/tilesets/autotiles_terrain/Sand.png",
@@ -104,6 +1849,156 @@
   "col": 2,
   "row": 2
  },
+ "fairy_forest/green1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "fence1-old.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence1-old2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence1-old3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence1_NE.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence1_NEW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence1_NS.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence1_NSE.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence1_NSEW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence1_NSW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence1_NW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence1_SE.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence1_SEW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence1_SW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence1gate1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence1gate1_NS.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence2_NE.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence2_NEW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence2_NS.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence2_NSE.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence2_NSEW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence2_NSW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence2_NW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence2_SE.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence2_SEW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence2_SW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence2gate1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "fence2gate1_NS.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
  "flower1.png": {
   "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
   "col": 7,
@@ -119,6 +2014,11 @@
   "col": 7,
   "row": 3
  },
+ "flower4-backup.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 7,
+  "row": 3
+ },
  "flower4.png": {
   "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
   "col": 7,
@@ -128,6 +2028,16 @@
   "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
   "col": 7,
   "row": 3
+ },
+ "fossil1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "fossil2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
  },
  "grass1.png": {
   "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
@@ -184,6 +2094,11 @@
   "col": 2,
   "row": 2
  },
+ "grass_planted-old.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
  "grass_planted.png": {
   "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
   "col": 2,
@@ -213,6 +2128,21 @@
   "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
   "col": 2,
   "row": 2
+ },
+ "gravestone1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gravestone2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gravestone3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
  },
  "green1.png": {
   "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
@@ -284,10 +2214,2720 @@
   "col": 2,
   "row": 2
  },
+ "gsc/barrier1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "gsc/barrier2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "gsc/bluecave/bluecave_bl.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/bluecave/bluecave_bl_inner.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/bluecave/bluecave_br.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/bluecave/bluecave_br_inner.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/bluecave/bluecave_down.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/bluecave/bluecave_left.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/bluecave/bluecave_right.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/bluecave/bluecave_tl.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/bluecave/bluecave_tr.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/bluecave/door1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/bluecave/entrance1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/bluecave/ground1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Dirt.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/bluecave/ground2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Dirt.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/bluecave/ground3.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Dirt.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/bluecave/ground4.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Dirt.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/bluecave/ramp1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/bluecave/rock1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/bluecave/stairs_down1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/bluecave/stairs_up1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/bluecave/water2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sea.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/bluecave/water_ledge1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/bluecave/water_ledge1_preview.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/buoy1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/buoy2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/bush1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "gsc/cave_door.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/darkcave/darkcave_bl.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/darkcave/darkcave_bl_inner.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/darkcave/darkcave_br.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/darkcave/darkcave_br_inner.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/darkcave/darkcave_down.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/darkcave/darkcave_left.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/darkcave/darkcave_right.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/darkcave/darkcave_tl.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/darkcave/darkcave_tr.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/darkcave/door1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/darkcave/entrance1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/darkcave/ground1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Dirt.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/darkcave/ground2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Dirt.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/darkcave/ramp1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/darkcave/rock1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/darkcave/stairs_down1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/darkcave/stairs_up1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/darkcave/water2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sea.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/darkcave/water_ledge1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/darkcave/water_ledge1_preview.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/elmslab/desk1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/elmslab/floor1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/elmslab/pc1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/elmslab/pokecenter1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/elmslab/rug1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/elmslab/shelf1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/elmslab/table1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/elmslab/trashcan1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/elmslab/wall1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/elmslab/wall2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/elmslab/wall3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/fence1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "gsc/house1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house4.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house5.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house_gym1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house_gym2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house_gym3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house_mart.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house_poke.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house_roof1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house_roof10.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house_roof11.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house_roof12.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house_roof13.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house_roof14.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house_roof15.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house_roof16.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house_roof2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house_roof3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house_roof4.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house_roof5.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house_roof6.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house_roof7.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house_roof8.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/house_roof9.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/icecave/chunk1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/icecave/chunk2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/icecave/chunk3.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/icecave/chunk4.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/icecave/chunk5.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brown cave floor.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/icecave/ground1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Dirt.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/icecave/ice1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "gsc/icecave/icecave_bl.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "gsc/icecave/icecave_bl_inner.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "gsc/icecave/icecave_br.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "gsc/icecave/icecave_br_inner.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "gsc/icecave/icecave_down1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "gsc/icecave/icecave_down2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "gsc/icecave/icecave_down3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "gsc/icecave/icecave_down4.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "gsc/icecave/icecave_left.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "gsc/icecave/icecave_right.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "gsc/icecave/icecave_tl.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "gsc/icecave/icecave_tr.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "gsc/icecave/ramp1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/icecave/rock1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/icecave/stairs_down1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/icecave/stairs_up1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/kurthome/floor1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/kurthome/floor2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/kurthome/floor3.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/kurthome/floor4.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/kurthome/floor5.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/kurthome/floor6.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/kurthome/rug1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/kurthome/shelf1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/kurthome/shelf2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/kurthome/shelf3.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/kurthome/shelf4.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/kurthome/shelf5.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/kurthome/table1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/kurthome/wall1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/kurthome/wall2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/mart/desk1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/mart/floor1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/mart/floor2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/mart/rug1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/mart/shelf1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/mart/shelf2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/mart/shelf3.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/mart/shelf4.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/mart/shelf5.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/mart/stairs_down1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/mart/stairs_up1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/mart/stool1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/mart/table1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/mart/wall1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/mart/wall2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/mart/wall3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/mountainkanto_bl.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/mountainkanto_bl_inner.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/mountainkanto_br.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/mountainkanto_br_inner.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/mountainkanto_down.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/mountainkanto_left.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/mountainkanto_right.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/mountainkanto_tl.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/mountainkanto_tr.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/mountainkanto_up.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/npchome1/floor1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/npchome1/plant1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "gsc/npchome1/plant2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "gsc/npchome1/plant3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "gsc/npchome1/radio1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/npchome1/rug1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/npchome1/shelf1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/npchome1/shelf2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/npchome1/stairs_down1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/npchome1/stairs_up1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/npchome1/stool1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/npchome1/table1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/npchome1/tv1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/npchome1/wall1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/npchome1/wall2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/npchome1/wall3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/path1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Dirt.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/path2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Dirt.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/path3.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Dirt.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/path4.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Dirt.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/playerhome/drawer1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/playerhome/floor1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/playerhome/fridge1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/playerhome/pc1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/playerhome/radio1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/playerhome/rug1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/playerhome/shelf1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/playerhome/shelf2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/playerhome/sink1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/playerhome/stairs_down1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/playerhome/stairs_up1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/playerhome/stool1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/playerhome/stove1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/playerhome/table1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/playerhome/tv1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/playerhome/wall1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/playerhome/wall2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/playerhome/wall3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/pokemoncenter/floor1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/pokemoncenter/floor2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/pokemoncenter/pc1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/pokemoncenter/pc2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/pokemoncenter/pokecenter1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/pokemoncenter/rug1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/pokemoncenter/stairs_down1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/pokemoncenter/stairs_up1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/pokemoncenter/stool1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/pokemoncenter/wall1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/sign1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/slots/desk1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/slots/floor1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/slots/plant1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "gsc/slots/shelf1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/slots/shelf2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/slots/shelf3.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/slots/stool1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "gsc/slots/wall1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/slots/wall2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/tree_small1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 55
+ },
+ "gsc/water_ledge1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/water_ledge1_preview.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/water_ledge2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "gsc/water_ledge2_preview.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "heart_tower/heart-tower-1856.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1857.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1861.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1864.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1865.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1866.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1867.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1868.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1871.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1872.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1914.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1915.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1919.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1920.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1921.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1922.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1924.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1926.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1927.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1929.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1930.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1943.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1944.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1945.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1946.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1947.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1948.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1949.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1950.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1951.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1973.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1975.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1976.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1977.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1978.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1979.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1980.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1981.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1982.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1983.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1984.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1985.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1987.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1988.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-1994.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2001.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2002.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2003.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2004.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2005.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2006.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2007.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2008.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2009.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2030.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2031.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2032.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2033.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2035.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2036.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2038.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2039.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2040.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2041.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2045.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2046.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2052.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2059.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2060.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2061.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2062.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2063.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2064.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2065.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2066.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2067.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2091.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2092.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2093.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2094.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2096.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2097.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2098.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2099.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2103.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2104.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2110.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2111.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2112.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2113.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2117.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2118.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2119.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2120.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2121.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2122.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2123.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2124.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2125.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2146.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2147.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2149.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2152.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2153.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2154.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2155.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2156.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2157.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2158.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2159.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2160.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2161.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2162.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2166.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2167.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2168.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2169.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2175.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2176.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2177.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2178.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2179.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2180.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2181.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2182.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2183.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2204.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2205.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2210.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2211.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2212.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2214.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2215.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2216.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2217.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2218.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2219.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2220.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2227.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2233.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2234.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2235.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2236.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2237.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2238.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2239.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2240.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2241.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2262.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2272.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2273.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2274.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2277.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2278.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2285.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2291.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2292.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2293.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2294.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2296.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2297.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2298.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2299.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2324.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2330.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2333.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2349.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2350.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2351.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2352.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2353.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2354.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2355.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2356.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2357.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2378.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2379.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2380.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2381.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2382.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2383.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2384.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2385.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2387.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2389.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2393.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2394.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2437.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2438.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2440.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2444.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2494.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2501.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2502.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2503.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2504.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2505.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2506.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2507.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2508.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2509.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2510.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2511.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2554.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2555.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2556.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2557.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2558.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2559.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2560.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2561.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2564.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2565.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2566.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2567.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2568.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2569.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2612.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2613.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2614.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2615.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2616.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2617.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2618.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2619.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2620.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2621.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2622.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2623.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2624.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2625.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2626.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2627.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2670.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2671.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2672.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2673.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-2674.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/heart-tower-733.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/legendary_beasts_trigger.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/overlay1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/pillar-diag-end.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "heart_tower/pillar-diag-origin.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "heart_tower/pillar-diag.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "heart_tower/proc-gen-deleteme/door_instance1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/proc-gen-deleteme/floor1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/proc-gen-deleteme/floor2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/proc-gen-deleteme/lever1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/proc-gen-deleteme/lever1_flipped.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/proc-gen-deleteme/log1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/proc-gen-deleteme/log1_flipped.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/proc-gen-deleteme/pillar1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "heart_tower/proc-gen-deleteme/ram_down.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/proc-gen-deleteme/ram_left.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/proc-gen-deleteme/ram_right.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/proc-gen-deleteme/ram_up.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/proc-gen-deleteme/stairs_down1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/rock1_color.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "heart_tower/stairs_down1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/stairs_down_ladder.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/stairs_up1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/stairs_up_ladder.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "heart_tower/stairs_up_long.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "hole1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "hole1_E.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "hole1_EW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "hole1_N.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "hole1_NE.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "hole1_NEW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "hole1_NS.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "hole1_NSE.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "hole1_NSEW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "hole1_NSW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "hole1_NW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "hole1_S.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "hole1_SE.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "hole1_SEW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "hole1_SW.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "hole1_W.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "house7_all.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
  "ice2.png": {
   "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
   "col": 2,
   "row": 35
+ },
+ "ice2_pit1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "ice2_pit2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "lava_sheet1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "lavafall_sheet1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "lavafall_sheet1_inner.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "lavafall_sheet2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "lavafall_sheet2_inner.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledge1_corner_bl.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledge1_corner_br.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledge1_down_color.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledge1_left.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledge1_right.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledge2_bl.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledge2_br.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledge2_down.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledge2_left.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledge2_right.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledge2_tl.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledge2_top.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledge2_tr.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledge_grass_down.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "ledge_grass_inside_tl.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "ledge_grass_inside_tr.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "ledge_grass_left.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "ledge_grass_ramp.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "ledge_grass_ramp_color.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "ledge_grass_right.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "ledge_grass_safari_up.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "ledges3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledges3_inner.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledges3_none.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledges3bluecave.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledges3bluecave_inner.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledges3bluecave_none.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledges3darkcave.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledges3darkcave_inner.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledges3darkcave_none.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledges3icecave.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "ledges3icecave_inner.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "ledges3icecave_none.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "ledges3kanto.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledges3kanto_inner.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledges3kanto_none.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledges3snow.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "ledges3snow_inner.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "ledges3snow_none.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 35
+ },
+ "ledges3volcano.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledges3volcano_inner.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ledges3volcano_none.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
  },
  "mountain1.png": {
   "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
@@ -359,8 +4999,108 @@
   "col": 2,
   "row": 28
  },
+ "odd_keystone2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
  "path1.png": {
   "atlas": "assets/graphics/tilesets/autotiles_terrain/Dirt.png",
+  "col": 2,
+  "row": 2
+ },
+ "pedistal1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "place_something1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "pokeball1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "pokedoll1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "pokemon_mansion_key.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "pot1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "potted1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "potted2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "potted3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "potted4.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "puddle_sheet1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Still water.png",
+  "col": 2,
+  "row": 2
+ },
+ "qmark_tile1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ramp1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ramp_left_N.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ramp_left_NS.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ramp_left_S.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ramp_right_N.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ramp_right_NS.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ramp_right_S.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
   "col": 2,
   "row": 2
  },
@@ -404,6 +5144,826 @@
   "col": 2,
   "row": 28
  },
+ "ruined_city/box1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/box2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/door1_left.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/door1_right.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/floor1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/fridge1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/house_table1_journal1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/house_table1_journal2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/kitchen_wall1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/kitchen_wall2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/kitchen_wall3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/metal_scrap1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/mirror1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pc.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pillar1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/pillar2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/pillar3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/pillar4.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/pillar_bottom1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/pillar_bottom2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/pokecenter/books1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/books2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/chair1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/chair2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/chair3.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/chair4.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/deleteme-pokecenter-interior46.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/pokecenter/healbed.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/healbed_backlights.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/healbed_broken.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/healbed_pokeballs.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/plant1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "ruined_city/pokecenter/plant2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "ruined_city/pokecenter/plant3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 3,
+  "row": 59
+ },
+ "ruined_city/pokecenter/pokecenter-interior0.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior10.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior11.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior12.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior13.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior14.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior15.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior16.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior17.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior18.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior19.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior22.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior23.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior24.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior27.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior28.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior29.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior3.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior30.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior31.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior32.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior33.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior34.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior35.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior36.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior37.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior38.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior39_rug.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior4.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior40.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior41.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior42.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior43.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior44.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior45.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior47.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior48.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior49.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior5.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior50.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior51.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior52.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior53.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior54.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior55.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior56.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior57.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior58.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior59.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior6.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior7.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior8.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter-interior9.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter10.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter11_door.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter13.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter14.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter15.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter17.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter18.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter19.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/pokecenter2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/pokecenter/pokecenter3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/pokecenter/pokecenter5.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/pokecenter/pokecenter6.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/pokecenter/pokecenter7.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/pokecenter/pokecenter9.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/pokecenter/shelf1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/shelf2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/shelf3.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/shelf4.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/pokecenter/shelf5.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/road1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/road1grass_all.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/road1grey_all.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/road1grey_all_inner.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/road1sand_all.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sand.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/road1white_all.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/road1white_all_inner.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/road2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/road3.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/road4.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/roof1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/roof1_all.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/rotom-appliances.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/sewer/ground1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Dirt.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/sewer/ground1tidal.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Dirt.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/sewer/stairs_up1_exit.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/sewer/wall1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/sewer/wall2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/sewer/water1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sea.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/sidewalk1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/sink1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/sink2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/sink3.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/sink4.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/stairs_down1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/stove1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/toilet1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/toilet2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/toiletpaper1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/trashcan1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/tv1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/tv1_rotom.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/wall1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/wall2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruined_city/window1_left.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/window1_right.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/window2_left.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/window2_right.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/window3_left.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/window3_right.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/window4_left.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/window4_right.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/window5_left.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/window5_right.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/window6_left.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruined_city/window6_right.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruins1_NE.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruins1_NSEW.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruins1_NW.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruins1_SE.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruins1_SW.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruins1_all.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruins1_pillar1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruins1_pillar1_broken.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruins2_door.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
  "ruins2_floor.png": {
   "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
   "col": 2,
@@ -414,6 +5974,21 @@
   "col": 2,
   "row": 50
  },
+ "ruins2_volcarona_picture1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "ruins2_wall1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "ruins2_wall2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
  "ruins_floor2.png": {
   "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
   "col": 2,
@@ -423,6 +5998,11 @@
   "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
   "col": 2,
   "row": 2
+ },
+ "ruins_statue1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
  },
  "sand1.png": {
   "atlas": "assets/graphics/tilesets/autotiles_terrain/Sand.png",
@@ -448,6 +6028,36 @@
   "atlas": "assets/graphics/tilesets/autotiles_terrain/Gravel.png",
   "col": 2,
   "row": 2
+ },
+ "shore1inner_sheet2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sea.png",
+  "col": 2,
+  "row": 2
+ },
+ "shore_sheet4.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sea.png",
+  "col": 2,
+  "row": 2
+ },
+ "sign1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "sign_built1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "sign_desert1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sand.png",
+  "col": 2,
+  "row": 2
+ },
+ "sleeping_bag1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
  },
  "snow1.png": {
   "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
@@ -484,7 +6094,212 @@
   "col": 2,
   "row": 2
  },
+ "spooky/bones1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "spooky/bones2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "spooky/bones3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "spooky/grass1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "spooky/green1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "spooky/green2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "spooky/green3.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "spooky/green4.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "spooky/lillypad1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Still water.png",
+  "col": 2,
+  "row": 2
+ },
+ "spooky/lillypad2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Still water.png",
+  "col": 2,
+  "row": 2
+ },
+ "spooky/tree1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "spooky/tree2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "spooky/tree3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "spooky/tree4.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "spooky/tree5.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "stairs_down1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "stairs_down2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "stairs_down4.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "stairs_up1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
+ "stairs_up1_exit.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Brick path.png",
+  "col": 2,
+  "row": 2
+ },
  "stalagmite1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "statue1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "swamp/bridge1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 42
+ },
+ "swamp/bridge1lower.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 42
+ },
+ "swamp/lillypad1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Still water.png",
+  "col": 2,
+  "row": 2
+ },
+ "swamp/lillypad2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Still water.png",
+  "col": 2,
+  "row": 2
+ },
+ "swamp/lillypad3.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Still water.png",
+  "col": 2,
+  "row": 2
+ },
+ "swamp/outh1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
+  "col": 2,
+  "row": 2
+ },
+ "swamp/swamp1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Still water.png",
+  "col": 2,
+  "row": 2
+ },
+ "swamp/swamp2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Still water.png",
+  "col": 2,
+  "row": 2
+ },
+ "swamp/tree10.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "swamp/tree11.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "swamp/tree12.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "swamp/tree13-old.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "swamp/tree13-old2.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "swamp/tree13-old3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "swamp/tree13.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "swamp/tree14.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "swamp/tree15.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "swamp/tree_large1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 1,
+  "row": 55
+ },
+ "tidalwater1-deleteme.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sea.png",
+  "col": 2,
+  "row": 2
+ },
+ "torch_sheet1.png": {
   "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
   "col": 2,
   "row": 28
@@ -624,12 +6439,82 @@
   "col": 3,
   "row": 55
  },
+ "ultraball1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "unown_portal.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "volcano1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "volcano3.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "warp1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "warp1_greyed.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "warp_tile1.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "warp_tile1_light.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
  "water1.png": {
   "atlas": "assets/graphics/tilesets/autotiles_terrain/Sea.png",
   "col": 2,
   "row": 2
  },
+ "water1_ledge1_left.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "water1_ledge1_right.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "water1_ledge1_tl.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "water1_ledge1_top.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
+ "water1_ledge1_tr.png": {
+  "atlas": "assets/graphics/tilesets/tilesets/Outside.png",
+  "col": 2,
+  "row": 28
+ },
  "water2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sea.png",
+  "col": 2,
+  "row": 2
+ },
+ "water2_edge1.png": {
   "atlas": "assets/graphics/tilesets/autotiles_terrain/Sea.png",
   "col": 2,
   "row": 2
@@ -651,6 +6536,21 @@
  },
  "water6.png": {
   "atlas": "assets/graphics/tilesets/autotiles_terrain/Sea.png",
+  "col": 2,
+  "row": 2
+ },
+ "waterfall_sheet2.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sea.png",
+  "col": 2,
+  "row": 2
+ },
+ "waterfall_sheet2_inner.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Sea.png",
+  "col": 2,
+  "row": 2
+ },
+ "zs1.png": {
+  "atlas": "assets/graphics/tilesets/autotiles_terrain/Light grass.png",
   "col": 2,
   "row": 2
  }
